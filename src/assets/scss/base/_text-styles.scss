@@ -1,0 +1,135 @@
+.text{
+	&--white{
+		color: #fff;
+	}
+	&--blue{
+		color: #003772;
+	}
+	&--cyan{
+		color: #00A3E0;
+	}
+	&--dark-gray{
+		color: #4B4B4B;
+	}
+	&--gray{
+		color: #6A6A6A;
+	}
+	&--light-gray{
+		color: #858585;
+	}
+	&--black{
+		color: #000;
+	}
+	&--blue-cyan{
+		background: linear-gradient(274.25deg, #00205B -9.03%, #00A3E0 138.82%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;	
+	}
+	&--400{
+		font-weight: 400;
+	}
+	&--500{
+		font-weight: 500;
+	}
+	&--700{
+		font-weight: 700;
+	}
+	&--XXL{
+		@include fSize(992, 440, 24, 20);
+		line-height: 1.1em;
+		&--static{
+			font-size: 28px;
+		}
+	}
+	&--XL{
+		@include fSize(992, 440, 24, 20);
+		line-height: 1.1em;
+		&--static{
+			font-size: 24px;
+		}
+	}
+	&--L{
+		@include fSize(992, 440, 24, 18);
+		line-height: 1.1em;
+		&--static{
+			font-size: 20px;
+		}
+	}
+	&--LM{
+		@include fSize(992, 440, 24, 16);
+		line-height: 1.1em;
+		&--static{
+			font-size: 20px;
+		}
+	}
+	&--M{
+		@include fSize(992, 440, 18, 16);
+		line-height: 1.1em;
+		&--static{
+			font-size: 18px;
+		}
+	}
+	&--S{
+		@include fSize(992, 440, 16, 14);
+		line-height: 1.1em;
+		&--static{
+			font-size: 16px;
+		}
+	}
+	&--XS{
+		@include fSize(992, 440, 14, 12);
+		line-height: 1.1em;
+		&--static{
+			font-size: 14px;
+		}
+	}
+	&--XXS{
+		@include fSize(992, 440, 12, 10);
+		line-height: 1.1em;
+		&--static{
+			font-size: 12px;
+		}
+	}
+	&--uppercase{
+		text-transform: uppercase;
+	}
+}
+
+//input
+.input{
+	&:not(.input--styled){
+		color: inherit !important;
+		font-family: inherit !important;
+		font-size: inherit !important;
+		line-height: inherit !important;
+		font-weight: inherit !important;
+	}
+	&:not(.input--placeholder-styled){
+		&::placeholder{
+			color: inherit !important;
+			font-family: inherit !important;
+			font-size: inherit !important;
+			line-height: inherit !important;
+			font-weight: inherit !important;	
+		}
+		
+	}
+
+	&--underscore{
+		background: transparent;
+		border: none;
+		border-top: 1px solid transparent;
+		border-right: 1px solid transparent;
+		border-left: 1px solid transparent;
+		border-bottom: 1px solid #B8B8B8 !important;
+		margin: 2px;
+		&:focus {
+			outline: none;
+			border: 1px solid #B8B8B8 !important;
+			outline: 1px solid #B8B8B8;
+			border-radius: 2px;
+		}
+	}
+}

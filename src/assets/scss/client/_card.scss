@@ -1,0 +1,98 @@
+.card-banner {
+	max-width: 1280px;
+	margin: auto;
+	&__outer-wrapper {
+		display: flex;
+
+	}
+	&__content-wrapper {
+		flex: 0 0 50%;
+		padding: 25px 50px;
+
+		background: #001843;
+		@media screen and (max-width: 769px) {
+			flex-grow: 1;
+		}
+	}
+	&__back-button {
+		display: flex;
+		align-items: center;
+		padding: 4px;
+		margin-bottom: 35px;
+	}
+	&__back-arrow {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		border-left: 2px solid #fff;
+		border-top: 2px solid #fff;
+		// border-bottom: 2px solid transparent;
+		// border-right: 2px solid transparent;
+		box-sizing: border-box;
+		margin-right: 15px;
+		transform: rotate(-45deg);
+		border-radius: 2px;
+	}
+	&__title {
+		margin-bottom: 7px;
+	}
+	&__subtitle {
+		margin-bottom: 50px;
+	}
+	&__consult-button {
+		margin-bottom: 50px;
+		@media screen and (max-width: 769px) {
+			margin-bottom: 25px;
+		}
+	}
+	&__image-wrapper {
+		@media screen and (max-width: 769px) {
+			display: none;
+		}
+		flex-grow: 1;
+		background-position: 50% 0 !important;
+	}
+	&__image-mob{
+		@media screen and (min-width: 769px) {
+			display: none;
+		}
+		margin: 0 -50px;
+		padding-bottom: 15px;
+		&>img{
+			width: 100%;
+		}
+	}
+}
+.card-details {
+	&__outer-wrapper {
+		display: grid;
+		gap:5px;
+		align-items: center;
+		grid-template-columns:[image-start] 2fr [image-end text-start title-start] 4fr [title-end text-end];
+		grid-template-rows: [image-start title-start] auto [title-end text-start] auto [text-end image-end];
+		@media screen and (max-width: 992px) {
+			grid-template-columns:[text-start image-start] 3fr [image-end title-start] 3fr [title-end text-end];
+			grid-template-rows: [image-start title-start] auto [title-end image-end text-start] auto [text-end ];
+		}
+		@media screen and (max-width: 576px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__image-wrapper {
+		grid-column: image-start/image-end;
+		grid-row: image-start/image-end;
+	}
+	&__title-wrapper {
+		grid-column: title-start/title-end;
+		grid-row: title-start/title-end;
+		@media screen and (max-width: 576px) {
+			display: none;
+			//flex-order:0;
+		}
+	}
+	&__content-wrapper {
+		grid-column: text-start/text-end;
+		grid-row: text-start/text-end;
+	}
+}

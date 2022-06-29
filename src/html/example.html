@@ -1,0 +1,59 @@
+        <%- include('inc/header.html') %>
+        <%- include('inc/client-menu.html') %>
+        <div id="info" data-current-id="coins" data-main-menu-current-id="private-client-head"></div>
+<!-- Main content-->
+        <section>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <div class="breadcrumbs__step"><a href="/">Главная</a></div>
+                    <div class="breadcrumbs__step"><a href="contributions.html">Частным клиентам</a></div>
+                    <div class="breadcrumbs__step"><span>Монеты</span></div>        
+                </div>
+            </div> 
+        </section>
+        <section>
+            <div class="container">
+                <div class="page">
+                   <div class="page__sidebar sidebar">
+                        <div class="sidebar__overlay"></div>
+                        <div class="sidebar__items">
+                            <div class="sidebar__item sidebar__item--selected">
+                                <div class="sidebar__item-text">
+                                    <a href="coins.html">Монеты</a>
+                                </div>
+                                <div class="sidebar__item-icon"></div>
+                            </div>
+                            <div class="sidebar__item">
+                                <div class="sidebar__item-text">
+                                    <a href="exchanges.html">Обмен валюты</a>
+                                </div>
+                                <div class="sidebar__item-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__content basic-page">
+                        <div class="basic-page__title  basic-page__title--hide-on-md">
+                            <h1>Монеты</h1>
+                        </div>
+                        <div class="basic-page__body contrib">
+                            <div class="contrib__filters contrib-filters">
+                                <span>Здесь будут фильтры</span>
+                            </div>
+                            <div class="contrib__cards contrib-cards">
+                                <div class="contrib-cards__wrap">
+                                    <div class="contrib-cards__card contrib-card">
+                                        <div class="contrib-card__wrap">
+                                            <div class="contrib-card__image"></div>
+                                            <div class="contrib-card__info"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('inc/footer.html') %>
+    </body>
+</html>

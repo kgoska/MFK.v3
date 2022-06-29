@@ -1,0 +1,107 @@
+@use 'sass:math';
+@import './utils/utils-collection';
+@import '../../../node_modules/modern-normalize/modern-normalize.css';
+@import './base/fonts';
+@import './utils/mixins';
+@import './utils/vars';
+@import './base/container';
+@import './base/breadcrumbs';
+@import './base/header';
+@import './base/mobile-menu';
+@import './base/dropdown';
+@import './base/acordion';
+@import './base/footer';
+@import './base/page-content';
+@import './base/text-styles';
+@import './base/sidebar';
+@import './base/def-slider';
+@import './corporative/deposits';
+@import './corporative/credits';
+@import './corporative/operations';
+@import './corporative/accountopen';
+@import './corporative/ved';
+@import './corporative/specialchecks';
+@import './corporative/garanty';
+@import './corporative/distance-services';
+@import './client/safeboxes';
+@import './client/settlement-service';
+@import './client/contributions';
+@import './client/savingsaccount';
+@import './client/cards';
+@import './client/card';
+@import './client/ubs';
+@import './client/coins';
+@import './client/coin';
+@import './client/online-bank';
+@import './client/exchanges';
+@import './private/rko';
+
+@import '../css/slick.css';
+
+
+
+
+body {
+    margin: 0px;
+    font-family: $mainFont;
+    color: #003772;
+    background-color: #F7FAFF;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+}
+button:active{
+    background: #B94C40;
+}
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit; /* no underline */
+}
+// a, a:hover, a:focus, a:active { 
+//       text-decoration: none; 
+//       color: inherit; 
+//  }
+
+// img {
+//     display: block;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1 { //default style for main page title
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: rem(28);
+    text-transform: uppercase;
+}
+.ibg{
+    background-position: center;
+    background-repeat: no-repeat;
+    &--contain{
+        background-size: contain;
+    }
+    &--cover{
+        background-size: cover;
+    }
+}

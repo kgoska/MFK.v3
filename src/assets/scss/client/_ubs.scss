@@ -1,0 +1,303 @@
+.second__title-settlement-service.contributions_title.usb__title{
+    display: flex;
+    @media screen and (max-width: 991px){
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+.ubs {
+
+		// .ubs__item
+
+		&__item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 56px;
+            @media screen and (max-width:991px){
+                margin-bottom: 80px;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 85px;
+                flex-direction: column-reverse;
+            }
+		}
+
+		// .ubs__item-wrapper
+
+		&__item-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 68px 240px 68px 52px;
+            background: #001843;
+            box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
+            border-radius: 2px;
+            @media screen and (max-width:1440px){
+              padding: 68px 50px 68px 52px;
+            }
+            @media screen and (max-width: 1199px){
+                padding: 32px 34px 45px 16px;   
+            }
+		}
+
+		// .ubs__item-text
+
+		&__item-text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #FFFFFF;
+            &:first-child{
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width:991px){
+                font-size: 16px;
+                line-height: 18px;
+            }
+		}
+
+		// .ubs__item-picture
+
+		&__item-picture {
+            width: 405px;
+            @media screen and (max-width: 991px){
+                width: 272px;
+            }
+            @media screen and (max-width:767px){
+                width: auto;
+            }
+		}
+        
+}
+.ubs {
+
+        // .ubs__about
+
+		&__about {
+            margin-bottom: 74px;
+            @media screen and (max-width:991px){
+                margin-bottom: 80px;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 85px;
+            }
+		}
+
+		// .ubs_about-title
+
+		&__about-title {
+            margin-bottom: 15px;
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #00205B;
+            text-transform: uppercase;
+            @media screen and (max-width:991px){
+                font-size: 20px;
+                line-height: 23px;
+            }
+		}
+
+		// .ubs__about-text
+
+		&__about-text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #5B5C5F;
+            margin-bottom: 15px;
+            @media screen and (min-width: 1440px){
+                width: 1100px;
+            }
+            @media screen and (max-width:991px){
+                font-size: 16px;
+                line-height: 18px;
+            }
+		}
+}
+.ubs {
+
+		// .ubs__register
+
+		&__register {
+            margin-bottom: 96px;
+		}
+
+		// .ubs__register-list
+
+		&__register-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 68px;
+            @media screen and (max-width:991px){
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+		}
+
+		// .ubs__register-item
+
+		&__register-item {
+            display: flex;
+            flex-direction: row;
+            flex: 0 0 45%;
+		}
+        &__register-item.last{
+            flex: 0 0 60%;
+        }
+
+        &__register-number{
+            margin-top: -10px;
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 74px;
+            color: #00A3E0;
+        }
+		// .ubs__register-title
+
+		&__register-title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            color: #5B5C5F;
+            text-transform: uppercase;
+		}
+
+		// .ubs__register-text
+
+		&__register-text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #5B5C5F;
+            &:not(:first-child){
+                margin-top: 20px;
+            }
+		}
+}
+.ubs__about-title.register__about-title{
+    margin-bottom: 25px;
+}
+// .wrapper__register-item{
+
+// }
+.wrap__register-number{
+    margin-right: 25px;
+}
+.ubs__border{
+    margin-bottom: 68px;
+    @media screen and (max-width:991px){
+        display: none;
+    }
+}
+.border-gradient-color-ubs{
+    border-image-source: linear-gradient(274.25deg, #00205B -9.03%, #00A3E0 138.82%);
+}
+.ubs {
+
+		// .ubs__contacts
+
+		&__contacts {
+            margin-bottom: 192px;
+            @media screen and (max-width:991px){
+                margin-bottom: 80px;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 107px;
+            }
+		}
+
+		// .ubs__contacts-list
+
+		&__contacts-list {
+            display: flex;
+            flex-direction: row;
+            @media screen and (max-width:991px){
+                flex-wrap: wrap;
+                row-gap: 25px;
+                column-gap: 25px;
+            }
+            @media screen and (max-width:767px){
+                display: block
+            }
+		}
+
+		// .ubs__contacts-item
+
+		&__contacts-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 230px;
+            flex: 1 0 30%;
+            padding: 35px 20px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
+            border-radius: 2px;
+            &:not(:last-child){
+                margin-right: 50px;
+                @media screen and (max-width:991px){
+                    margin-right: 0px;
+                }
+            }
+            @media screen and (max-width:991px){
+                flex: 0 0 45%;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 40px;
+            }
+		}
+
+		// .ubs__contacts-title
+
+		&__contacts-title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            color: #00205B;
+           
+		}
+
+		// .ubs__contacts-text
+
+		&__contacts-text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            color: #858585;
+		}
+
+		// .ubs__contacts-link
+
+		&__contacts-link {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #00205B;
+		}
+}
+.contacts-title {
+    margin-bottom: 74px;
+        @media screen and (max-width:991px){
+            margin-bottom: 30px;
+        }
+}

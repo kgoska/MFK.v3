@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Helvetica-Compressed';
+  src: url('Helvetica-Compressed.eot');
+  src: url('Helvetica-Compressed.eot?#iefix') format('embedded-opentype'),
+       url('Helvetica-Compressed.svg#Helvetica-Compressed') format('svg'),
+       url('Helvetica-Compressed.ttf') format('truetype'),
+       url('Helvetica-Compressed.woff') format('woff'),
+       url('Helvetica-Compressed.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

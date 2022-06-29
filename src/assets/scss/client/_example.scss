@@ -1,0 +1,18 @@
+.contrib {
+	&__filters {}
+	&__cards {}
+}
+.contrib-filters {
+}
+.contrib-cards {
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+	}
+	&__card {}
+}
+.contrib-card {
+	&__wrap {}
+	&__image {}
+	&__info {}
+}

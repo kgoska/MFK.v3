@@ -1,0 +1,52 @@
+//XLG
+
+@import './def-flex-util-preset';
+@import './def-margin-util-preset';
+@import './def-padding-util-preset';
+//L
+@media screen and (max-width: 1200px){
+	.lg{
+		@import './flex-util-preset';
+		@import './margin-util-preset';
+		@import './padding-util-preset';
+	}
+	
+}
+//M
+@media screen and (max-width: 992px){
+	.md{
+		@import './flex-util-preset';
+		@import './margin-util-preset';
+		@import './padding-util-preset';
+	}
+}
+//S
+@media screen and (max-width: 772px){
+	.sm{
+		@import './flex-util-preset';
+		@import './margin-util-preset';
+		@import './padding-util-preset';
+	}
+}
+//xs
+@media screen and (max-width: 576px){
+	.xsm{
+		@import './flex-util-preset';
+		@import './margin-util-preset';
+		@import './padding-util-preset';
+	}
+}
+
+.full-img{
+	&--w{
+		&>img{
+			width: 100%;
+		}	
+	}
+	&--h{
+		&>img{
+			height: 100%;
+		}
+	}
+	
+}

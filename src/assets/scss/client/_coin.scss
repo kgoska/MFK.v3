@@ -1,0 +1,135 @@
+.coin {
+	--coin-gap: calc(45 / 664 * 100%);
+	@media screen and (max-width: 600px) {
+		--coin-gap: 0;
+	}
+	&__info {}
+}
+.coin-info {
+
+	&__wrap {
+		display: flex;
+		justify-content: flex-start;
+		align-items: stretch;
+		@media screen and (max-width: 600px) {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	&__left {
+		flex: 0 0 45%;
+		margin-right: var(--coin-gap);
+		@media screen and (max-width: 1200px) {
+			flex: 0 0 35%;
+		}
+	}
+	&__right {
+		flex: 1 0 0;
+	}
+}
+.coin-img {
+	--coin-padding: calc(61 / 357 * 100%);
+	--coin-preview-padding: calc(18 / 357 *100%);
+	@media screen and (max-width: 768px) {
+		--coin-preview-padding: calc(10 / 357 *100%);
+	}
+	@media screen and (max-width: 600px) {
+		--coin-padding: calc(30 / 357 * 100%);
+		margin: 0 10% 50px;
+	}
+	&__main-wrap {
+		padding: var(--coin-padding);
+		background: #FFFFFF;
+		border: 1px solid #D1D1D1;
+		box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+	}
+	&__main {
+		img{
+			width: 100%;
+		}
+	}
+	&__bar-wrap {
+		margin-top: calc(20 / 357 * 100%);
+	}
+	&__bar {
+		display: flex;
+		justify-content: center;
+	}
+	&__item {
+		flex: 0 0 calc(111 / 357 * 100%);
+		padding: var(--coin-preview-padding);
+		background: #FFFFFF;
+		border: 1px solid #D1D1D1;
+		box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+		cursor: pointer;
+		img{
+			width: 100%;
+		}
+		&:first-child{
+			margin-right:  calc(20 / 358 * 100%);
+		}
+	}
+}
+.coin-attr {
+	margin-bottom: 50px;
+	&__prop {}
+	&__price {}
+}
+.coin-prop {
+	margin-bottom: 30px;
+	&__items {
+		@media screen and (max-width: 600px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__item {
+		&--art {
+			padding-bottom: 10px;
+		}
+		&--date {
+			padding-bottom: 20px;
+		}
+		&--on-stock {
+			color: #38ae00;
+			img {
+				height: 100%;
+			}
+			&>:first-child{
+				margin-right: 15px;
+			}
+		}
+	}
+}
+.coin-price {
+	padding: 40px 35px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid #D1D1D1;
+	box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+	&__wrap {}
+	&__items {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 30px;
+	}
+	&__item {
+		text-align: center;
+	}
+	&__title {}
+	&__price {}
+	&__button-wrap {
+	}
+	&__btn {
+		margin: 0 auto;
+	}
+}
+.coin-tabs {
+	&__content {
+		line-height: 1.2;
+		*{
+			margin-bottom: 10px;
+		}
+	}
+}

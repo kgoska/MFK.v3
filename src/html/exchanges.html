@@ -1,0 +1,343 @@
+<%- include('inc/header.html') %>
+	<%- include('inc/client-menu.html') %>
+		<div id="info" data-current-id="online-bank" data-main-menu-current-id="private-client-head"></div>
+		<!-- Main content-->
+		<section>
+			<div class="container">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__step">Главная</div>
+					<div class="breadcrumbs__step">Частным клиентам</div>
+					<div class="breadcrumbs__step"> Монеты и обмен валюты</div>
+					<div class="breadcrumbs__step">Монеты</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="page page--with-sidebar">
+					<div class="page__sidebar sidebar">
+						<div class="sidebar__overlay"></div>
+						<div class="sidebar__items">
+							<div class="sidebar__item">
+								<div class="sidebar__item-text">
+									<a href="coins.html">Монеты</a>
+								</div>
+								<div class="sidebar__item-icon"></div>
+							</div>
+							<div class="sidebar__item sidebar__item--selected">
+								<div class="sidebar__item-text">
+									<a href="exchanges.html">Обмен валюты</a>
+								</div>
+								<div class="sidebar__item-icon"></div>
+							</div>
+						</div>
+					</div>
+					<div class="page__content basic-page">
+						<div class="basic-page__title text--blue text--700 text--L">
+							<h1>Курсы валют</h1>
+						</div>
+						<div class="basic-page__body">
+							<div class="exchange-card">
+								<div class="exchange-card__title text--700 text--L text--blue">
+									<span>Курс в офисах</span>
+								</div>
+								<div class="exchange-card__header-row text--gray text--400 text--M">
+									<div class="exchange-card__currency-title">
+										<span>Валюта</span>
+									</div>
+									<div class="exchange-card__rate-title-wrapper">
+										<div class="exchange-card__rate-title">
+											<span>Покупка (банк покупает)</span>
+										</div>
+										<div class="exchange-card__rate-title">
+											<span>Продажа (банк продаёт)</span>
+										</div>
+									</div>
+								</div>
+								<div class="exchange-card__currency-row text--blue text--400 text--L">
+									<div class="exchange-card__currency-name">
+										<span>$ Доллар США</span>
+									</div>
+									<div class="exchange-card__currency-rate-wrapper">
+										<div class="exchange-card__currency-rate">
+											<span>от 79.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--red arrow--16"></div>
+											</div>
+										</div>
+										<div class="exchange-card__currency-rate">
+											<span>от 89.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--green arrow--16 arrow--up"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="exchange-card__currency-row text--blue text--400 text--L">
+									<div class="exchange-card__currency-name">
+										<span>€ Евро</span>
+									</div>
+									<div class="exchange-card__currency-rate-wrapper">
+										<div class="exchange-card__currency-rate">
+											<span>от 79.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--red arrow--16"></div>
+											</div>
+										</div>
+										<div class="exchange-card__currency-rate">
+											<span>от 89.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--green arrow--16 arrow--up"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="exchange-card">
+								<div class="exchange-card__title text--700 text--L text--blue">
+									<span>Курс в офисах</span>
+								</div>
+								<div class="exchange-card__header-row text--gray text--400 text--M">
+									<div class="exchange-card__currency-title">
+										<span>Валюта</span>
+									</div>
+									<div class="exchange-card__rate-title-wrapper">
+										<div class="exchange-card__rate-title">
+											<span>Покупка (банк покупает)</span>
+										</div>
+										<div class="exchange-card__rate-title">
+											<span>Продажа (банк продаёт)</span>
+										</div>
+									</div>
+								</div>
+								<div class="exchange-card__currency-row text--blue text--400 text--L">
+									<div class="exchange-card__currency-name">
+										<span>$ Доллар США</span>
+									</div>
+									<div class="exchange-card__currency-rate-wrapper">
+										<div class="exchange-card__currency-rate">
+											<span>от 79.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--red arrow--16"></div>
+											</div>
+										</div>
+										<div class="exchange-card__currency-rate">
+											<span>от 89.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--green arrow--16 arrow--up"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="exchange-card__currency-row text--blue text--400 text--L">
+									<div class="exchange-card__currency-name">
+										<span>€ Евро</span>
+									</div>
+									<div class="exchange-card__currency-rate-wrapper">
+										<div class="exchange-card__currency-rate">
+											<span>от 79.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--red arrow--16"></div>
+											</div>
+										</div>
+										<div class="exchange-card__currency-rate">
+											<span>от 89.00</span>
+											<div class="exchange-card__currency-rate-icon">
+												<div class="arrow arrow--green arrow--16 arrow--up"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cyan-tabs cyan-tabs--bg-cyan-gradient m--b-25">
+								<div class="tabs" data-underline="true" data-tab-container-id="rates-tabs">
+									<div class="tabs__tab active" data-tab-window-id="offices">
+										<span>Офисы</span>
+									</div>
+									<div class="tabs__tab" data-tab-window-id="ATMs">
+										<span>Банкоматы</span>
+									</div>
+									<div class="tabs__underline">
+									</div>
+								</div>
+							</div>
+							<div class="tabs__windows m--b-45" id="rates-tabs">
+								<div class="tabs__tab-window text--dark-gray text--M text--400" id="offices">
+									<div class="rates-tab">
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__tab-window text--dark-gray text--M text--400" id="ATMs">
+									<div class="rates-tab">
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+										<div class="rates-tab__card">
+											<div class="rates-tab__card-title m--b-25 text--M text--blue text--700">
+												<h3>Центр операционного обслуживания Банка МФК</h3>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div class="rates-tab__card-info m--b-10 text--S text--gray text--400">
+												<span>Телефон/телефакс: +7 391 274-37-66</span>
+											</div>
+											<div
+												class="rates-tab__card-link m--t-25 m--b-10 text--XS text--XXS--static text--blue text--400">
+												<a href="">Показать на карте</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="ubs.html"
+								class="exchange-link-button text--700 text--L text--white text--uppercase m--b-25">
+								РЕГИСТРАЦИЯ В ЕДИНОЙ БИОМЕТРИЧЕСКОЙ СИСТЕМЕ
+								<div class="arrow arrow--white arrow--right arrow--32 arrow--no-body"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+		<%- include('inc/footer.html') %>
+			</body>
+
+			</html>

@@ -1,0 +1,210 @@
+.online-bank {
+
+		// .online-bank__title
+
+		&__title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #003772;
+            margin-bottom: 40px;
+            @media screen and (max-width:991px){
+                text-align:inherit;
+                font-size: 20px;
+                line-height: 23px;
+                margin-bottom: 35px;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 20px;
+            }
+		}
+
+		// .online-bank__picture
+
+		&__picture {
+            height: 346px;
+            margin-bottom: 79px;
+            &>img{
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            @media screen and (max-width:991px){
+                height: 192px;
+                margin-bottom: 30px;
+            }
+            @media screen and (max-width:767px){
+                height: 126px;
+            }
+
+		}
+
+		// .online-bank__about
+
+		&__about {
+            margin: 0 40px 60px;
+            @media screen and (max-width:991px){
+                margin: 0 29px 75px;  
+            }
+            @media screen and (max-width:767px){
+                margin: 0 20px 44px;
+            }
+		}
+
+		// .online-bank__about-text
+
+		&__about-text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #646569;
+            @media screen and (max-width:991px){
+                font-size: 16px;
+                line-height: 18px;
+            }
+            
+		}
+
+		// .online-bank__internet-bank
+
+		&__internet-bank {
+            padding: 88px 30px 74px 57px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
+            border-radius: 2px;
+            margin-bottom: 106px;
+            @media screen and (max-width:991px){
+                padding: 44px 10px 59px;
+                margin-bottom: 70px;
+            }
+            @media screen and (max-width:767px){
+                padding: 26px 20px 39px;
+                margin-bottom: 81px;
+            }
+		}
+}
+.internet-bank {
+        
+		// .internet-bank__title
+
+		&__title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            text-transform: uppercase;
+            color: #00205B;
+            margin-bottom: 50px;
+            @media screen and (max-width:991px){
+                font-size: 20px;
+                line-height: 23px;
+                margin-bottom: 45px;
+            }
+            @media screen and (max-width:767px){
+                font-size: 18px;
+                line-height: 21px;
+                margin-bottom: 30px;
+            }
+		}
+
+		// .internet-bank__wrapper
+
+		&__wrapper {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 90px;
+            @media screen and (max-width:991px){
+                flex-direction: column;
+                align-content: center;
+                margin-bottom: 80px;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 98px;
+            }
+		}
+
+		// .internet-bank__list
+
+		&__list {
+            @media screen and (max-width:991px){
+                margin-bottom: 45px;
+            }
+		}
+
+		// .internet-bank__item
+
+		&__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &:not(:last-child){
+                margin-bottom: 25px;
+            }
+		}
+
+        // .internet-bank__text
+
+        &__text{
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #5B5C5F;
+            margin-left: 15px;
+        }
+
+        // .internet-bank__wrap
+
+        &__wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 70px;
+            @media screen and (max-width:991px){
+                flex-direction: column;
+                margin-bottom: 80px;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 95px;
+            }
+        }
+
+		// .internet-bank__access
+
+		&__access {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 0 0 40%;
+            @media screen and (max-width:991px){
+                margin-bottom: 10px;
+                flex: 0 0 100%;
+                justify-content: flex-start;
+            }
+            @media screen and (max-width:767px){
+                margin-bottom: 45px;
+            }
+		}
+
+		// .internet-bank__connect
+
+		&__connect {
+
+		}
+}
+.internet-bank__text.connect-text{
+    margin-left: 0px;
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+}

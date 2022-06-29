@@ -1,0 +1,67 @@
+.accoutopen__checklist{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 55px;
+    @media  screen and (max-width:767px) {
+        margin-bottom: 0px;
+    }
+}
+.accountopen__text{
+    border: none;
+    border-bottom: 1px solid #8D8D8D;
+    margin-bottom: 40px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8D8D8D;
+}
+.principal{
+    display: flex;  
+    @media  screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+.accountopen__conditions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    @media  screen and (max-width: 767px) {
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .operations__documentation-Link__list.account{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+}
+
+.accountopen__check{
+    margin-right: 25px;
+}
+.accountopen__check-text{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #727272;
+}
+.accountopen__item-list{
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 767px) {
+        display: block;
+        
+    }
+}
+.accountopen__check-item{
+    display:flex;
+    flex-direction: column;
+    
+}

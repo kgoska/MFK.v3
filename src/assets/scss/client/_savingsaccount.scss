@@ -1,0 +1,192 @@
+.garanty__card.savingsaccount__card{
+    background: #FFFFFF;
+    margin-bottom: 50px;
+}
+.operations__documentation.savingsaccount__documentation{
+    margin-bottom: 0px;
+}
+
+.savingsaccount {
+    
+		// .savingsaccount__filter
+
+		&__filter {
+            padding: 50px 96px 25px 80px;
+            background: #FFFFFF;
+            border: 1px solid #D1D1D1;
+            box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+            margin-bottom: 50px;
+            @media screen and (max-width: 1440px){
+                padding: 50px 45px 25px 40px;  
+            }
+            @media screen and (max-width:520px) {
+                padding: 30px 10px;
+            }
+		}
+        &__filter-item{
+            margin-right: 50px;
+            margin-bottom: 25px;
+            & img{
+                align-items: center;
+            }
+            @media screen and (max-width:420px){
+                margin-right: 0px;
+            }
+        }
+		// .savingsaccount__filter-wrapper
+
+		&__filter-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+		}
+
+		// .savingsaccount__filter-title
+
+		&__filter-title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: flex-start;
+            color: #003772;
+            margin-bottom: 25px;
+		}
+
+		// .savingsaccount__filter-item
+
+		&__filter-item__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            color: #4E4E4E;
+            @media screen and (max-width: 1199px){
+                font-size: 14px;
+                line-height: 16px;
+            }
+		}
+
+        &__filter-item__title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            display: flex;
+            align-items: flex-end;
+            color: #00A3E0;
+		}
+}
+.text-picture{
+    margin-top:10px ;
+}
+
+#sav1{
+    order: 1;
+    @media screen and (max-width: 420px){
+        margin-right: 30px;
+    }
+}
+#sav2{
+    order: 2;
+    @media screen and (max-width:767px){
+        order:3;
+    }
+}
+#sav3{
+    order: 3;
+    @media screen and (max-width: 767px){
+        order: 2;
+    }
+}
+#sav4{
+    order: 4;
+    @media screen and (max-width: 420px){
+        margin-right: 30px;
+    }
+}
+#sav5{
+    order: 5;
+}
+
+
+.savingsaccount {
+
+		// .savingsaccount__percentage
+
+		&__percentage {
+            padding: 54px 80px;
+            background: #FFFFFF;
+            border: 1px solid #D1D1D1;
+            box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+            margin-bottom: 50px;
+            @media screen and (max-width: 767px){
+                padding: 30px 10px;
+
+            }
+		}
+
+		// .savingsaccount__filter-title
+
+		&__filter-title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #003772;
+		}
+}
+.percentage {
+    
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #00A3E0;
+
+		// .percentage__title
+
+		&__title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            margin-bottom: 27px;
+            border-bottom: 1px solid #00A3E0;
+		}
+}
+.value-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.description-list {
+    width: -webkit-fill-available;
+}
+.description-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.description-text {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #4E4E4E;
+}
+.description-text:not(:first-child){
+    margin-left: 15px;
+}
+.description-item:not(:last-child){
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,204 @@
+.distance-services__mobile{
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 60px;
+    background-image: url('../img/icons/mobile.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #D1D1D1;
+    box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+    padding:52px 68px 42px 61px;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+.distance-services__desktop{
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 60px;
+    background-image: url('../img/icons/desktop1.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #D1D1D1;
+    box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+    padding:58px 30px 85px 46px;
+    @media screen and (max-width: 767px) {
+        padding:0px;
+    }
+}
+
+.mobile-choice{
+    display: flex;
+    margin-bottom: 35px;
+}  
+.mobile__button{
+    width:118px;
+    height: 37px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background: transparent;
+} 
+.mobile__button:active{
+    background: #FFFFFF;
+    color: #B94C40;
+}
+.mobile__title{
+    margin-bottom: 28px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.mobile__text{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #DADADA;
+}
+.service-description{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #DADADA;
+}
+.mobile-picture{
+    height: 264px;
+    background: transparent;
+}
+.mobile__services{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+}
+.mobile__item{
+    display: flex;
+    flex-direction: column;
+    margin-right: 91px;
+    @media screen and (max-width: 1199px){
+        margin-right: 0px;
+    }
+    @media  screen and (max-width: 767px) {
+        margin-right: 0px;
+    }
+}
+.qr-code__picture,
+.service-description{
+    margin-left: 10px;
+}
+.qr-code__picture{
+    width: 78px;
+    height:83px;
+    margin-bottom: 22px;
+}
+.service__link-appstore,
+.appstore__picture {
+    width:146px;
+    height: 56px;
+}
+.service__link-playstore{
+    width: 130px;
+    margin-left: 9px;
+}
+.playstore__picture{ 
+    width: inherit;
+    height: auto;
+}
+.desktop__services{
+    margin-left: 25px;
+    @media screen and (max-width: 767px) {
+        margin-left: 0px;
+    }
+}
+.desktop__title{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom:17px;
+    @media screen and (max-width: 767px) {
+        margin-top: 60px;
+        text-align: center;
+    }
+}
+.desktop__text{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #DADADA;
+    margin-bottom: 35px;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+}
+.desktop__button{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    width: 150px;
+    height: 45px;
+    background: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: solid 1px #FFFFFF;
+    border-radius: 2px;
+    
+}
+.desktop__button:not(:last-child){
+    margin-right: 28px;
+}
+.desktop__button:active{
+    background: #FFFFFF;
+    color: #373737;
+}
+.mobile-background,
+.desktop-background {
+    margin-left:95px;
+    @media screen and (max-width: 1199px){
+        margin-left: 0px;
+    }
+    @media screen and (max-width: 767px) {
+    margin-left: 0px;
+    }    
+}
+
+.mobile__clas{
+    display: flex;
+}
+.desktop__picture-mob{
+    display: none;
+}
+@media screen and (max-width:767px) {
+    .desktop__picture{
+        display: none;
+    }
+    .desktop__picture-mob{
+        display: block;
+    }
+    .desktop__enlaces{
+        margin-bottom: 62px;
+        text-align: center;
+    }
+}

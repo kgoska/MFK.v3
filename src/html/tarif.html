@@ -1,0 +1,117 @@
+<%- include('inc/header.html') %>
+<%- include('inc/corporate-menu.html') %>
+<div id="info" data-current-id="bank" data-main-menu-current-id="corporative-head"></div>
+
+    <!-- Main content-->
+
+    <section class="container">
+        <div class="second__header-operations">
+            <div class="second__text-credits__list">
+                <a class="second__text-credits" href="#">Главная /</a>
+                <a class="second__text-credits" href="./accountopen.html">Корпоративным клиентам /</a>
+                <a class="second__text-credits" href="./accountopen.html">Банковское обслуживание /</a>
+                <a class="second__text-credits current-second__text-credits" href="./tarif.html">Тарифы</a>
+            </div>
+        </div>
+        <div class="operations">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <p class="dropbtn-text">Тарифы</p>
+                    <img class="dropdown__picture" src="../assets/img/icons/arrow1.png" alt="arrow" class="operations__picture" width="20px"
+                        height="20px">
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <ul class="operations__list__mobile">
+                        <li class="operations__list-item__mobile">
+                            <a href="./accountopen.html" class="operations__link__mobile">Открытие расчетного счета</a>
+                        </li>
+                        <li class="operations__list-item__mobile">
+                            <a href="./ved.html" class="operations__link__mobile">ВЭД</a>
+                        </li>
+                        <li class="operations__list-item__mobile">
+                            <a href="./specialchecks.html" class="operations__link__mobile">Специальные счета</a>
+                        </li>
+                        <li class="operations__list-item__mobile">
+                            <a href="./distance-services.html" class="operations__link__mobile">Дистанционные сервисы</a>
+                        </li>
+                        <li class="operations__list-item__mobile ">
+                            <a href="./operations.html" class="operations__link__mobile">Операции с ценными бумагами</a>
+                        </li>
+                        <li class="operations__list-item__mobile">
+                            <a href="./tarif.html" class="operations__link__mobile">Тарифы</a>
+                        </li>
+                        <li class="operations__list-item__mobile">
+                            <a href="" class="operations__link__mobile">Документы</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="operations__item">
+                <ul class="operations__list">
+                    <li class="operations__list-item">
+                        <a href="./accountopen.html" class="operations__link ">Открытие
+                            расчетного счета</a>
+                    </li>
+                    <li class="operations__list-item">
+                        <a href="./ved.html" class="operations__link">ВЭД</a>
+                    </li>
+                    <li class="operations__list-item">
+                        <a href="./specialchecks.html" class="operations__link">Специальные счета</a>
+                    </li>
+                    <li class="operations__list-item">
+                        <a href="./distance-services.html" class="operations__link">Дистанционные сервисы</a>
+                    </li>
+                    <li class="operations__list-item">
+                        <a href="./operations.html" class="operations__link">Операции с ценными бумагами</a>
+                    </li>
+                    <li class="operations__list-item current-operations__list-item">
+                        <a href="./tarif.html" class="operations__link current-operations__link">Тарифы</a>
+                        <img src="../assets/img/images/arrow.png" alt="arrow" class="operations__picture" width="20px" height="20px">
+                    </li>
+                    <li class="operations__list-item">
+                        <a href="" class="operations__link">Документы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="operations__item">
+                <div class="rates operations__rates">
+                    <div class="rates__item">
+                        <div class="rates__link-item rates__link-item--full">
+                            <a class="rates__link" href="#">
+                                Тарифы на РКО
+                            </a>
+                            <svg class="rates__svg">
+                                <use href="../assets/img/svg/sprite/symbol-defs.svg#icon-next" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="rates__item">
+                        <div class="rates__link-item rates__link-item--full">
+                            <a class="rates__link" href="#">
+                                Тарифы по документарным операциям
+                            </a>
+                            <svg class="rates__svg">
+                                <use href="../assets/img/svg/sprite/symbol-defs.svg#icon-next" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="rates__item">
+                        <div class="rates__link-item rates__link-item--full">
+                            <a class="rates__link" href="#">
+                                Тарифы депозитария
+                            </a>
+                            <svg class="rates__svg">
+                                <use href="../assets/img/svg/sprite/symbol-defs.svg#icon-next" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('inc/footer.html') %>
+
+</body>
+
+</html>

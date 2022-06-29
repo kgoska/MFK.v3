@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HelveticaRounded-Bold';
+  src: url('HelveticaRounded-Bold.eot');
+  src: url('HelveticaRounded-Bold.eot?#iefix') format('embedded-opentype'),
+       url('HelveticaRounded-Bold.svg#HelveticaRounded-Bold') format('svg'),
+       url('HelveticaRounded-Bold.ttf') format('truetype'),
+       url('HelveticaRounded-Bold.woff') format('woff'),
+       url('HelveticaRounded-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

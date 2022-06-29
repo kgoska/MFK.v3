@@ -1,0 +1,442 @@
+<%- include('inc/header.html') %>
+	<%- include('inc/client-menu.html') %>
+		<div id="info" data-current-id="cards" data-main-menu-current-id="private-client-head"></div>
+
+		<!-- Main content-->
+
+		<section class="container">
+			<div class="second__header-operations">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__step"><a href="">Главная</a></div>
+					<div class="breadcrumbs__step"><a href="contributions.html">Частным клиентам</a></div>
+					<div class="breadcrumbs__step"><span>Карты</span></div>
+				</div>
+			</div>
+			<div class="card-list">
+				<div class="card-list__title">
+					<span>Карты</span>
+				</div>
+				<div class="card-list__filters">
+					<div class="card-list__filters-title">
+						<span>Выберите тип карты</span>
+					</div>
+					<div class="card-list__filter-buttons">
+						<button class="card-list__filter-button filter-button active"
+							data-filter-container-id="card-list" data-filter='
+							{
+								"classic": true,
+								"wage": true,
+								"pension": true,
+								"cumulative": true,
+								"virtual": true,
+								"premium": true
+							}
+						'>
+							Все карты
+						</button>
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
+							{
+								"classic": true
+							}
+						'>
+							Классическая
+						</button>
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
+							{
+								"wage": true
+							}
+						'>
+							Зарплатная
+						</button>
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
+							{
+								"pension": true
+							}
+						'>
+							Пенсионная
+						</button>
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
+							{
+								"cumulative": true
+							}
+						'>
+							Накопительная
+						</button>
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
+							{
+								"virtual": true
+							}
+						'>
+							Вертуальная
+						</button>
+						<button class="card-list__filter-button filter-button" data-filter-container-id="card-list"
+							data-filter='
+							{
+								"premium": true
+							}
+						'>
+							Премиальная
+						</button>
+					</div>
+				</div>
+				<div class="card-list__cards" id="card-list">
+					<div class="card-list__card filtered" data-filtered-type="classic">
+						<div class="card-list__card__content-wrapper">
+							<div class="card-list__card__preview">
+								<img src="../assets/img/images/gold-mastercard.png" alt="">
+							</div>
+							<div class="card-list__card__title-wrapper">
+								<div class="card-list__card__subtitle">
+									<span>Премиальная</span>
+								</div>
+								<div class="card-list__card__title">
+									<span>MasterCard Gold</span>
+								</div>
+							</div>
+							<div class="card-list__card__info-primary">
+								<div class="card-list__info-block">
+									<div class="card-list__info-block__description">
+										<span>Стоимость обслуживания</span>
+									</div>
+									<div class="card-list__info-block__info">
+										<span>600 руб</span>
+									</div>
+								</div>
+								<div class="card-list__advantage">
+									<div class="card-list__advantage__description">
+										<span>SMS-информирование</span>
+									</div>
+									<div class="card-list__advantage__icon">
+										<img src="../assets/img/images/Accept.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__info-secondary">
+								<div class="card-list__card__info-wrapper">
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Срок действия</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>3 года</span>
+										</div>
+									</div>
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Премиальные сервисы платежной системы</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>Привилегии</span>
+										</div>
+									</div>
+								</div>
+								<div class="card-list__card__advantages-wrapper">
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Безопасность интернет платежей</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Просмотр выписки по карте</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Интернет-банк</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__button-wrapper">
+								<button class="card-list__card__button btn">Получить консультацию</button>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__card filtered" data-filtered-type="wage">
+						<div class="card-list__card__content-wrapper">
+							<div class="card-list__card__preview">
+								<img src="../assets/img/images/gold-mastercard.png" alt="">
+							</div>
+							<div class="card-list__card__title-wrapper">
+								<div class="card-list__card__subtitle">
+									<span>Премиальная</span>
+								</div>
+								<div class="card-list__card__title">
+									<span>MasterCard Gold</span>
+								</div>
+							</div>
+							<div class="card-list__card__info-primary">
+								<div class="card-list__info-block">
+									<div class="card-list__info-block__description">
+										<span>Стоимость обслуживания</span>
+									</div>
+									<div class="card-list__info-block__info">
+										<span>600 руб</span>
+									</div>
+								</div>
+								<div class="card-list__advantage">
+									<div class="card-list__advantage__description">
+										<span>SMS-информирование</span>
+									</div>
+									<div class="card-list__advantage__icon">
+										<img src="../assets/img/images/Accept.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__info-secondary">
+								<div class="card-list__card__info-wrapper">
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Срок действия</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>3 года</span>
+										</div>
+									</div>
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Премиальные сервисы платежной системы</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>Привилегии</span>
+										</div>
+									</div>
+								</div>
+								<div class="card-list__card__advantages-wrapper">
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Безопасность интернет платежей</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Просмотр выписки по карте</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Интернет-банк</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__button-wrapper">
+								<button class="card-list__card__button btn">Получить консультацию</button>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__card filtered" data-filtered-type="cumulative"
+						data-readmore-identifier="card-list-readmore">
+						<div class="card-list__card__content-wrapper">
+							<div class="card-list__card__preview">
+								<img src="../assets/img/images/gold-mastercard.png" alt="">
+							</div>
+							<div class="card-list__card__title-wrapper">
+								<div class="card-list__card__subtitle">
+									<span>Премиальная</span>
+								</div>
+								<div class="card-list__card__title">
+									<span>MasterCard Gold</span>
+								</div>
+							</div>
+							<div class="card-list__card__info-primary">
+								<div class="card-list__info-block">
+									<div class="card-list__info-block__description">
+										<span>Стоимость обслуживания</span>
+									</div>
+									<div class="card-list__info-block__info">
+										<span>600 руб</span>
+									</div>
+								</div>
+								<div class="card-list__advantage">
+									<div class="card-list__advantage__description">
+										<span>SMS-информирование</span>
+									</div>
+									<div class="card-list__advantage__icon">
+										<img src="../assets/img/images/Accept.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__info-secondary">
+								<div class="card-list__card__info-wrapper">
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Срок действия</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>3 года</span>
+										</div>
+									</div>
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Премиальные сервисы платежной системы</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>Привилегии</span>
+										</div>
+									</div>
+								</div>
+								<div class="card-list__card__advantages-wrapper">
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Безопасность интернет платежей</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Просмотр выписки по карте</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Интернет-банк</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__button-wrapper">
+								<button class="card-list__card__button btn">Получить консультацию</button>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__card filtered" data-filtered-type="pension"
+						data-readmore-identifier="card-list-readmore">
+						<div class="card-list__card__content-wrapper">
+							<div class="card-list__card__preview">
+								<img src="../assets/img/images/gold-mastercard.png" alt="">
+							</div>
+							<div class="card-list__card__title-wrapper">
+								<div class="card-list__card__subtitle">
+									<span>Премиальная</span>
+								</div>
+								<div class="card-list__card__title">
+									<span>MasterCard Gold</span>
+								</div>
+							</div>
+							<div class="card-list__card__info-primary">
+								<div class="card-list__info-block">
+									<div class="card-list__info-block__description">
+										<span>Стоимость обслуживания</span>
+									</div>
+									<div class="card-list__info-block__info">
+										<span>600 руб</span>
+									</div>
+								</div>
+								<div class="card-list__advantage">
+									<div class="card-list__advantage__description">
+										<span>SMS-информирование</span>
+									</div>
+									<div class="card-list__advantage__icon">
+										<img src="../assets/img/images/Accept.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__info-secondary">
+								<div class="card-list__card__info-wrapper">
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Срок действия</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>3 года</span>
+										</div>
+									</div>
+									<div class="card-list__info-block">
+										<div class="card-list__info-block__description">
+											<span>Премиальные сервисы платежной системы</span>
+										</div>
+										<div class="card-list__info-block__info">
+											<span>Привилегии</span>
+										</div>
+									</div>
+								</div>
+								<div class="card-list__card__advantages-wrapper">
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Безопасность интернет платежей</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Просмотр выписки по карте</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+									<div class="card-list__advantage">
+										<div class="card-list__advantage__description">
+											<span>Интернет-банк</span>
+										</div>
+										<div class="card-list__advantage__icon">
+											<img src="../assets/img/images/Accept.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-list__card__button-wrapper">
+								<button class="card-list__card__button btn">Получить консультацию</button>
+								<a class="card-list__card__button btn btn--transparent"
+									href="single-card.html">Подробнее о вкладе</a>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__read-more read-more__wrapper">
+						<div class="read-more readmore" id="card-list-readmore">
+							<span class="read-more__text-more">Смотреть все</span>
+							<span class="read-more__text-less">Скрыть</span>
+							<img src="../assets/img/svg/read-more-btn.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<%- include('inc/footer.html') %>
+
+			</body>
+
+			</html>

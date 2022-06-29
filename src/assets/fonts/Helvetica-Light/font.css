@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Helvetica-Light';
+  src: url('Helvetica-Light.svg#Helvetica-Light') format('svg'),
+       url('Helvetica-Light.ttf') format('truetype'),
+       url('Helvetica-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica-light-587ebe5a59211';
+  src: url('helvetica-light-587ebe5a59211.eot');
+  src: url('helvetica-light-587ebe5a59211.eot?#iefix') format('embedded-opentype'),
+       url('helvetica-light-587ebe5a59211.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
