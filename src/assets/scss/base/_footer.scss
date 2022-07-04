@@ -178,7 +178,12 @@
     @media screen and (max-width: 767px) {
         display: flex;
         margin-top:0px;
-    }
+    &>img{
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }   
+    } 
 }
 
 .contacts-footer-item {
