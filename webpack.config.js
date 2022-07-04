@@ -28,7 +28,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: `${PATHS.js}[name].[contenthash].js`,
-        clean: true,
+        clean: (mode === 'development') ? false : true,
     },
     devServer: {
         open: true,

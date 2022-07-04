@@ -186,8 +186,18 @@
 		display: flex;
 		align-items: center;
 		gap:20px;
+		@media screen and (max-width: 992px) {
+			flex: 0 0 50%;
+			gap: 0;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
 	}
 	&__top-menu-item {
+		@media screen and (max-width: 992px) {
+			padding: 5px;
+			text-align: center;
+		}
 	}
 	&__contacts {
 		order: 1;
