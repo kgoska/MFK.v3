@@ -37,28 +37,28 @@
 		font-weight: 700;
 	}
 	&--XXL{
-		@include fSize(992, 440, 24, 20);
+		@include fSize(992, 440, 28, 24);
 		line-height: 1.1em;
 		&--static{
 			font-size: 28px;
 		}
 	}
 	&--XL{
-		@include fSize(992, 440, 24, 20);
+		@include fSize(992, 440, 24, 22);
 		line-height: 1.1em;
 		&--static{
 			font-size: 24px;
 		}
 	}
 	&--L{
-		@include fSize(992, 440, 24, 18);
+		@include fSize(992, 440, 22, 20);
 		line-height: 1.1em;
 		&--static{
-			font-size: 20px;
+			font-size: 22px;
 		}
 	}
 	&--LM{
-		@include fSize(992, 440, 24, 16);
+		@include fSize(992, 440, 20, 18);
 		line-height: 1.1em;
 		&--static{
 			font-size: 20px;
