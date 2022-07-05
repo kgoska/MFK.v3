@@ -1,14 +1,37 @@
 .lifestyle {
 }
 .lifestyle-title {
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #003772;
+	margin-bottom: 35px;
 }
 .lifestyle-about {
+	padding: 28px 150px 47px 36px;
     background: #001843;
     box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
     border-radius: 2px;
+	margin:0 -32px 85px;
+	@media screen and (max-width: 575px){
+		padding: 50px 15px 65px;
+	}
+
 		// .lifestyle-about__text
 
 		&__text {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 23px;
+			color: #FFFFFF;
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
 		}
 }
 .lifestyle-programm {
@@ -16,66 +39,193 @@
 		// .lifestyle-programm__wrap
 
 		&__wrap {
+			margin-bottom: 108px;
 		}
 }
 .programm-title {
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	color: #00205B;
+	margin-bottom: 50px;
 }
 .programm-list {
 
 		// .programm-list__item
-
-		&__item {
+		&__item{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			&:not(:last-child){
+				margin-bottom: 25px;
+			}
 		}
+
 }
 .item-circle {
+	width: 12px;
+	height: 12px;
 }
 .item {
 
 		// .item_text
 
 		&_text {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			color: #5B5C5F;
+			margin-left: 15px;
 		}
 }
 .insurance-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 60px 34px 82px 38px;
+	background: #001843;
+	box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
+	border-radius: 2px;
+	margin:0 -32px 145px;
+	@media screen and (max-width: 991px){
+		flex-direction: column;
+	}
+	@media screen and (max-width:575px){
+		padding: 35px 4px 60px;
+	}
 }
 .insurance-about {
-
+	flex: 0 0 50%;
 		// .insurance-about__title
 
 		&__title {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 28px;
+			color: #00A3E0;
+			margin-bottom: 30px;
 		}
+		//.insurance-about__wrap-text
 
+		&__wrap-text{
+			margin-bottom: 30px;
+		}
 		// .insurance-about__text
 
 		&__text {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 21px;
+			color: #FFFFFF;
+			&:not(:last-child){
+				margin-bottom: 15px;
+			}
 		}
 
 		// .insurance-about__list
 
 		&__list {
+			margin-bottom: 27px;
+			@media screen and (max-width:575px){
+				margin-left: 4px;
+			}
 		}
 
 		// .insurance-about__item
 
 		&__item {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			color: #FFFFFF;
+			display: flex;
+			justify-content: flex-start;
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+			&::before{
+				content: "—";
+				display: inline-block;
+				align-self: flex-start;
+				margin-right: 18px;
+				color: #00A3E0;
+			}
 		}
 
 		// .insurance-about__locate-wrap
 
 		&__locate-wrap {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 0 35px;
+			@media screen and (min-width: 575px) {
+				flex-direction: column;	
+				&:not(:last-child){
+					margin-bottom: 25px;
+				}
+			}
 		}
 
 		// .insurance-about__locate
 
-		&__locate {
+		&__locate{
+			@media screen and (max-width: 575px){
+				&:not(:last-child){
+					margin-bottom: 25px;
+				}
+			}
+			
 		}
-
+		
 		// .insurance-about__locate-item
 
 		&__locate-item {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			color: #FFFFFF;
 		}
 }
 .locate-item {
 }
-.insurance-picture {
+.insurance-picture.tablet-mobile{
+	display: none;
+	@media screen and (max-width: 991px){
+		display: flex;
+		flex: 0 0 100%;
+		margin-bottom: 50px;
+		@media screen and (max-width: 575px){
+		}
+	&>img{
+	display: block;
+	height: 274px;
+	width: 100%;
+	object-fit: cover;	
+}
+	}
+}
+.insurance-picture{
+	flex: 0 0 45%;
+	@media screen and (max-width: 991px){
+		display: none;
+	}
+	&>img{
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: contain;	
+}
 }
