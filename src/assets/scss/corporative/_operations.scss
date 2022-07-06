@@ -88,6 +88,9 @@
         padding: 25px 13px 36px 16px;        
     }
 }
+.operations__kind-item.accountopen-item{
+    width: -webkit-fill-available;
+}
 .operations__kind-title{
     margin-bottom: 25px;
     font-family: 'Helvetica';
