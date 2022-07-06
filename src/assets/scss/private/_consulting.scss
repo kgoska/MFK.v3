@@ -17,6 +17,11 @@
     @media screen and (max-width:575px){
         margin-bottom: 16px;
     }
+    &__credit-private{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
 }
 .consulting-wrap {
 }
@@ -73,7 +78,12 @@
             margin-bottom: 40px;
         }
     }
-    
+        &__credit-private{
+            flex: 0 0 100%;
+        }
+        &__title{
+            margin-bottom: 50px;
+        }
 		// .consulting-list__item
 
 		&__item {
