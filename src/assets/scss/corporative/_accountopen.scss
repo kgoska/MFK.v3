@@ -19,6 +19,7 @@
 }
 .principal{
     display: flex;  
+    justify-content: space-around;
     @media  screen and (max-width: 767px) {
         flex-direction: column;
     }
@@ -29,6 +30,7 @@
     align-items: center;
     margin-right: 10px;
     @media  screen and (max-width: 767px) {
+        justify-content: start;
         margin-right: 0px;
         margin-bottom: 40px;
     }
@@ -63,5 +65,6 @@
 .accountopen__check-item{
     display:flex;
     flex-direction: column;
+    flex: 0 0 40%;
     
 }

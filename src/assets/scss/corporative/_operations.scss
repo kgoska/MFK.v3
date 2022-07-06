@@ -82,9 +82,10 @@
     }
 }
 .operations__kind-item{
-    margin: 40px 50px 45px 55px;
+    width: 100%;
+    padding: 40px 50px 45px 55px;
     @media screen and (max-width:767px) {
-        margin: 25px 13px 36px 16px;        
+        padding: 25px 13px 36px 16px;        
     }
 }
 .operations__kind-title{

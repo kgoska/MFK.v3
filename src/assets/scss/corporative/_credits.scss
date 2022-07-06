@@ -443,6 +443,8 @@
 .rates__contacts{
 	margin: 15px 35px;
 	@media screen and (max-width: 767px) {
+		margin: 0;
+		padding: 10px;
 		display: flex;
 	}
 }
