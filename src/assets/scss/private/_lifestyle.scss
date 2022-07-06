@@ -72,7 +72,7 @@
 
 		// .item_text
 
-		&_text {
+		&__text {
 			font-family: 'Helvetica';
 			font-style: normal;
 			font-weight: 400;
@@ -169,7 +169,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 			margin: 0 35px;
-			@media screen and (min-width: 575px) {
+			@media screen and (max-width: 575px) {
 				flex-direction: column;	
 				&:not(:last-child){
 					margin-bottom: 25px;
@@ -203,18 +203,19 @@
 }
 .insurance-picture.tablet-mobile{
 	display: none;
-	@media screen and (max-width: 991px){
-		display: flex;
-		flex: 0 0 100%;
-		margin-bottom: 50px;
-		@media screen and (max-width: 575px){
-		}
 	&>img{
 	display: block;
 	height: 274px;
 	width: 100%;
-	object-fit: cover;	
-}
+	object-fit: cover;
+		@media screen and (max-width:575px){
+			height: 188px;
+		}
+	}
+	@media screen and (max-width: 991px){
+		display: flex;
+		flex: 0 0 100%;
+		margin-bottom: 50px;
 	}
 }
 .insurance-picture{
