@@ -88,12 +88,32 @@
 			background: #ddd;
 		}
 	}
+	&--transparent-white{
+		color: #7A7A7A;
+		background: transparent;
+		border: 1px solid #FFF;
+		border-radius: 2px;
+		transition: all 0.2s;
+		&:active{
+			background: rgba(0.5,0.5,0.5,0.5);
+		}
+	}
 	&--cyan{
 		background: #00A3E0;
 		border-radius: 2px;
 		transition: all 0.2s;
 		&:active{
 			background: #00A3E0;
+			filter: brightness(85%);
+		}
+	}
+	&--white{
+		background: #FFF;
+		border-radius: 2px;
+		transition: all 0.2s;
+		color: #000;
+		&:active{
+			background: #FFF;
 			filter: brightness(85%);
 		}
 	}
