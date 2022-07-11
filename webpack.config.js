@@ -27,13 +27,14 @@ module.exports = {
     mode: mode,
     entry: './src/index.js',
     output: {
-        filename: `${PATHS.js}[name].[contenthash].js`,
+        path: PATHS.dist,
+        filename: 'js/[name].[contenthash].js',
         clean: true,
     },
     devServer: {
         open: true,
         static: {
-            directory: './src',
+            directory: PATHS.src,
             watch: true
         }
     },
@@ -45,6 +46,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.html$/i,
+                use: ['html-loader', 'template-ejs-loader'],
+            },
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
@@ -93,11 +98,7 @@ module.exports = {
                     //     presets: ['@babel/preset-env']
                     // }
                 }
-            },
-            {
-                test: /\.html$/i,
-                use: ['html-loader', 'template-ejs-loader'],
-            },
+            }
         ]
     },
     plugins: [
