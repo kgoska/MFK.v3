@@ -301,6 +301,7 @@
 
             </div>
             <div>
+            	<input type="range" class="custom-range">
                 <div class="filter__content">
                     <div class="filter__item" id="checkbox1">
                         <input class="checkbox" type="checkbox" name="filter" id="vostrebovanie">
@@ -314,6 +315,7 @@
                         <input class="checkbox" type="checkbox" name="filter" id="partvostrebovanie">
                         <label for="partvostrebovanie">Частичное востребование</label>
                     </div>
+
                     <div class="filter__option-item" id="filter1">
                         <form class="filter__option-form" onchange="output.value = parseInt(rangeField.value)"
                             oninput="changeVar(rangeField.value,rangeField.min,rangeField.max)">
@@ -326,6 +328,7 @@
                             <input id="rangeField" type="range" list="mydata" min="0" max="100" value="1" step="1">
                         </form>
                     </div>
+
                     <div class="filter__option-item" id="filter2">
                         <form class="filter__option-form" onchange="output.value=parseInt(rangeField.value)"
                             oninput="changeVar(rangeField.value,rangeField.min, rangeField.max)">

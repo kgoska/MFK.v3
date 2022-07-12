@@ -8,6 +8,7 @@ require ('./libs/slick.min.js');
 // require ('./libs/mobile-menu.js');
 require ('./libs/dropdown.js');
 require ('./libs/deposite.js');
+require ('./libs/filters.js');
 
 
 //Mobile burger
@@ -17,7 +18,35 @@ $(document).on('click', '#burger-open', function(){
 $(document).on('click', '#burger-close', function(){
 	$('#mobile-menu').removeClass('is-open');
 });
+$(document).on('input change', 'input[type="range"]', function(){
+	let min = this.min;
+	if(!min){
+		min = 0;
+	}
+	let max = this.max;
+	if(!max){
+		max = 100;
+	}
+	const val = this.value;
 
+	this.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
+});
+$(document).ready(function(){
+	$('input[type="range"]').each(function(){
+		let min = this.min;
+		if(!min){
+			min = 0;
+		}
+		let max = this.max;
+		if(!max){
+			max = 100;
+		}
+		const val = this.value;
+
+		this.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';	
+	});
+	
+});
 
 //TABS
 $(document).on('click', '[data-tab-window-id]', function(){

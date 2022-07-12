@@ -1,521 +1,651 @@
 <%- include('inc/header.html') %>
-    <%- include('inc/corporate-menu.html') %>
-        <div id="info" data-current-id="deposits" data-main-menu-current-id="corporative-head"></div>
+	<%- include('inc/corporate-menu.html') %>
+		<div id="info" data-current-id="deposits" data-main-menu-current-id="corporative-head"></div>
 
-        <!-- Main content-->
+		<!-- Main content-->
 
-        <section class="container">
-            <div class="second__header">
-                <div class="second__text-list">
-                    <a class="second__text" href="#">Главная /</a>
-                    <a class="second__text" href="./accountopen.html">Корпоративным клиентам /</a>
-                    <a class="second__text current-second__text" href="./deposits.html">Депозиты</a>
-                </div>
-                <div class="second__title">
-                    <h2 class="second__title-text">Депозиты</h2>
-                </div>
-            </div>
-            <div>
-                <div class="filter__content">
-                    <div class="filter__item" id="checkbox1">
-                        <input class="checkbox" type="checkbox" name="filter" id="vostrebovanie">
-                        <label for="vostrebovanie">Досрочное полное востребование</label>
-                    </div>
-                    <div class="filter__item" id="checkbox2">
-                        <input class="checkbox" type="checkbox" name="filter" id="vznos">
-                        <label for="vznos">Дополнительные взносы</label>
-                    </div>
-                    <div class="filter__item" id="checkbox3">
-                        <input class="checkbox" type="checkbox" name="filter" id="partvostrebovanie">
-                        <label for="partvostrebovanie">Частичное востребование</label>
-                    </div>
-                    <div class="filter__option-item" id="filter1">
-                        <form class="filter__option-form" onchange="output.value = parseInt(rangeField.value)"
-                            oninput="changeVar(rangeField.value,rangeField.min,rangeField.max)">
-                            <label class="sliderBar">Хочу вложить
-                                <output id="output" value="1">1</output>
-                                <span class="">
-                                    тыс. рублей
-                                </span>
-                            </label>
-                            <input id="rangeField" type="range" list="mydata" min="0" max="100" value="1" step="1">
-                        </form>
-                    </div>
-                    <div class="filter__option-item" id="filter2">
-                        <form class="filter__option-form" onchange="output.value=parseInt(rangeField.value)"
-                            oninput="changeVar(rangeField.value,rangeField.min, rangeField.max)">
-                            <label class="sliderBar">На срок
-                                <output id="output" value="1">1</output>
-                                <span class="">
-                                    год/лет
-                                </span>
-                            </label>
-                            <input id="rangeField" type="range" list="mydata" min="0" max="35" value="1" step="1">
-                        </form>
-                    </div>
-                    <div class="filter__option-item" id="filter3">
-                        <button class="btn btn-filter">
-                            Применить
-                        </button>
-                    </div>
-                </div>
-                <div class="deposite-kinds__content">
-                    <h4 class="deposite-kinds__title">
-                        Короткие депозиты до 2-х недель
-                    </h4>
-                    <div class="deposite-kinds__comtainer" id="minsumma">
-                        <p class="deposite-kinds__text">
-                            Мин. сумма депозита</p>
-                        <h6 class="deposite-kinds__description">
-                            1 млн. рублей
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="timedeposite">
-                        <p class="deposite-kinds__text">
-                            Срок депозита
-                        </p>
-                        <h6 class="deposite-kinds__description">
-                            2 - 14 дней
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="returndeposite">
-                        <p class="deposite-kinds__text">
-                            Возврат депозита и выплата процентов</p>
-                        <h6 class="deposite-kinds__description">
-                            День окончания срока
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check1">
-                        <p class="deposite-kinds__text">
-                            Досрочное полное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check2">
-                        <p class="deposite-kinds__text">
-                            Дополнительные <br>взносы
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check3">
-                        <p class="deposite-kinds__text">
-                            Частичное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="btn">
-                        <button class="btn btn-deposite">Открыть депозит</button>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="bet">
-                        <p class="deposite-kinds__text">
-                            Ставка до
-                            <span class="deposite-kinds__text-second">
-                                9,1%
-                            </span>
-                        </p>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="amount">
-                        <p class="deposite-kinds__text">
-                            Сумма дохода
-                            <span class="deposite-kinds__text-second">
-                                9 100 ₽
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="deposite-kinds__content">
-                    <h4 class="deposite-kinds__title">
-                        Депозит «Классический» в рублях (безопциональный депозит)
-                    </h4>
-                    <div class="deposite-kinds__comtainer" id="minsumma">
-                        <p class="deposite-kinds__text">
-                            Мин. сумма депозита</p>
-                        <h6 class="deposite-kinds__description">
-                            100 тыс. рублей
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="timedeposite">
-                        <p class="deposite-kinds__text">
-                            Срок депозита
-                        </p>
-                        <h6 class="deposite-kinds__description">
-                            15 дней - 5 лет
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="returndeposite">
-                        <p class="deposite-kinds__text">
-                            Периодичность выплаты процентов</p>
-                        <h6 class="deposite-kinds__description">
-                            В дату возврата депозита
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check1">
-                        <p class="deposite-kinds__text">
-                            Досрочное полное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check2">
-                        <p class="deposite-kinds__text">
-                            Дополнительные <br>взносы
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check3">
-                        <p class="deposite-kinds__text">
-                            Частичное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="btn">
-                        <button class="btn btn-deposite">Открыть депозит</button>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="bet">
-                        <p class="deposite-kinds__text">
-                            Ставка до
-                            <span class="deposite-kinds__text-second">
-                                10,1%
-                            </span>
-                        </p>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="amount">
-                        <p class="deposite-kinds__text">
-                            Сумма дохода
-                            <span class="deposite-kinds__text-second">
-                                10 100 ₽
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="deposite-kinds__content">
-                    <h4 class="deposite-kinds__title">
-                        Депозит «Отзывной» (с правом расторжения)
-                    </h4>
-                    <div class="deposite-kinds__comtainer" id="minsumma">
-                        <p class="deposite-kinds__text">
-                            Мин. сумма депозита</p>
-                        <h6 class="deposite-kinds__description">
-                            100 тыс. -<br>
-                            100 млн. рублей
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="timedeposite">
-                        <p class="deposite-kinds__text">
-                            Срок депозита
-                        </p>
-                        <h6 class="deposite-kinds__description">
-                            1 месяц - 5 лет
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="returndeposite">
-                        <p class="deposite-kinds__text">
-                            Возврат депозита и выплата процентов</p>
-                        <h6 class="deposite-kinds__description">
-                            В дату возврата депозита
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check1">
-                        <p class="deposite-kinds__text">
-                            Досрочное полное<br> востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/Accept.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check2">
-                        <p class="deposite-kinds__text">
-                            Дополнительные <br>взносы
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check3">
-                        <p class="deposite-kinds__text">
-                            Частичное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="btn">
-                        <button class="btn btn-deposite">Открыть депозит</button>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="bet">
-                        <p class="deposite-kinds__text">
-                            Ставка до
-                            <span class="deposite-kinds__text-second">
-                                8,1%
-                            </span>
-                        </p>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="amount">
-                        <p class="deposite-kinds__text">
-                            Сумма дохода
-                            <span class="deposite-kinds__text-second">
-                                8 100 ₽
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="deposite-kinds__content">
-                    <h4 class="deposite-kinds__title">
-                        Депозит «Гибкий» (с правом пополнения и частичного востребования (снятия)
-                    </h4>
-                    <div class="deposite-kinds__comtainer" id="minsumma">
-                        <p class="deposite-kinds__text">
-                            Мин. сумма депозита</p>
-                        <h6 class="deposite-kinds__description">
-                            100 тыс. -<br>100 млн. рублей
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="timedeposite">
-                        <p class="deposite-kinds__text">
-                            Срок депозита
-                        </p>
-                        <h6 class="deposite-kinds__description">
-                            1 месяц - 2 лет
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="returndeposite">
-                        <p class="deposite-kinds__text">
-                            Возврат депозита и выплата процентов</p>
-                        <h6 class="deposite-kinds__description">
-                            В дату возврата депозита
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check1">
-                        <p class="deposite-kinds__text">
-                            Досрочное полное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check2">
-                        <p class="deposite-kinds__text">
-                            Дополнительные <br>взносы
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/Accept.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check3">
-                        <p class="deposite-kinds__text">
-                            Частичное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/Accept.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="btn">
-                        <button class="btn btn-deposite">Открыть депозит</button>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="bet">
-                        <p class="deposite-kinds__text">
-                            Ставка до
-                            <span class="deposite-kinds__text-second">
-                                8,1%
-                            </span>
-                        </p>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="amount">
-                        <p class="deposite-kinds__text">
-                            Сумма дохода
-                            <span class="deposite-kinds__text-second">
-                                8 100 ₽
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="deposite-kinds__content">
-                    <h4 class="deposite-kinds__title">
-                        Депозит «Классический» в долларах США (безопциональный депозит)
-                    </h4>
-                    <div class="deposite-kinds__comtainer" id="minsumma">
-                        <p class="deposite-kinds__text">
-                            Мин. сумма депозита
-                        </p>
-                        <h6 class="deposite-kinds__description">
-                            20 тыс. <br>долларов США
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="timedeposite">
-                        <p class="deposite-kinds__text">
-                            Срок депозита
-                        </p>
-                        <h6 class="deposite-kinds__description">
-                            15 дней - 5 лет
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="returndeposite">
-                        <p class="deposite-kinds__text">
-                            Возврат депозита и выплата процентов</p>
-                        <h6 class="deposite-kinds__description">
-                            В дату возврата депозита
-                        </h6>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check1">
-                        <p class="deposite-kinds__text">
-                            Досрочное полное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check2">
-                        <p class="deposite-kinds__text">
-                            Дополнительные <br>взносы
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="check3">
-                        <p class="deposite-kinds__text">
-                            Частичное <br>востребование
-                        </p>
-                        <img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
-                            height="14" />
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="btn">
-                        <button class="btn btn-deposite">Открыть депозит</button>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="bet">
-                        <p class="deposite-kinds__text">
-                            Ставка до
-                            <span class="deposite-kinds__text-second">
-                                5,1%
-                            </span>
-                        </p>
-                    </div>
-                    <div class="deposite-kinds__comtainer" id="amount">
-                        <p class="deposite-kinds__text">
-                            Сумма дохода
-                            <span class="deposite-kinds__text-second">
-                                5 100 ₽
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="document-list deposits-list">
-                    <div class="document-list__card">
-                        <div class="document-list__content-wrapper">
-                            <div class="document-list__title-block">
-                                <span>
-                                    Документы
-                                </span>
-                            </div>
-                            <div class="document-list__list-block">
-                                <div class="document-list__document">
-                                    <div class="document-list__document__content-wrapper">
-                                        <div class="document-list__document__icon">
-                                            <img src="../assets/img/images/pdf.png" alt="pdf">
-                                        </div>
-                                        <div class="document-list__document__text-wrapper">
-                                            <div class="document-list__document__title">
-                                                <span>Перечень страховых организаций, удовлетворяющих требованиям
-                                                    Банка</span>
-                                            </div>
-                                            <div class="document-list__document__description">
-                                                <span>PDF, 279 КБ / 04 июня 2018</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="document-list__document">
-                                    <div class="document-list__document__content-wrapper">
-                                        <div class="document-list__document__icon">
-                                            <img src="../assets/img/images/pdf.png" alt="pdf">
-                                        </div>
-                                        <div class="document-list__document__text-wrapper">
-                                            <div class="document-list__document__title">
-                                                <span>Перечень документов для экспресс-анализа</span>
-                                            </div>
-                                            <div class="document-list__document__description">
-                                                <span>PDF, 279 КБ / 04 июня 2018</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="document-list__document">
-                                    <div class="document-list__document__content-wrapper">
-                                        <div class="document-list__document__icon">
-                                            <img src="../assets/img/images/word.png" alt="pdf">
-                                        </div>
-                                        <div class="document-list__document__text-wrapper">
-                                            <div class="document-list__document__title">
-                                                <span>Общие условия комплексного банковского обслуживания</span>
-                                            </div>
-                                            <div class="document-list__document__description">
-                                                <span>PDF, 279 КБ / 04 июня 2018</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="document-list__document">
-                                    <div class="document-list__document__content-wrapper">
-                                        <div class="document-list__document__icon">
-                                            <img src="../assets/img/images/word.png" alt="pdf">
-                                        </div>
-                                        <div class="document-list__document__text-wrapper">
-                                            <div class="document-list__document__title">
-                                                <span>Заявление об открытии счета</span>
-                                            </div>
-                                            <div class="document-list__document__description">
-                                                <span>PDF, 279 КБ / 04 июня 2018</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="document-list__document" data-readmore-identifier="doc-list-readmore">
-                                    <div class="document-list__document__content-wrapper">
-                                        <div class="document-list__document__icon">
-                                            <img src="../assets/img/images/word.png" alt="pdf">
-                                        </div>
-                                        <div class="document-list__document__text-wrapper">
-                                            <div class="document-list__document__title">
-                                                <span>Общие условия комплексного банковского обслуживания</span>
-                                            </div>
-                                            <div class="document-list__document__description">
-                                                <span>PDF, 279 КБ / 04 июня 2018</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="document-list__document" data-readmore-identifier="doc-list-readmore">
-                                    <div class="document-list__document__content-wrapper">
-                                        <div class="document-list__document__icon">
-                                            <img src="../assets/img/images/pdf.png" alt="pdf">
-                                        </div>
-                                        <div class="document-list__document__text-wrapper">
-                                            <div class="document-list__document__title">
-                                                <span>Перечень страховых организаций, удовлетворяющих требованиям
-                                                    Банка</span>
-                                            </div>
-                                            <div class="document-list__document__description">
-                                                <span>PDF, 279 КБ / 04 июня 2018</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- data-readmore-identifier="doc-list-readmore" -->
+		<section class="container">
+			<div class="second__header">
+				<div class="second__text-list">
+					<a class="second__text" href="#">Главная /</a>
+					<a class="second__text" href="./accountopen.html">Корпоративным клиентам /</a>
+					<a class="second__text current-second__text" href="./deposits.html">Депозиты</a>
+				</div>
+				<div class="second__title">
+					<h2 class="second__title-text">Депозиты</h2>
+				</div>
+			</div>
+			<div>     
+				<div class="deposite-filters filters" data-filtered-items-container-id="deposit-items" data-auto-update="false" >
+					<div class="deposite-filters__item deposite-filters__item--large filter" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition1'>
+						<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vostrebovanie">
+						<label class="filter-trigger" for="vostrebovanie">Досрочное полное востребование</label>
+					</div>
+					<div class="deposite-filters__item deposite-filters__item--small filter" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition2'>
+						<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vznos">
+						<label class="filter-trigger" for="vznos">Дополнительные взносы</label>
+					</div>
+					<div class="deposite-filters__item deposite-filters__item--large filter" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition3'>
+						<input class="checkbox filter-trigger" type="checkbox" name="filter" id="partvostrebovanie">
+						<label class="filter-trigger" for="partvostrebovanie">Частичное востребование</label>
+					</div>
+					<div class="filter deposite-filters__range deposite-filters__range--cost" data-filter-type="number" data-filter-name='price' data-scale="breakpoints" data-label-selector=".filter-label" data-label-preset="price" data-breakpoints='
+					{
+						"breakpoints":[
+							{
+								"steps": 9,
+								"multiplier": 10
+							},
+							{
+								"steps": 9,
+								"multiplier": 100
+							},
+							{
+								"steps": 9,
+								"multiplier": 1000
+							}
+						]
+					}'>
+						<span>Хочу вложить </span>
+						<span class="filter-label text--700 text--M text--dark-gray">1</span>
+						<input id="days-range" type="range" class="filter-trigger" name="days" min="1" max="28" value="1" step="1">
+					</div>
+					<div class="deposite-filters__range deposite-filters__range--time filter" data-filter-type="number" data-filter-name='time' data-scale="breakpoints" data-label-selector=".filter-label" data-label-preset="time" data-breakpoints='
+					{
+						"breakpoints":[
+							{
+								"steps": 5,
+								"multiplier": 5
+							},
+							{
+								"steps": 11,
+								"multiplier": 30
+							},
+							{
+								"steps": 10,
+								"multiplier": 360
+							}
+						]
+					}'>
+						<span>На срок в</span> 
+						<span class="filter-label text--700 text--M text--dark-gray">1</span>
+						<input id="days-range" type="range" class="filter-trigger" name="days" min="1" max="31" value="1" step="1">
+					</div>
+					<div class="deposite-filters__button">
+						<button class="btn btn-filter filter-apply-button">
+							Применить
+						</button>
+					</div>
+				</div>
+				<div class="filtered-items" id="deposit-items">
+					<div class="deposite-kinds__content filtered-item" data-item-filter-data='
+					{
+						"price":{
+							"type": "comparison",
+							"comparison": ">",
+							"value": 20
+						},
+						"time":{
+							"type": "range",
+							"min": 10,
+							"max": 20
+						},
+						"condition1":{
+							"value": true
+						},
+						"condition2":{
+							"value": true
+						},
+						"condition3":{
+							"value": true
+						}
+					}'>
+						<h4 class="deposite-kinds__title">
+							Короткие депозиты до 2-х недель
+						</h4>
+						<div class="deposite-kinds__comtainer" id="minsumma">
+							<p class="deposite-kinds__text">
+								Мин. сумма депозита</p>
+							<h6 class="deposite-kinds__description">
+								1 млн. рублей
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="timedeposite">
+							<p class="deposite-kinds__text">
+								Срок депозита
+							</p>
+							<h6 class="deposite-kinds__description">
+								2 - 14 дней
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="returndeposite">
+							<p class="deposite-kinds__text">
+								Возврат депозита и выплата процентов</p>
+							<h6 class="deposite-kinds__description">
+								День окончания срока
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="check1">
+							<p class="deposite-kinds__text">
+								Досрочное полное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check2">
+							<p class="deposite-kinds__text">
+								Дополнительные <br>взносы
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check3">
+							<p class="deposite-kinds__text">
+								Частичное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="btn">
+							<button class="btn btn-deposite">Открыть депозит</button>
+						</div>
+						<div class="deposite-kinds__comtainer" id="bet">
+							<p class="deposite-kinds__text">
+								Ставка до
+								<span class="deposite-kinds__text-second">
+									9,1%
+								</span>
+							</p>
+						</div>
+						<div class="deposite-kinds__comtainer" id="amount">
+							<p class="deposite-kinds__text">
+								Сумма дохода
+								<span class="deposite-kinds__text-second">
+									9 100 ₽
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="deposite-kinds__content filtered-item" data-item-filter-data='
+					{
+						"price":{
+							"type": "comparison",
+							"comparison": ">",
+							"value": 20
+						},
+						"time":{
+							"type": "range",
+							"min": 10,
+							"max": 20
+						},
+						"condition1":{
+							"value": true
+						},
+						"condition2":{
+							"value": true
+						},
+						"condition3":{
+							"value": true
+						}
 
-                            </div>
-                        </div>
-                        <div class="document-list__read-more read-more__wrapper">
-                            <div class="read-more readmore" id="doc-list-readmore">
-                                <span class="read-more__text-more">Смотреть все</span>
-                                <span class="read-more__text-less">Скрыть</span>
-                                <img src="../assets/img/svg/read-more-btn.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
+					}'>
+						<h4 class="deposite-kinds__title">
+							Депозит «Классический» в рублях (безопциональный депозит)
+						</h4>
+						<div class="deposite-kinds__comtainer" id="minsumma">
+							<p class="deposite-kinds__text">
+								Мин. сумма депозита</p>
+							<h6 class="deposite-kinds__description">
+								100 тыс. рублей
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="timedeposite">
+							<p class="deposite-kinds__text">
+								Срок депозита
+							</p>
+							<h6 class="deposite-kinds__description">
+								15 дней - 5 лет
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="returndeposite">
+							<p class="deposite-kinds__text">
+								Периодичность выплаты процентов</p>
+							<h6 class="deposite-kinds__description">
+								В дату возврата депозита
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="check1">
+							<p class="deposite-kinds__text">
+								Досрочное полное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check2">
+							<p class="deposite-kinds__text">
+								Дополнительные <br>взносы
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check3">
+							<p class="deposite-kinds__text">
+								Частичное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="btn">
+							<button class="btn btn-deposite">Открыть депозит</button>
+						</div>
+						<div class="deposite-kinds__comtainer" id="bet">
+							<p class="deposite-kinds__text">
+								Ставка до
+								<span class="deposite-kinds__text-second">
+									10,1%
+								</span>
+							</p>
+						</div>
+						<div class="deposite-kinds__comtainer" id="amount">
+							<p class="deposite-kinds__text">
+								Сумма дохода
+								<span class="deposite-kinds__text-second">
+									10 100 ₽
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="deposite-kinds__content filtered-item" data-item-filter-data='
+					{
+						"price":{
+							"type": "comparison",
+							"comparison": ">",
+							"value": 20
+						},
+						"time":{
+							"type": "range",
+							"min": 10,
+							"max": 20
+						},
+						"condition1":{
+							"value": true
+						},
+						"condition2":{
+							"value": true
+						},
+						"condition3":{
+							"value": true
+						}
 
-        <%- include('inc/footer.html') %>
+					}'>
+						<h4 class="deposite-kinds__title">
+							Депозит «Отзывной» (с правом расторжения)
+						</h4>
+						<div class="deposite-kinds__comtainer" id="minsumma">
+							<p class="deposite-kinds__text">
+								Мин. сумма депозита</p>
+							<h6 class="deposite-kinds__description">
+								100 тыс. -<br>
+								100 млн. рублей
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="timedeposite">
+							<p class="deposite-kinds__text">
+								Срок депозита
+							</p>
+							<h6 class="deposite-kinds__description">
+								1 месяц - 5 лет
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="returndeposite">
+							<p class="deposite-kinds__text">
+								Возврат депозита и выплата процентов</p>
+							<h6 class="deposite-kinds__description">
+								В дату возврата депозита
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="check1">
+							<p class="deposite-kinds__text">
+								Досрочное полное<br> востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/Accept.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check2">
+							<p class="deposite-kinds__text">
+								Дополнительные <br>взносы
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check3">
+							<p class="deposite-kinds__text">
+								Частичное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="btn">
+							<button class="btn btn-deposite">Открыть депозит</button>
+						</div>
+						<div class="deposite-kinds__comtainer" id="bet">
+							<p class="deposite-kinds__text">
+								Ставка до
+								<span class="deposite-kinds__text-second">
+									8,1%
+								</span>
+							</p>
+						</div>
+						<div class="deposite-kinds__comtainer" id="amount">
+							<p class="deposite-kinds__text">
+								Сумма дохода
+								<span class="deposite-kinds__text-second">
+									8 100 ₽
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="deposite-kinds__content filtered-item" data-item-filter-data='
+					{
+						"price":{
+							"type": "comparison",
+							"comparison": ">",
+							"value": 20
+						},
+						"time":{
+							"type": "range",
+							"min": 10,
+							"max": 20
+						},
+						"condition1":{
+							"value": true
+						},
+						"condition2":{
+							"value": true
+						},
+						"condition3":{
+							"value": true
+						}
 
-            </body>
+					}'>
+						<h4 class="deposite-kinds__title">
+							Депозит «Гибкий» (с правом пополнения и частичного востребования (снятия)
+						</h4>
+						<div class="deposite-kinds__comtainer" id="minsumma">
+							<p class="deposite-kinds__text">
+								Мин. сумма депозита</p>
+							<h6 class="deposite-kinds__description">
+								100 тыс. -<br>100 млн. рублей
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="timedeposite">
+							<p class="deposite-kinds__text">
+								Срок депозита
+							</p>
+							<h6 class="deposite-kinds__description">
+								1 месяц - 2 лет
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="returndeposite">
+							<p class="deposite-kinds__text">
+								Возврат депозита и выплата процентов</p>
+							<h6 class="deposite-kinds__description">
+								В дату возврата депозита
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="check1">
+							<p class="deposite-kinds__text">
+								Досрочное полное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check2">
+							<p class="deposite-kinds__text">
+								Дополнительные <br>взносы
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/Accept.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check3">
+							<p class="deposite-kinds__text">
+								Частичное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/Accept.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="btn">
+							<button class="btn btn-deposite">Открыть депозит</button>
+						</div>
+						<div class="deposite-kinds__comtainer" id="bet">
+							<p class="deposite-kinds__text">
+								Ставка до
+								<span class="deposite-kinds__text-second">
+									8,1%
+								</span>
+							</p>
+						</div>
+						<div class="deposite-kinds__comtainer" id="amount">
+							<p class="deposite-kinds__text">
+								Сумма дохода
+								<span class="deposite-kinds__text-second">
+									8 100 ₽
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="deposite-kinds__content filtered-item" data-item-filter-data='
+					{
+						"price":{
+							"type": "comparison",
+							"comparison": ">",
+							"value": 20
+						},
+						"time":{
+							"type": "range",
+							"min": 10,
+							"max": 20
+						},
+						"condition1":{
+							"value": true
+						},
+						"condition2":{
+							"value": true
+						},
+						"condition3":{
+							"value": true
+						}
 
-            </html>
+					}'>
+						<h4 class="deposite-kinds__title">
+							Депозит «Классический» в долларах США (безопциональный депозит)
+						</h4>
+						<div class="deposite-kinds__comtainer" id="minsumma">
+							<p class="deposite-kinds__text">
+								Мин. сумма депозита
+							</p>
+							<h6 class="deposite-kinds__description">
+								20 тыс. <br>долларов США
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="timedeposite">
+							<p class="deposite-kinds__text">
+								Срок депозита
+							</p>
+							<h6 class="deposite-kinds__description">
+								15 дней - 5 лет
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="returndeposite">
+							<p class="deposite-kinds__text">
+								Возврат депозита и выплата процентов</p>
+							<h6 class="deposite-kinds__description">
+								В дату возврата депозита
+							</h6>
+						</div>
+						<div class="deposite-kinds__comtainer" id="check1">
+							<p class="deposite-kinds__text">
+								Досрочное полное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check2">
+							<p class="deposite-kinds__text">
+								Дополнительные <br>взносы
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="check3">
+							<p class="deposite-kinds__text">
+								Частичное <br>востребование
+							</p>
+							<img class="deposite-kinds-picture" src="../assets/img/images/close.png" width="14"
+								height="14" />
+						</div>
+						<div class="deposite-kinds__comtainer" id="btn">
+							<button class="btn btn-deposite">Открыть депозит</button>
+						</div>
+						<div class="deposite-kinds__comtainer" id="bet">
+							<p class="deposite-kinds__text">
+								Ставка до
+								<span class="deposite-kinds__text-second">
+									5,1%
+								</span>
+							</p>
+						</div>
+						<div class="deposite-kinds__comtainer" id="amount">
+							<p class="deposite-kinds__text">
+								Сумма дохода
+								<span class="deposite-kinds__text-second">
+									5 100 ₽
+								</span>
+							</p>
+						</div>
+					</div>	
+				</div>
+				
+				<div class="document-list deposits-list">
+					<div class="document-list__card">
+						<div class="document-list__content-wrapper">
+							<div class="document-list__title-block">
+								<span>
+									Документы
+								</span>
+							</div>
+							<div class="document-list__list-block">
+								<div class="document-list__document">
+									<div class="document-list__document__content-wrapper">
+										<div class="document-list__document__icon">
+											<img src="../assets/img/images/pdf.png" alt="pdf">
+										</div>
+										<div class="document-list__document__text-wrapper">
+											<div class="document-list__document__title">
+												<span>Перечень страховых организаций, удовлетворяющих требованиям
+													Банка</span>
+											</div>
+											<div class="document-list__document__description">
+												<span>PDF, 279 КБ / 04 июня 2018</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="document-list__document">
+									<div class="document-list__document__content-wrapper">
+										<div class="document-list__document__icon">
+											<img src="../assets/img/images/pdf.png" alt="pdf">
+										</div>
+										<div class="document-list__document__text-wrapper">
+											<div class="document-list__document__title">
+												<span>Перечень документов для экспресс-анализа</span>
+											</div>
+											<div class="document-list__document__description">
+												<span>PDF, 279 КБ / 04 июня 2018</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="document-list__document">
+									<div class="document-list__document__content-wrapper">
+										<div class="document-list__document__icon">
+											<img src="../assets/img/images/word.png" alt="pdf">
+										</div>
+										<div class="document-list__document__text-wrapper">
+											<div class="document-list__document__title">
+												<span>Общие условия комплексного банковского обслуживания</span>
+											</div>
+											<div class="document-list__document__description">
+												<span>PDF, 279 КБ / 04 июня 2018</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="document-list__document">
+									<div class="document-list__document__content-wrapper">
+										<div class="document-list__document__icon">
+											<img src="../assets/img/images/word.png" alt="pdf">
+										</div>
+										<div class="document-list__document__text-wrapper">
+											<div class="document-list__document__title">
+												<span>Заявление об открытии счета</span>
+											</div>
+											<div class="document-list__document__description">
+												<span>PDF, 279 КБ / 04 июня 2018</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="document-list__document" data-readmore-identifier="doc-list-readmore">
+									<div class="document-list__document__content-wrapper">
+										<div class="document-list__document__icon">
+											<img src="../assets/img/images/word.png" alt="pdf">
+										</div>
+										<div class="document-list__document__text-wrapper">
+											<div class="document-list__document__title">
+												<span>Общие условия комплексного банковского обслуживания</span>
+											</div>
+											<div class="document-list__document__description">
+												<span>PDF, 279 КБ / 04 июня 2018</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="document-list__document" data-readmore-identifier="doc-list-readmore">
+									<div class="document-list__document__content-wrapper">
+										<div class="document-list__document__icon">
+											<img src="../assets/img/images/pdf.png" alt="pdf">
+										</div>
+										<div class="document-list__document__text-wrapper">
+											<div class="document-list__document__title">
+												<span>Перечень страховых организаций, удовлетворяющих требованиям
+													Банка</span>
+											</div>
+											<div class="document-list__document__description">
+												<span>PDF, 279 КБ / 04 июня 2018</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- data-readmore-identifier="doc-list-readmore" -->
+
+							</div>
+						</div>
+						<div class="document-list__read-more read-more__wrapper">
+							<div class="read-more readmore" id="doc-list-readmore">
+								<span class="read-more__text-more">Смотреть все</span>
+								<span class="read-more__text-less">Скрыть</span>
+								<img src="../assets/img/svg/read-more-btn.svg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<%- include('inc/footer.html') %>
+
+			</body>
+
+			</html>
