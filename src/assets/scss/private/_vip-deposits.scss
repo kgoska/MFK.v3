@@ -1,0 +1,158 @@
+.deposits-card {
+	padding: 40px 55px 44px 130px;
+	margin: 0 120px;
+	background: #FFFFFF;
+	border: 1px solid #D1D1D1;
+	box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+	&:not(:last-child){
+		margin-bottom: 50px;
+	}
+    @media screen and (max-width:1200px){
+        padding: 40px 20px ;
+    }
+}
+.card {
+
+		// .card__wrapper
+
+		&__wrapper {
+		}
+
+		// .card__title
+
+		&__title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #00205B;
+            margin-bottom: 30px;
+		}
+
+		// .card__table
+
+		&__table {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 50px;
+            
+		}
+
+		// .card__table-column
+
+		&__table-column {
+            
+		}
+}
+.column {
+
+		// .column__title
+
+		&__title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            color: #4E4E4E;
+            padding: 10px;
+            border-bottom: 1px solid #00205B;
+            height: 3.75em;
+		}
+
+		// .column__text
+
+		&__text {
+            padding: 10px;
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            color: #454444;
+		}
+
+		// .column__pretitle
+
+		&__pretitle {
+            padding: 10px;
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            color: #4E4E4E;
+            height: 1.25em;
+		}
+}
+.columns {
+
+		// .columns__wrap
+
+		&__wrap {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+		}
+
+		// .columns__item
+
+		&__item {
+		}
+}
+.btn {
+}
+
+
+
+
+
+
+
+
+// .deposits-card {
+// 	padding: 40px 55px 44px 130px;
+// 	margin: 0 120px;
+// 	background: #FFFFFF;
+// 	border: 1px solid #D1D1D1;
+// 	box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+// 	&:not(:last-child){
+// 		margin-bottom: 50px;
+// 	}
+// 		// .deposits-card__wrapper
+
+// 		&__wrapper {
+// 		}
+
+// 		// .deposits-card__title
+
+// 		&__title {
+// 			margin-bottom: 30px;
+// 			font-family: 'Helvetica';
+// 			font-style: normal;
+// 			font-weight: 700;
+// 			font-size: 24px;
+// 			line-height: 28px;
+// 			color: #00205B;
+// 		}
+// }
+// .tg {
+// 	font-family: 'Helvetica';
+// 	font-style: normal;
+// 	color: #4E4E4E;
+// 	table-layout: fixed;
+// 	width: 100%;
+// 	border-collapse: collapse;
+// 	margin-bottom: 60px;
+// }
+// .tg-lue3 {
+// 	padding: 10px;
+// 	text-align: center;
+// 	margin-bottom: 50px;
+// }
+// .thead{
+//     width: 100%;
+//     border-bottom: 1px solid #00205B;
+// 	padding-bottom: 29px;
+// }
