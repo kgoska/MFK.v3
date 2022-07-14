@@ -16,20 +16,20 @@
 				</div>
 			</div>
 			<div>     
-				<div class="deposite-filters filters" data-filtered-items-container-id="deposit-items" data-auto-update="false" >
-					<div class="deposite-filters__item deposite-filters__item--large filter" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition1'>
+				<div class="filters m--b-25 fx fx-wr--w fx-ai--c fx-jc--s md-fx-jc--sa xsm-fx-jc--c" data-filtered-items-container-id="deposit-items" data-auto-update="false" >
+					<div class="filter fx p--10 md-fx-od--3 md-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition1'>
 						<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vostrebovanie">
 						<label class="filter-trigger" for="vostrebovanie">Досрочное полное востребование</label>
 					</div>
-					<div class="deposite-filters__item deposite-filters__item--small filter" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition2'>
+					<div class="filter fx p--10 md-fx-od--3 md-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition2'>
 						<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vznos">
 						<label class="filter-trigger" for="vznos">Дополнительные взносы</label>
 					</div>
-					<div class="deposite-filters__item deposite-filters__item--large filter" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition3'>
+					<div class="filter fx p--10 md-fx-od--3 md-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition3'>
 						<input class="checkbox filter-trigger" type="checkbox" name="filter" id="partvostrebovanie">
 						<label class="filter-trigger" for="partvostrebovanie">Частичное востребование</label>
 					</div>
-					<div class="filter deposite-filters__range deposite-filters__range--cost" data-filter-type="number" data-filter-name='price' data-scale="breakpoints" data-label-selector=".filter-label" data-label-preset="price" data-breakpoints='
+					<div class="filter fx-el--40 fx-el--g1 p--10 md-fx-od--0 xsm-fx-el--100" data-filter-type="number" data-filter-name='price' data-scale="breakpoints" data-label-selector=".filter-label" data-label-preset="price" data-breakpoints='
 					{
 						"breakpoints":[
 							{
@@ -48,9 +48,9 @@
 					}'>
 						<span>Хочу вложить </span>
 						<span class="filter-label text--700 text--M text--dark-gray">1</span>
-						<input id="days-range" type="range" class="filter-trigger" name="days" min="1" max="28" value="1" step="1">
+						<input id="days-range" type="range" class="filter-trigger m--t-10" name="days" min="1" max="28" value="1" step="1">
 					</div>
-					<div class="deposite-filters__range deposite-filters__range--time filter" data-filter-type="number" data-filter-name='time' data-scale="breakpoints" data-label-selector=".filter-label" data-label-preset="time" data-breakpoints='
+					<div class="filter fx-el--30 fx-el--g1 p--10 md-fx-od--1 xsm-fx-el--100" data-filter-type="number" data-filter-name='time' data-scale="breakpoints" data-label-selector=".filter-label" data-label-preset="time" data-breakpoints='
 					{
 						"breakpoints":[
 							{
@@ -69,13 +69,14 @@
 					}'>
 						<span>На срок в</span> 
 						<span class="filter-label text--700 text--M text--dark-gray">1</span>
-						<input id="days-range" type="range" class="filter-trigger" name="days" min="1" max="31" value="1" step="1">
+						<input id="days-range" type="range" class="filter-trigger m--t-10" name="days" min="1" max="31" value="1" step="1">
 					</div>
-					<div class="deposite-filters__button">
-						<button class="btn btn-filter filter-apply-button">
+					<div class="md-fx-el--50 md-fx-od--3 fx fx-jc--c xsm-fx-el--100">
+						<button class="btn btn-filter filter-apply-button  p--10 xsm-fx-el--100">
 							Применить
-						</button>
+						</button>	
 					</div>
+					
 				</div>
 				<div class="filtered-items" id="deposit-items">
 					<div class="deposite-kinds__content filtered-item" data-item-filter-data='
