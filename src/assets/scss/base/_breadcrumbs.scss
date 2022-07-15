@@ -20,4 +20,17 @@
 			color: #001843;
 		}
 	}
+
+}
+.deposits{
+	.breadcrumbs{
+		 margin:0px;
+		 padding: 40px 25px 30px;
+		&__step {
+			color: #fff;
+			&>a:active, &>a:visited, &>a:link {
+				color: #fff;
+		}
+	}
+	}
 }
