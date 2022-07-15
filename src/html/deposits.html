@@ -15,7 +15,53 @@
 					<h2 class="second__title-text">Депозиты</h2>
 				</div>
 			</div>
-			<div>     
+			<div>
+				<div class="filters m--b-25 vip-filters__wrapper" data-filtered-items-container-id="deposit-items" data-auto-update="false" >
+					<div class="fx sm-fx-d--c vip-filters__checkboxes">
+						<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition1'>
+							<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vostrebovanie">
+							<label class="filter-trigger" for="vostrebovanie">Проценты ежемесячно</label>
+						</div>
+						<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition2'>
+							<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vznos">
+							<label class="filter-trigger" for="vznos">Дополнительные взносы</label>
+						</div>
+						<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition3'>
+							<input class="checkbox filter-trigger" type="checkbox" name="filter" id="partvostrebovanie">
+							<label class="filter-trigger" for="partvostrebovanie">Частичное востребование</label>
+						</div>
+						<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition4'>
+							<input class="checkbox filter-trigger" type="checkbox" name="filter" id="partvostrebovanie">
+							<label class="filter-trigger" for="partvostrebovanie">Конвертация внутри вклада</label>
+						</div>	
+					</div>
+					<div class="filter vip-filters__range p--10 xsm-m--b-25" data-filter-type="number" data-filter-name='time' data-scale="breakpoints" data-label-selector=".filter-label" data-label-preset="time" data-breakpoints='
+					{
+						"breakpoints":[
+							{
+								"steps": 5,
+								"multiplier": 5
+							},
+							{
+								"steps": 11,
+								"multiplier": 30
+							},
+							{
+								"steps": 10,
+								"multiplier": 360
+							}
+						]
+					}'>
+						<span>На срок в</span> 
+						<span class="filter-label text--700 text--M text--dark-gray">1</span>
+						<input id="days-range" type="range" class="filter-trigger m--t-10" name="days" min="1" max="31" value="1" step="1">
+					</div>
+					<div class="vip-filters__button xsm-m--t-35">
+						<button class="btn btn-filter filter-apply-button p--10 ">
+							Применить
+						</button>	
+					</div>
+				</div>
 				<div class="filters m--b-25 fx fx-wr--w fx-ai--c fx-jc--s md-fx-jc--sa xsm-fx-jc--c" data-filtered-items-container-id="deposit-items" data-auto-update="false" >
 					<div class="filter fx p--10 md-fx-od--3 md-fx-el--50 xsm-fx-el--100" data-filter-type="boolean" data-truthfull-selector="input:checked" data-filter-name='condition1'>
 						<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vostrebovanie">
@@ -76,7 +122,6 @@
 							Применить
 						</button>	
 					</div>
-					
 				</div>
 				<div class="filtered-items" id="deposit-items">
 					<div class="deposite-kinds__content filtered-item" data-item-filter-data='

@@ -51,6 +51,9 @@
 	text-transform: uppercase;
 	color: #727272;
 }
+.operations__docs{
+	width: 100%;
+}
 .current-operations__link{
 	color:#2F4670;
 	font-weight: 700;
@@ -231,7 +234,7 @@
 		flex: 1 1 50%;
 		// margin: 0 0 25px 0;
 	}
-	@media screen and (max-width: 370px) {
+	@media screen and (max-width: 380px) {
 		flex: 1 1 100%;
 		// margin: 0 0 25px 0;
 		margin: 10px 0;
