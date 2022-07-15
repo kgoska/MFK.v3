@@ -13,7 +13,7 @@
 	
 }
 //M
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 	.md{
 		@import './flex-util-preset';
 		@import './margin-util-preset';
@@ -21,7 +21,7 @@
 	}
 }
 //S
-@media screen and (max-width: 772px){
+@media screen and (max-width: 768px){
 	.sm{
 		@import './flex-util-preset';
 		@import './margin-util-preset';
