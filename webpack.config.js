@@ -27,9 +27,10 @@ module.exports = {
     mode: mode,
     entry: './src/index.js',
     output: {
-        path: PATHS.dist,
-        filename: 'js/[name].[contenthash].js',
-        clean: true,
+        //path: PATHS.dist,
+        //filename: `${PATHS.js}[name].[contenthash].js`,
+        filename: `${PATHS.js}[name].js`,
+        clean: (mode === 'development') ? false : true,
     },
     devServer: {
         open: true,
@@ -53,7 +54,7 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    (mode === 'development') ? "style-loader" : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     {
                         loader: "postcss-loader",
@@ -103,7 +104,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATHS.css}[name].[contenthash].css`
+            //filename: `${PATHS.css}[name].[contenthash].css`
+            filename: `${PATHS.css}[name].css`
         }),
         ...PAGES.map(
             page =>

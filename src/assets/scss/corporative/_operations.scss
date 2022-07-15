@@ -82,10 +82,14 @@
     }
 }
 .operations__kind-item{
-    margin: 40px 50px 45px 55px;
+    width: 100%;
+    padding: 40px 50px 45px 55px;
     @media screen and (max-width:767px) {
-        margin: 25px 13px 36px 16px;        
+        padding: 25px 13px 36px 16px;        
     }
+}
+.operations__kind-item.accountopen-item{
+    width: -webkit-fill-available;
 }
 .operations__kind-title{
     margin-bottom: 25px;
@@ -123,7 +127,6 @@
 
 .operations__documentation{
     display: flex;
-    padding: 15px;
     flex-direction: column;
     align-items: center;
     margin-bottom: 95px;
@@ -133,6 +136,11 @@
     @media screen and (max-width: 767px) {
         margin-top: 33px;
         margin-bottom: 38px;
+    }
+}
+.rko{
+    &--docs{
+        padding: 35px 45px 40px 57px;
     }
 }
 .operations__documentation-nav{
@@ -149,6 +157,11 @@
 }
 .operations__documentation-list{
     position: relative;
+    border-right: 1px solid #00205B;
+    padding-right: 20px;
+    @media screen and (max-width: 767px) {
+        border-right: none;
+    }
 }
 .operations__documentation-item{
     position:absolute;

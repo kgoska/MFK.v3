@@ -258,6 +258,9 @@
 	flex-direction: column;
 	padding-bottom: 50px;
 }*/
+.document-list.deposits-list{
+	margin: 0 100px 70px 100px;
+}
 .document-list {
 	margin-bottom: 75px;
 	&__card {
@@ -405,7 +408,7 @@
 	&--full{
 		width: 100%;
 	}
-	align-content: center;
+	align-items: center;
 	padding: 41px 0 41px 30px;
 	height: 126px;
 	background: #00205B;
@@ -443,6 +446,8 @@
 .rates__contacts{
 	margin: 15px 35px;
 	@media screen and (max-width: 767px) {
+		margin: 0;
+		padding: 10px;
 		display: flex;
 	}
 }

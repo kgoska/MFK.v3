@@ -15,6 +15,7 @@
 @import './base/text-styles';
 @import './base/sidebar';
 @import './base/def-slider';
+@import './base/default-card';
 @import './corporative/deposits';
 @import './corporative/credits';
 @import './corporative/operations';
@@ -34,13 +35,19 @@
 @import './client/coin';
 @import './client/online-bank';
 @import './client/exchanges';
-@import './private/rko';
+@import './private/calculations';
+@import './private/lifestyle';
+@import './private/consulting';
+@import './private/investments';
+
 
 @import '../css/slick.css';
 
 
 
-
+input{
+    caret-color: black;
+}
 body {
     margin: 0px;
     font-family: $mainFont;
@@ -104,4 +111,7 @@ h1 { //default style for main page title
     &--cover{
         background-size: cover;
     }
+}
+div.hidden{
+    display: none;
 }
