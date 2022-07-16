@@ -3,6 +3,9 @@
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 65px 0 55px;
+	@media screen and(max-width: 768px){
+		margin: 18px 0 40px;
+	}
 	&__step {
 		color: #001843;
 		font-style: normal;
@@ -22,7 +25,7 @@
 	}
 
 }
-.deposits{
+.deposits-breadcrumbs{
 	.breadcrumbs{
 		 margin:0px;
 		 padding: 40px 25px 30px;
@@ -33,4 +36,13 @@
 		}
 	}
 	}
+	@media screen and(max-width: 768px){
+            display: none;
+      };
+      &--mobile{
+            display: none;
+            @media screen and(max-width:768px){
+                  display: block;
+            }
+      }
 }

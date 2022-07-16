@@ -1,639 +1,620 @@
 <%- include('inc/header.html') %>
-    <%- include('inc/private-menu.html') %>
-        <div id="info" data-current-id="vip-deposits" data-main-menu-current-id="banking-head"></div>
+	<%- include('inc/private-menu.html') %>
+		<div id="info" data-current-id="vip-deposits" data-main-menu-current-id="banking-head"></div>
 
-        <!-- Main content-->
+		<!-- Main content-->
 
-        <section>
-            <div class="container">
-                <div class="page">
-                    <div class="page__content basic-page">
-                        <div class="deposits__general m--b-50 ibg ibg--cover ratio-w" style="margin-bottom: 50px;"
-                            data-ratio-multiplier="0.35">
-                            <div class="container">
-                                <div class="deposits">
-                                    <div class="breadcrumbs">
-                                        <div class="breadcrumbs__step"><a href="/">Главная</a></div>
-                                        <div class="breadcrumbs__step"><a href="rko.html">Private banking</a></div>
-                                        <div class="breadcrumbs__step"><span>Депозиты</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="deposits__title p--l-25 text--700 text--white text--XL text--uppercase">
-                                <h1>
-                                    Депозиты vip
-                                </h1>
-                            </div>
-                            <img src="../assets/img/images/vip-deposits.jpg" alt="">
-                        </div>
-                        <div class="filter-card">
+		<section>
+			<div class="container">
+				<div class="page">
+					<div class="page__content basic-page">
+						<div class="container">
+							<div class="deposits-breadcrumbs--mobile">
+								<div class="breadcrumbs">
+									<div class="breadcrumbs__step"><a href="/">Главная</a></div>
+									<div class="breadcrumbs__step"><a href="rko.html">Private banking</a></div>
+									<div class="breadcrumbs__step"><span>Депозиты</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="deposits__general m--b-50 ibg ibg--cover ratio-w" style="margin-bottom: 50px;"
+							data-ratio-multiplier="0.35">
+							<div class="container">
+								<div class="deposits-breadcrumbs">
+									<div class="breadcrumbs">
+										<div class="breadcrumbs__step"><a href="/">Главная</a></div>
+										<div class="breadcrumbs__step"><a href="rko.html">Private banking</a></div>
+										<div class="breadcrumbs__step"><span>Депозиты</span></div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="deposits__title p--l-25 text--700 text--white text--XL text--uppercase sm-p--t-35">
+								<h1>
+									Депозиты vip
+								</h1>
+							</div>
+							<img src="../assets/img/images/vip-deposits.jpg" alt="">
+						</div>
+						<div class="filter-card">
+							<div class="filters m--b-25 vip-filters__wrapper"
+								data-filtered-items-container-id="deposit-items" data-auto-update="false">
+								<div class="fx sm-fx-d--c vip-filters__checkboxes">
+									<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean"
+										data-truthfull-selector="input:checked" data-filter-name='condition1'>
+										<input class="checkbox filter-trigger" type="checkbox" name="filter"
+											id="vostrebovanie">
+										<label class="filter-trigger" for="vostrebovanie">Проценты ежемесячно</label>
+									</div>
+									<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean"
+										data-truthfull-selector="input:checked" data-filter-name='condition2'>
+										<input class="checkbox filter-trigger" type="checkbox" name="filter" id="vznos">
+										<label class="filter-trigger" for="vznos">Дополнительные взносы</label>
+									</div>
+									<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean"
+										data-truthfull-selector="input:checked" data-filter-name='condition3'>
+										<input class="checkbox filter-trigger" type="checkbox" name="filter"
+											id="partvostrebovanie">
+										<label class="filter-trigger" for="partvostrebovanie">Частичное
+											востребование</label>
+									</div>
+									<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean"
+										data-truthfull-selector="input:checked" data-filter-name='condition4'>
+										<input class="checkbox filter-trigger" type="checkbox" name="filter"
+											id="partvostrebovanie">
+										<label class="filter-trigger" for="partvostrebovanie">Конвертация внутри
+											вклада</label>
+									</div>
+								</div>
+								<div class="filter vip-filters__range p--10 xsm-m--b-25" data-filter-type="number"
+									data-filter-name='time' data-scale="breakpoints" data-label-selector=".filter-label"
+									data-label-preset="time" data-breakpoints='
+								{
+									"breakpoints":[
+										{
+											"steps": 5,
+											"multiplier": 5
+										},
+										{
+											"steps": 11,
+											"multiplier": 30
+										},
+										{
+											"steps": 10,
+											"multiplier": 360
+										}
+									]
+								}'>
+									<span>На срок в</span>
+									<span class="filter-label text--700 text--M text--dark-gray">1</span>
+									<input id="days-range" type="range" class="filter-trigger m--t-10" name="days"
+										min="1" max="31" value="1" step="1">
+								</div>
+								<div class="vip-filters__button xsm-m--t-35">
+									<button class="btn btn-filter filter-apply-button p--10 ">
+										Применить
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="deposits-card">
+							<div class="card__wrapper">
+								<div class="card__title ">
+									<h3>Расходный вклад — VIP</h3>
+								</div>
+								<div class="card__table">
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special column__title--special text--LM text--700 text--dark-gray">
+											<h3>Вид валюты</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">рубли</p>
+											<p class="column__text">доллары США</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special column__title--min-size text--LM text--700 text--dark-gray">
+											<h3>Минимальная
+												сумма вклада</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">1 000 000</p>
+											<p class="column__text">25 000</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div class="column__pretitle text--LM text--700 text--dark-gray">
+											<h3>Процентная ставка (годовых)</h3>
+										</div>
+										<div class="columns__wrap">
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>9 месяцев</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">9,5</p>
+													<p class="column__text">0,9</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1 год</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">8</p>
+													<p class="column__text">0,8</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1,5 год</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">7,5</p>
+													<p class="column__text">0,7</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>2 года</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">7,2</p>
+													<p class="column__text">0,5</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn--fullwidth">Открыть депозит</button>
+								</div>
+							</div>
 
-                        </div>
-                        <div class="deposits-card">
-                            <div class="card__wrapper">
-                                <div class="card__title ">
-                                    <h3>Расходный вклад — VIP</h3>
-                                </div>
-                                <div class="card__table">
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Вид валюты</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">рубли</p>
-                                            <p class="column__text">доллары США</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Минимальная
-                                                сумма вклада</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">1 000 000</p>
-                                            <p class="column__text">25 000</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div class="column__pretitle text--LM text--700 text--dark-gray">
-                                            <h3>Процентная ставка (годовых)</h3>
-                                        </div>
-                                        <div class="columns__wrap">
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>9 месяцев</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">9,5</p>
-                                                    <p class="column__text">0,9</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1 год</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">8</p>
-                                                    <p class="column__text">0,8</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1,5 год</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">7,5</p>
-                                                    <p class="column__text">0,7</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>2 года</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">7,2</p>
-                                                    <p class="column__text">0,5</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--fullwidth">Открыть депозит</button>
-                                </div>
-                            </div>
-                            <!-- <div class="deposits-card__wrapper">
-                                <div class="deposits-card__title">
-                                    <h4>Расходный вклад — VIP</h4>
-                                </div>
-                                <table class="tg">
-                                    <colgroup>
-                                        <col class="col" style="width: auto">
-                                        <col style="width: auto">
-                                        <col style="width: auto">
-                                        <col style="width: auto">
-                                        <col style="width: auto">
-                                        <col style="width: auto">
-                                        <col style="width: auto">
-                                    </colgroup>
-                                    <thead class="thead">
-                                        <tr>
-                                            <th class="tg-lue3 text--700 text--LM"
-                                                style="text-align: left; vertical-align: baseline; padding: 0px "
-                                                rowspan="3">
-                                                Вид валюты</th>
-                                            <th class="tg-lue3 text--700 text--LM"
-                                                style="text-align: left; vertical-align: baseline; padding: 0px "
-                                                rowspan="3">
-                                                Минимальная сумма
-                                                вклада</th>
-                                            <th class="tg-lue3 text--700 text--LM" style="padding: 0px" colspan="4">
-                                                Процентная ставка
-                                                (годовых)</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="tg-lue3 text--700 text--LM"
-                                                style="padding: 0px; padding-bottom: 29px;" rowspan="2">9
-                                                месяцев</th>
-                                            <th class="tg-lue3 text--700 text--LM"
-                                                style="padding: 0px; padding-bottom: 29px;" rowspan="2">1
-                                                год</th>
-                                            <th class="tg-lue3 text--700 text--LM"
-                                                style="padding: 0px; padding-bottom: 29px;" rowspan="2">1,5
-                                                год</th>
-                                            <th class="tg-lue3 text--700 text--LM"
-                                                style="padding: 0px; padding-bottom: 29px;" rowspan="2">2
-                                                года</th>
-                                            <th class="tg-lue3 text--700 text--LM" style="padding: 0px; padding-bottom: 29px;" rowspan="2"></th>
-                                        </tr>
-                                        <tr>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="tg-lue3" colspan="6"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tg-lue3 text--400 text--S text--400 text--S"
-                                                style="text-align: left">рубли</td>
-                                            <td class="tg-lue3 text--400 text--S" style="text-align: left">1 000 000
-                                            </td>
-                                            <td class="tg-lue3 text--400 text--S">9,5</td>
-                                            <td class="tg-lue3 text--400 text--S">8</td>
-                                            <td class="tg-lue3 text--400 text--S">7,5</td>
-                                            <td class="tg-lue3 text--400 text--S">7,2</td>
-                                            <td class="tg-lue3 text--400 text--S"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tg-lue3 text--400 text--S" style="text-align: left">доллары США
-                                            </td>
-                                            <td class="tg-lue3 text--400 text--S" style="text-align: left">25 000</td>
-                                            <td class="tg-lue3 text--400 text--S">0,9</td>
-                                            <td class="tg-lue3 text--400 text--S">0,8</td>
-                                            <td class="tg-lue3 text--400 text--S">0,7</td>
-                                            <td class="tg-lue3 text--400 text--S">0,5</td>
-                                            <td class="tg-lue3 text--400 text--S"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tg-lue3"></td>
-                                            <td class="tg-lue3"></td>
-                                            <td class="tg-lue3"></td>
-                                            <td class="tg-lue3"></td>
-                                            <td class="tg-lue3"></td>
-                                            <td class="tg-lue3"></td>
-                                            <td class="tg-lue3"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="deposite-kinds__comtainer" id="btn">
-                                    <button class="btn btn-deposite">Открыть депозит</button>
-                                </div>
-                            </div> -->
-                        </div>
-                        <div class="deposits-card">
-                            <div class="card__wrapper">
-                                <div class="card__title ">
-                                    <h3>Срочный вклад с дополнительными взносами — VIP</h3>
-                                </div>
-                                <div class="card__table">
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Вид валюты</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">рубли</p>
-                                            <p class="column__text">доллары США</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Минимальная
-                                                сумма вклада</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">1 000 000</p>
-                                            <p class="column__text">25 000</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div class="column__pretitle text--LM text--700 text--dark-gray">
-                                            <h3>Процентная ставка (годовых)</h3>
-                                        </div>
-                                        <div class="columns__wrap">
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>3 месяца</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">12</p>
-                                                    <p class="column__text">2</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>6 месяцев</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">10</p>
-                                                    <p class="column__text">1,5</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>9 месяцев</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">9</p>
-                                                    <p class="column__text">1</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1 год</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">8,5</p>
-                                                    <p class="column__text">0,8</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1,5 года</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">7</p>
-                                                    <p class="column__text">0,7</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--fullwidth">Открыть депозит</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="deposits-card">
-                            <div class="card__wrapper">
-                                <div class="card__title ">
-                                    <h3>Валютный вклад — VIP</h3>
-                                </div>
-                                <div class="card__table">
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Вид валюты</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">доллары США</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Минимальная
-                                                сумма вклада</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">25 000</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div class="column__pretitle text--LM text--700 text--dark-gray">
-                                            <h3>Процентная ставка (годовых)</h3>
-                                        </div>
-                                        <div class="columns__wrap">
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>3 месяца</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">1,5</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1,5 года</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">0,3</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--fullwidth">Открыть депозит</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="deposits-card">
-                            <div class="card__wrapper">
-                                <div class="card__title ">
-                                    <h3>Мультивалютный вклад — VIP</h3>
-                                </div>
-                                <div class="card__table">
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Вид валюты</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">рубли</p>
-                                            <p class="column__text">доллары США</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Минимальная
-                                                сумма вклада</h3>
-                                        </div>
-                                        <div class="column__text column__text--align">
-                                            <p class="column__text ">1 000 000</p>
-                                            <p class="column__text ">1 000 000</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div class="column__pretitle text--LM text--700 text--dark-gray">
-                                            <h3>Процентная ставка (годовых)</h3>
-                                        </div>
-                                        <div class="columns__wrap">
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>6 месяцев</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">9,5</p>
-                                                    <p class="column__text">1,2</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>9 месяцев</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">9</p>
-                                                    <p class="column__text">1</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1 год</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">7,5</p>
-                                                    <p class="column__text">0,9</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1,5 год</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">7,2</p>
-                                                    <p class="column__text">0,8</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--fullwidth">Открыть депозит</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="deposits-card">
-                            <div class="card__wrapper">
-                                <div class="card__title ">
-                                    <h3>Срочный вклад — VIP</h3>
-                                </div>
-                                <div class="card__table">
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Вид валюты</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">рубли</p>
-                                            <p class="column__text">доллары США</p>
-                                            <p class="column__text">евро</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Минимальная
-                                                сумма вклада</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">1 000 000</p>
-                                            <p class="column__text">25 000</p>
-                                            <p class="column__text">20 000</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div class="column__pretitle text--LM text--700 text--dark-gray">
-                                            <h3>Процентная ставка (годовых)</h3>
-                                        </div>
-                                        <div class="columns__wrap">
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>3 месяца</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">15</p>
-                                                    <p class="column__text">3,2</p>
-                                                    <p class="column__text">2</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>6 месяцев</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">14</p>
-                                                    <p class="column__text">3</p>
-                                                    <p class="column__text">1,5</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>9 месяцев</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">12</p>
-                                                    <p class="column__text">2,5</p>
-                                                    <p class="column__text">0,9</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1 год</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">9</p>
-                                                    <p class="column__text">1,5</p>
-                                                    <p class="column__text">0,6</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1,5 года</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">8</p>
-                                                    <p class="column__text">1,25</p>
-                                                    <p class="column__text">-</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--fullwidth">Открыть депозит</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="deposits-card">
-                            <div class="card__wrapper">
-                                <div class="card__title ">
-                                    <h3>Детский с дополнительными взносами — VIP</h3>
-                                </div>
-                                <div class="card__table">
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Вид валюты</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">рубли</p>
-                                            <p class="column__text">доллары США</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Минимальная
-                                                сумма вклада</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">1 000 000</p>
-                                            <p class="column__text">25 000</p>
-                                        </div>
-                                    </div>
-                                    <div class="card__table-column">
-                                        <div class="column__pretitle text--LM text--700 text--dark-gray">
-                                            <h3>Процентная ставка (годовых)</h3>
-                                        </div>
-                                        <div class="columns__wrap">
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>1 год</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">8</p>
-                                                    <p class="column__text">0,8</p>
-                                                </div>
-                                            </div>
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3>2 года</h3>
-                                                </div>
-                                                <div class="column__text">
-                                                    <p class="column__text">7</p>
-                                                    <p class="column__text">0,7</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--fullwidth">Открыть депозит</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="deposits-card">
-                            <div class="card__wrapper">
-                                <div class="card__title ">
-                                    <h3>Вклад «До востребования»</h3>
-                                </div>
-                                <div class="card__table">
-                                    <div class="card__table-column">
-                                        <div
-                                            class="column__title column__title--large text--LM text--700 text--dark-gray">
-                                            <h3>Вид валюты</h3>
-                                        </div>
-                                        <div class="column__text">
-                                            <p class="column__text">рубли</p>
-                                            <p class="column__text">доллары США</p>
-                                            <p class="column__text">евро</p>
-                                            <p class="column__text">швейцарские франки</p>
-                                            <p class="column__text">рубли</p>
-                                        </div>
-                                    </div>
+						</div>
+						<div class="deposits-card">
+							<div class="card__wrapper">
+								<div class="card__title ">
+									<h3>Срочный вклад с дополнительными взносами — VIP</h3>
+								</div>
+								<div class="card__table">
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special text--LM text--700 text--dark-gray">
+											<h3>Вид валюты</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">рубли</p>
+											<p class="column__text">доллары США</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special column__title--min-size text--LM text--700 text--dark-gray">
+											<h3>Минимальная
+												сумма вклада</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">1 000 000</p>
+											<p class="column__text">25 000</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div class="column__pretitle text--LM text--700 text--dark-gray">
+											<h3>Процентная ставка (годовых)</h3>
+										</div>
+										<div class="columns__wrap">
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>3 месяца</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">12</p>
+													<p class="column__text">2</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>6 месяцев</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">10</p>
+													<p class="column__text">1,5</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>9 месяцев</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">9</p>
+													<p class="column__text">1</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1 год</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">8,5</p>
+													<p class="column__text">0,8</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1,5 года</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">7</p>
+													<p class="column__text">0,7</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn--fullwidth">Открыть депозит</button>
+								</div>
+							</div>
+						</div>
+						<div class="deposits-card">
+							<div class="card__wrapper">
+								<div class="card__title ">
+									<h3>Валютный вклад — VIP</h3>
+								</div>
+								<div class="card__table">
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special text--LM text--700 text--dark-gray">
+											<h3>Вид валюты</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">доллары США</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special column__title--min-size text--LM text--700 text--dark-gray">
+											<h3>Минимальная
+												сумма вклада</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">25 000</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div class="column__pretitle text--LM text--700 text--dark-gray">
+											<h3>Процентная ставка (годовых)</h3>
+										</div>
+										<div class="columns__wrap">
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>3 месяца</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">1,5</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1,5 года</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">0,3</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn--fullwidth">Открыть депозит</button>
+								</div>
+							</div>
+						</div>
+						<div class="deposits-card">
+							<div class="card__wrapper">
+								<div class="card__title ">
+									<h3>Мультивалютный вклад — VIP</h3>
+								</div>
+								<div class="card__table">
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special text--LM text--700 text--dark-gray">
+											<h3>Вид валюты</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">рубли</p>
+											<p class="column__text">доллары США</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special column__title--min-size text--LM text--700 text--dark-gray">
+											<h3>Минимальная
+												сумма вклада</h3>
+										</div>
+										<div class="column__text-wrapper column__text--align">
+											<p class="column__text ">1 000 000</p>
+											<p class="column__text ">1 000 000</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div class="column__pretitle text--LM text--700 text--dark-gray">
+											<h3>Процентная ставка (годовых)</h3>
+										</div>
+										<div class="columns__wrap">
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>6 месяцев</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">9,5</p>
+													<p class="column__text">1,2</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>9 месяцев</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">9</p>
+													<p class="column__text">1</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1 год</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">7,5</p>
+													<p class="column__text">0,9</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1,5 год</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">7,2</p>
+													<p class="column__text">0,8</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn--fullwidth">Открыть депозит</button>
+								</div>
+							</div>
+						</div>
+						<div class="deposits-card">
+							<div class="card__wrapper">
+								<div class="card__title ">
+									<h3>Срочный вклад — VIP</h3>
+								</div>
+								<div class="card__table">
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special text--LM text--700 text--dark-gray">
+											<h3>Вид валюты</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text column__text--flex30">рубли</p>
+											<p class="column__text column__text--flex30">доллары США</p>
+											<p class="column__text column__text--flex30">евро</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special column__title--min-size text--LM text--700 text--dark-gray">
+											<h3>Минимальная
+												сумма вклада</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text column__text--flex30">1 000 000</p>
+											<p class="column__text column__text--flex30">25 000</p>
+											<p class="column__text column__text--flex30">20 000</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div class="column__pretitle text--LM text--700 text--dark-gray">
+											<h3>Процентная ставка (годовых)</h3>
+										</div>
+										<div class="columns__wrap">
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>3 месяца</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text column__text--flex30">15</p>
+													<p class="column__text column__text--flex30">3,2</p>
+													<p class="column__text column__text--flex30">2</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>6 месяцев</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text column__text--flex30">14</p>
+													<p class="column__text column__text--flex30">3</p>
+													<p class="column__text column__text--flex30">1,5</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>9 месяцев</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text column__text--flex30">12</p>
+													<p class="column__text column__text--flex30">2,5</p>
+													<p class="column__text column__text--flex30">0,9</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1 год</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text column__text--flex30">9</p>
+													<p class="column__text column__text--flex30">1,5</p>
+													<p class="column__text column__text--flex30">0,6</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1,5 года</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text column__text--flex30">8</p>
+													<p class="column__text column__text--flex30">1,25</p>
+													<p class="column__text column__text--flex30">-</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn--fullwidth">Открыть депозит</button>
+								</div>
+							</div>
+						</div>
+						<div class="deposits-card">
+							<div class="card__wrapper">
+								<div class="card__title ">
+									<h3>Детский с дополнительными взносами — VIP</h3>
+								</div>
+								<div class="card__table">
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special text--LM text--700 text--dark-gray">
+											<h3>Вид валюты</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">рубли</p>
+											<p class="column__text">доллары США</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div
+											class="column__title column__title--large column__title--special column__title--min-size text--LM text--700 text--dark-gray">
+											<h3>Минимальная
+												сумма вклада</h3>
+										</div>
+										<div class="column__text-wrapper">
+											<p class="column__text">1 000 000</p>
+											<p class="column__text">25 000</p>
+										</div>
+									</div>
+									<div class="card__table-column">
+										<div class="column__pretitle text--LM text--700 text--dark-gray">
+											<h3>Процентная ставка (годовых)</h3>
+										</div>
+										<div class="columns__wrap">
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>1 год</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">8</p>
+													<p class="column__text">0,8</p>
+												</div>
+											</div>
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--special  text--LM text--700 text--dark-gray">
+													<h3>2 года</h3>
+												</div>
+												<div class="column__text-wrapper">
+													<p class="column__text">7</p>
+													<p class="column__text">0,7</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn--fullwidth">Открыть депозит</button>
+								</div>
+							</div>
+						</div>
+						<div class="deposits-card">
+							<div class="card__wrapper">
+								<div class="card__title ">
+									<h3>Вклад «До востребования»</h3>
+								</div>
+								<div class="card__table card__table--original">
+									<div class="card__table-column card__table-column--original">
+										<div
+											class="column__title column__title--large column__title--original text--LM text--700 text--dark-gray">
+											<h3>Вид валюты</h3>
+										</div>
+										<div class="column__text-wrapper column__text-wrapper--original">
+											<p class="column__text column__text--original">рубли</p>
+											<p class="column__text column__text--original">доллары США</p>
+											<p class="column__text column__text--original">евро</p>
+											<p class="column__text column__text--original">швейцарские франки</p>
+											<p class="column__text column__text--original">рубли</p>
+										</div>
+									</div>
+									<div class="card__table-column card__table-column--original">
+										<div class="column__pretitle text--LM text--700 text--dark-gray">
+											<h3>Процентная ставка (годовых)</h3>
+										</div>
+										<div class="columns__wrap columns__wrap--original">
+											<div class="columns__item">
+												<div
+													class="column__title column__title--medium column__title--original text--LM text--700 text--dark-gray">
+													<h3></h3>
+												</div>
 
-                                    <div class="card__table-column">
-                                        <div class="column__pretitle text--LM text--700 text--dark-gray">
-                                            <h3>Процентная ставка (годовых)</h3>
-                                        </div>
-                                        <div class="columns__wrap">
-                                            <div class="columns__item">
-                                                <div
-                                                    class="column__title column__title--medium  text--LM text--700 text--dark-gray">
-                                                    <h3></h3>
-                                                </div>
+												<div class="column__text-wrapper column__text-wrapper--original">
+													<p class="column__text column__text--original">0,01</p>
+													<p class="column__text column__text--original">0,01</p>
+													<p class="column__text column__text--original">0,01</p>
+													<p class="column__text column__text--original">0,01</p>
+													<p class="column__text column__text--original">0,01</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn--fullwidth">Открыть депозит</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                                                <div class="column__text">
-                                                    <p class="column__text">0,01</p>
-                                                    <p class="column__text">0,01</p>
-                                                    <p class="column__text">0,01</p>
-                                                    <p class="column__text">0,01</p>
-                                                    <p class="column__text">0,01</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--fullwidth">Открыть депозит</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		</section>
 
-        </section>
+		<%- include('inc/footer.html') %>
 
-        <%- include('inc/footer.html') %>
+			</body>
 
-            </body>
-
-            </html>
+			</html>

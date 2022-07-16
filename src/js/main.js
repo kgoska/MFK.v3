@@ -158,7 +158,8 @@ $(document).ready(function(){
 });
 
 //READMORE END
-//Filter Start
+
+//Simple Filters
 $(document).on('click', '.filter-button', function(event) {
 	let filterData = JSON.parse($(this).data("filter"));
 	let filteredObjects = $("#"+$(this).data("filter-container-id")).find(".filtered");
@@ -181,7 +182,8 @@ $(document).on('click', '.filter-button', function(event) {
 	$(this).addClass("active");
 
 });
-//Filter end
+//Simple Filters end
+
 $(window).resize(function(){
 	RatioW();
 	RatioH();
