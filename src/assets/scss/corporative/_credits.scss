@@ -408,8 +408,9 @@
 	&--full{
 		width: 100%;
 	}
+	justify-content: space-between;
 	align-items: center;
-	padding: 41px 0 41px 30px;
+	padding: 0 30px;
 	height: 126px;
 	background: #00205B;
 	border-radius: 5px;
@@ -421,18 +422,16 @@
 .rates__link{
 	display: flex;
 	align-items: center;
-	margin-right: 30px;
 	font-family: 'Helvetica';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 23px;
 	color: #FFFFFF;
-	
 }
 .rates__svg{
 	margin-left: 30px;
-	width: 33px;
+	width: 40px;
     height: 30px;
 }
 .rates__item-contacts {
