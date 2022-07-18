@@ -1,0 +1,132 @@
+.background {
+
+}
+.ibg {
+}
+.ibg--cover {
+}
+.container {
+}
+.general-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 155px 0 220px 0;
+}
+.general-title {
+    margin-bottom: 50px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 1.25em;
+    color: #FFFFFF;
+}
+.general-btn {
+}
+.btn {
+}
+.general {
+}
+.general-info {
+    display: flex;
+    flex-direction: row;
+    margin: 84px 0  140px;
+}
+.info-card {
+
+		// .info-card__wrapper
+
+		&__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: #FFFFFF;
+            border: 1px solid #D1D1D1;
+            padding: 30px;
+            &:not(:last-child){
+                margin-right: 30px;
+            }
+		}
+
+		// .info-card__title
+
+		&__title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+		}
+
+		// .info-card__text
+
+		&__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #5B5B5B;
+		}
+}
+.general-about {
+    display: flex;
+    flex-direction: row;
+
+}
+.about-card {
+
+		// .about-card__wrapper
+
+		&__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 0 0 50%;
+            padding: 30px 45px 45px 70px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            &:not(:last-child){
+                margin-right: 30px;
+            }
+		}
+
+		// .about-card__title
+
+		&__title {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 34px;
+            color: #00205B;
+		}
+
+		// .about-card__posttitle
+
+		&__posttitle {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            color: #4E4E4E;
+		}
+
+		// .about-card__text
+
+		&__text {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            color: #4E4E4E;
+		}
+}
