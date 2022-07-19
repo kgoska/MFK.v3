@@ -195,7 +195,7 @@ function FormTimeQuantity(quantity, unit) { // THIS IS LITERAL HELL, preceed wit
 			break;
 		case 'month':
 			if(lastDigit == 0 || lastDigit > 4 || penultimateDigit == 1){
-				return "Месяцов";
+				return "Месяцев";
 			}
 			else if (lastDigit == 1){
 				return "Месяц";
