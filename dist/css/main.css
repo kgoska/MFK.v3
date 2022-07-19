@@ -8144,15 +8144,19 @@ label {
   grid-template-rows: none;
 }
 
+@media screen and (max-width: 560px) {
+  .premium-card {
+    padding: 40px 20px !important;
+  }
+}
+
 .premium-card__wrap {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 }
 @media screen and (max-width: 560px) {
-  .premium-card__wrap {
-    flex-direction: column;
-  }
   .premium-card__wrap:first-child {
     margin-bottom: 25px;
   }
@@ -8181,7 +8185,7 @@ label {
 }
 @media screen and (max-width: 1199px) {
   .card-list__card__advantages-wrapper.premium-card__wrapper {
-    flex: 0 0 54%;
+    flex: 0 0 calc(50% - 10px);
     justify-content: space-between;
     gap: 5px;
   }
@@ -8189,13 +8193,12 @@ label {
 @media screen and (max-width: 767px) {
   .card-list__card__advantages-wrapper.premium-card__wrapper {
     flex-direction: column;
-    flex: none;
     gap: 0;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 560px) {
   .card-list__card__advantages-wrapper.premium-card__wrapper {
-    margin: 0 auto;
+    margin: 0;
   }
 }
 
@@ -8211,23 +8214,37 @@ label {
 }
 
 .card-list__card__button-wrapper.premium-card__button-wrap {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 10px);
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  .card-list__card__button-wrapper.premium-card__button-wrap {
+    align-items: start;
+  }
 }
 @media screen and (max-width: 769px) {
   .card-list__card__button-wrapper.premium-card__button-wrap {
-    flex: 0 0 auto;
     gap: 20px;
   }
 }
 
 .card-list__info-wrap.premium-card__info-wrap {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 10px);
+}
+@media screen and (max-width: 560px) {
+  .card-list__info-wrap.premium-card__info-wrap {
+    flex: 0 0 100%;
+  }
+  .card-list__info-wrap.premium-card__info-wrap * {
+    width: 100% !important;
+    margin: 0;
+  }
 }
 
 .card-list__card__preview.premium-card__preview {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 10px);
 }
 @media screen and (max-width: 769px) {
   .card-list__card__preview.premium-card__preview {
@@ -8237,8 +8254,14 @@ label {
 }
 @media screen and (max-width: 560px) {
   .card-list__card__preview.premium-card__preview {
+    flex: 0 0 100%;
     margin-bottom: 25px;
     padding: 0;
+  }
+  .card-list__card__preview.premium-card__preview > img {
+    width: 100%;
+    height: auto;
+    max-width: unset;
   }
 }
 
