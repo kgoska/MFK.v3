@@ -3,20 +3,25 @@
 
       }
 }
-.deposits-card {
+.deposits-card { 
+	&--center{
+		*{
+			text-align: center;
+			justify-content: center;
+		}
+		
+	}
 	padding: 40px 55px 44px 130px;
-	margin: 0 100px;
+	margin: 0 100px 50px 100px;
 	background: #FFFFFF;
 	border: 1px solid #D1D1D1;
 	box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
-	&:not(:last-child){
-		margin-bottom: 50px;
-	}
+	margin-bottom: 50px;
     @media screen and (max-width:1200px){
       padding: 40px 20px ;
     }
     @media screen and (max-width:991px){
-      margin: 0;
+      margin: 0 0 50px 0;
     }
 }
 .card {
@@ -81,12 +86,13 @@
                   }
                   @media screen and (max-width:768px){
                         border: none;
-                        height: calc(1.25em + 20px);
+                        // height: calc(1.25em + 20px);
                   }
                   &--min-size{
                         width: min-content;
                         @media screen and (max-width:768px){
                               width: 100%;
+                              margin-bottom: 15px;
                         }
                   }
                   &--medium{
@@ -104,10 +110,14 @@
                   }
                   &--special{
                         @media screen and (max-width:768px){
-                        border: none;
-                        height: calc(1.25em + 20px);
+		                        border: none;
+		                        // height: calc(1.25em + 20px);
+		                  }
                   }
-                  }
+                  @media screen and (max-width:768px){
+	                    height: auto;
+	                    margin: 0;
+	              }
 		}
 
             &__text-wrapper{
@@ -115,7 +125,8 @@
                   flex-direction: column;
                   @media screen and (max-width:768px){
                         flex-direction: row;
-                        align-items: flex-start;
+                        align-items: stretch;
+                        padding: 0 30px;
                   }
                   &--original{
                         display: flex;
@@ -136,16 +147,33 @@
                         padding: 7px;
                   }
                   @media screen and (max-width:768px){
-                        flex: 0 0 50%;
-                        align-items: flex-start;
+                  		flex-basis: 0;
+                  		flex-grow: 1;
+                  		border-top: 1px solid #aaa;
+                  		border-bottom: 1px solid #aaa;
+                  		// border-left: 1px solid #aaa;
+                  		// &:last-child{
+                  		// 	border-right: 1px solid #aaa;
+                  		// }
+                  		&:not(:last-child){
+                  			border-right: 1px solid #aaa;
+                  		}
+                        // flex: 0 0 50%;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                   }
-                  &--flex30{
-                        flex: 0 0 33%;
-                  }
+                  // &--flex30{
+                  //       flex: 0 0 33%;
+                  // }
                   &--original{
                         @media screen and (max-width:575px){
                               height: calc(2em + 10px);
                         }
+                  }
+                  &--bold{
+                  	font-weight: bold;
                   }
 		}
 
@@ -157,6 +185,11 @@
                   @media screen and (max-width: 991px){
                         font-size: 18px;
                         line-height: 21px;
+                  }
+                  @media screen and (max-width:768px){
+                        margin-bottom: 15px;
+                        height: auto;
+                        margin: 0;
                   }
 		}
 }

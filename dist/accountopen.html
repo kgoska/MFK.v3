@@ -94,14 +94,14 @@
 					</div>
 					<div class="header-menu__contacts text--400 text--M">
 						<div class="header-menu__contacts-icon">
-							<img src="assets/img/phone.svg" alt="">
+							<img src="assets/fonts/phone.svg" alt="">
 						</div>
 						<span>+ 7 495 287-02-60</span>
 					</div>
 					<div class="header-menu__search text--white">
 						<input class="input input--underscore" type="text" placeholder="Поиск">
 						<a class="header-menu__search-icon" href="">
-							<img src="assets/img/search.svg" alt="">
+							<img src="assets/fonts/search.svg" alt="">
 						</a>
 					</div>
 					<!-- </div> -->
@@ -137,7 +137,7 @@
 					</div>
 					<button class="mobile__toggle" id="burger-close">
 						<svg class="mobile__svg">
-							<use href="assets/img/symbol-defs.svg#icon-close-menu"></use>
+							<use href="assets/fonts/symbol-defs.svg#icon-close-menu"></use>
 						</svg>
 					</button>
 				</div>
@@ -215,15 +215,22 @@
 								<div class="submenu__body-wrap">
 									<ul class="submenu__body">
 										<li class="submenu__item">
-											<a class="submenu__item-link" href="accountopen.html">Банковское
-												обслуживание</a>
+											<a class="submenu__item-link" href="rko.html">Расчеты</a>
 										</li>
 										<li class="submenu__item">
-											<a class="submenu__item-link" href="credits.html">Кредитование</a>
+											<a class="submenu__item-link" href="vip-deposits.html">Депозиты</a>
 										</li>
 										<li class="submenu__item">
-											<a class="submenu__item-link" href="garanty.html">Аккредитивы и
-												гарантии</a>
+											<a class="submenu__item-link" href="investments.html">Инвестиции</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__item-link" href="credit-private.html">Кредиты</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__item-link" href="consulting.html">Консультирование</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__item-link" href="lifestyle.html">Lifestyle</a>
 										</li>
 									</ul>
 								</div>
@@ -251,272 +258,549 @@
 			</div>
 		</section>
 	</header>
-<section class="container">
+	<section class="container">
     <div class="page-content">
         <div class="page-item" id="bank">
             <a class="page-link" href="accountopen.html">
-                <svg class="page__more current__item" viewBox="0 0 32 32">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-bank" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/bank.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Банковское обслуживание</p>
             </a>
         </div>
         <div class="page-item" id="deposits">
             <a class="page-link" href="deposits.html">
-                <svg class="page__more">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-deposite" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/deposite.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Депозиты</p>
             </a>
         </div>
-        <div class="page-item" id="credit">
+        <div class="page-item" id="credits">
             <a class="page-link" href="credits.html">
-                <svg class="page__more">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-credite" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/credite.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Кредитование</p>
             </a>
         </div>
         <div class="page-item" id="garanty">
             <a class="page-link" href="garanty.html">
-                <svg class="page__more">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-garanties" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/garanties.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Аккредитивы и гарантии</p>
             </a>
         </div>
     </div>
 </section>
-<div id="info" data-current-id="bank" data-main-menu-current-id="corporative-head"></div>
+		<div id="info" data-current-id="bank" data-main-menu-current-id="corporative-head"></div>
 
-    <!-- Main content-->
+		<!-- Main content-->
 
-    <section class="container">
-        <div class="second__header-operations">
-            <div class="second__text-credits__list">
-                <a class="second__text-credits" href="#">Главная /</a>
-                <a class="second__text-credits" href="./accountopen.html">Корпоративным клиентам /</a>
-                <a class="second__text-credits" href="./accountopen.html">Банковское обслуживание /</a>
-                <a class="second__text-credits current-second__text-credits" href="./accountopen.html">Открытие расчетного счета</a>
-            </div>
-        </div>
-        <div class="operations">
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <p class="dropbtn-text">Открытие расчетного счета</p>
-                    <img class="dropdown__picture" src="assets/img/arrow1.png" alt="arrow" class="operations__picture" width="20px"
-                        height="20px">
-                </button>
-                <div id="myDropdown" class="dropdown-content">
-                    <ul class="operations__list__mobile">
-                        <li class="operations__list-item__mobile">
-                            <a href="./accountopen.html" class="operations__link__mobile">Открытие расчетного счета</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./ved.html" class="operations__link__mobile">ВЭД</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./specialchecks.html" class="operations__link__mobile">Специальные счета</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./distance-services.html" class="operations__link__mobile">Дистанционные сервисы</a>
-                        </li>
-                        <li class="operations__list-item__mobile ">
-                            <a href="./operations.html" class="operations__link__mobile">Операции с ценными бумагами</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./tarif.html" class="operations__link__mobile">Тарифы</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="" class="operations__link__mobile">Документы</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="operations__item">
-                <ul class="operations__list">
-                    <li class="operations__list-item current-operations__list-item">
-                        <a href="./accountopen.html" class="operations__link current-operations__link">Открытие расчетного счета</a>
-                        <img src="assets/img/arrow.png" alt="arrow" class="operations__picture" width="20px" height="20px">
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./ved.html" class="operations__link">ВЭД</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./specialchecks.html" class="operations__link">Специальные счета</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./distance-services.html" class="operations__link">Дистанционные сервисы</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./operations.html" class="operations__link">Операции с ценными бумагами</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./tarif.html" class="operations__link">Тарифы</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="" class="operations__link">Документы</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="operations__item">
-                <div class="operations__kind">
-                    <div class="operations__kind-item fx-el--100">
-                        <h5 class="operations__kind-title">
-                            Анкета на открытие счета
-                        </h5>
-                        <div class="accoutopen__checklist">
-                            <input type="text" class="accountopen__text" placeholder="Наименование организации" />
-                            <div class="accountopen__item-list">
-                                <div class="accountopen__check-item">
-                                    <input type="text" class="accountopen__text" placeholder="ИНН" />
-                                    <input type="text" class="accountopen__text" placeholder="Контактное лицо " />
-                                </div>
-                                <div class="accountopen__check-item">
-                                    <input type="text" class="accountopen__text" placeholder="Электронная почта" />
-                                    <input type="text" class="accountopen__text" placeholder="Контактный телефон" />
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="principal" >
-                            <div class="accountopen__conditions">
-                                <input type="checkbox" class="accountopen__check" name="check" id="conditions" />
-                                <label class="accountopen__check-text" for="conditions">
-                                    Я согласен с <a href="">условиями</a> использования<br> 
-                                    банком моих персональных данных для<br> 
-                                    обработки данного обращения
-                                </label>
-                            </div>
-                            <button class="operations__btn btn m--l-5">
-                                Открыть счет
-                            </button>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="operations__documentation">
-                    <div class="operations__documentation-nav">
-                        <div type="menu__toggle" id="operations__docs" class="operations__docs">
-                            <div>
-                                <h3 class="operations__documentation-title">
-                                    Перечень документов для открытия счета
-                                </h3>
-                                <div class="operations__documentation-Link__list">
-                                    <a href="#" class="operations__documentation-link" id="resident">Резиденту</a>
-                                    <a href="#" class="operations__documentation-link" id="noresident">Нерезиденту</a>
-                                    <a href="#" class="operations__documentation-link" id="up">ИП</a>
-                                    <a href="#" class="operations__documentation-link current-link" id="custom">Общие</a>
-                                </div>
-                            </div>
-                            <div class="operations__documentation-list">
-                                <div class="operations__documentation-kind" id="resident-item">
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/pdf.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Общие условия комплексного банковского обслуживания
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="operations__documentation-file hide" data-show="no">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Перечень документов для заключения договора банковского обслуживания 
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="operations__documentation-kind" id="noresident-item">
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Форма Подтверждения о присоединении 
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="operations__documentation-kind" id="up-item">
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/pdf.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Общие условия комплексного банковского обслуживания
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="operations__documentation-file hide" data-show="no">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Перечень документов для заключения договора банковского обслуживания 
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="operations__documentation-kind active" id="custom-item">
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Форма Подтверждения о присоединении 
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="documentation__more more" type="button" id="showmore">
-                        Смотреть все
-                        <svg class="more-picture">
-                            <use href="assets/img/symbol-defs.svg#icon-more" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="rates operations__rates">
-                    <div class="rates__link-item">
-                        <a class="rates__link" href="#">
-                            Тарифы на РКО
-                        </a>
-                        <svg class="rates__svg">
-                            <use href="assets/img/symbol-defs.svg#icon-next" />
-                        </svg>
-                    </div>
-                    <div class="rates__item-contacts">
-                        <div class="rates__contacts">
-                            <h5 class="rates__title">Контакты:</h5>
-                            <p class="rates__text">
-                                s.pigolkina@mfk-bank.ru<br>
-                                +7 495 287-02-60
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<footer class=" footer">
+		<section class="container">
+			<div class="second__header-operations">
+				<div class="second__text-credits__list">
+					<a class="second__text-credits" href="#">Главная /</a>
+					<a class="second__text-credits" href="./accountopen.html">Корпоративным клиентам /</a>
+					<a class="second__text-credits" href="./accountopen.html">Банковское обслуживание /</a>
+					<a class="second__text-credits current-second__text-credits" href="./accountopen.html">Открытие
+						расчетного счета</a>
+				</div>
+			</div>
+			<div class="page">
+				<div class="page__sidebar sidebar">
+					<div class="sidebar__overlay"></div>
+					<div class="sidebar__items">
+						<div class="sidebar__item sidebar__item--selected">
+							<div class="sidebar__item-text">
+								<a href="accountopen.html">Открытие расчетного счета</a>
+							</div>
+							<div class="sidebar__item-icon"></div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__item-text">
+								<a href="ved.html">ВЭД</a>
+							</div>
+							<div class="sidebar__item-icon"></div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__item-text">
+								<a href="specialchecks.html">Специальные счета</a>
+							</div>
+							<div class="sidebar__item-icon"></div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__item-text">
+								<a href="distance-services.html">Дистанционные сервисы</a>
+							</div>
+							<div class="sidebar__item-icon"></div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__item-text">
+								<a href="operations.html">Операции с ценными бумагами</a>
+							</div>
+							<div class="sidebar__item-icon"></div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__item-text">
+								<a href="tarif.html">Тарифы</a>
+							</div>
+							<div class="sidebar__item-icon"></div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__item-text">
+								<a href="#">Документы</a>
+							</div>
+							<div class="sidebar__item-icon"></div>
+						</div>
+					</div>
+				</div>
+				<div class="page__content basic-page">
+					<div class="operations__kind">
+						<div class="operations__kind-item fx-el--100">
+							<h5 class="operations__kind-title">
+								Анкета на открытие счета
+							</h5>
+							<div class="accoutopen__checklist">
+								<input type="text" class="accountopen__text" placeholder="Наименование организации" />
+								<div class="accountopen__item-list">
+									<div class="accountopen__check-item">
+										<input type="text" class="accountopen__text" placeholder="ИНН" />
+										<input type="text" class="accountopen__text" placeholder="Контактное лицо " />
+									</div>
+									<div class="accountopen__check-item">
+										<input type="text" class="accountopen__text" placeholder="Электронная почта" />
+										<input type="text" class="accountopen__text" placeholder="Контактный телефон" />
+									</div>
+								</div>
+
+							</div>
+							<div class="principal">
+								<div class="accountopen__conditions">
+									<input type="checkbox" class="accountopen__check" name="check" id="conditions" />
+									<label class="accountopen__check-text" for="conditions">
+										Я согласен с <a href="">условиями</a> использования<br>
+										банком моих персональных данных для<br>
+										обработки данного обращения
+									</label>
+								</div>
+								<button class="operations__btn btn m--l-5">
+									Открыть счет
+								</button>
+							</div>
+
+						</div>
+					</div>
+					<div class="default-card m--b-35">
+						<div class="operations__documentation-nav">
+							<div type="menu__toggle" id="operations__docs" class="operations__docs">
+								<div>
+									<h3 class="operations__documentation-title">
+										Перечень документов для открытия счета
+									</h3>
+									<div class="operations__documentation-Link__list">
+										<a href="#" class="operations__documentation-link" id="resident">Резиденту</a>
+										<a href="#" class="operations__documentation-link"
+											id="noresident">Нерезиденту</a>
+										<a href="#" class="operations__documentation-link" id="up">ИП</a>
+										<a href="#" class="operations__documentation-link current-link"
+											id="custom">Общие</a>
+									</div>
+								</div>
+								<div class="operations__documentation-list">
+									<div class="operations__documentation-kind" id="resident-item">
+										<div class="operations__documentation-file">
+											<img src="assets/img/pdf.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Общие условия комплексного банковского обслуживания
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+										<div class="operations__documentation-file"
+											data-readmore-identifier="doc-list-readmore">
+											<img src="assets/img/word.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Перечень документов для заключения договора банковского
+													обслуживания 
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="operations__documentation-kind" id="noresident-item">
+										<div class="operations__documentation-file">
+											<img src="assets/img/word.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Форма Подтверждения о присоединении 
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+										<div class="operations__documentation-file"
+											data-readmore-identifier="doc-list-readmore">
+											<img src="assets/img/word.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Перечень документов для заключения договора банковского
+													обслуживания 
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="operations__documentation-kind" id="up-item">
+										<div class="operations__documentation-file">
+											<img src="assets/img/pdf.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Общие условия комплексного банковского обслуживания
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+										<div class="operations__documentation-file"
+											data-readmore-identifier="doc-list-readmore">
+											<img src="assets/img/word.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Перечень документов для заключения договора банковского
+													обслуживания 
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="operations__documentation-kind active" id="custom-item">
+										<div class="operations__documentation-file">
+											<img src="assets/img/word.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Форма Подтверждения о присоединении 
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+										<div class="operations__documentation-file"
+											data-readmore-identifier="doc-list-readmore">
+											<img src="assets/img/word.png" alt="pdf" width="24px"
+												height="30px">
+											<div class="operations__documentation-content">
+												<H5 class="operations__documentation-description">
+													Перечень документов для заключения договора банковского
+													обслуживания 
+												</H5>
+												<p class="operations__documentation-caracter">
+													PDF, 279 КБ / 04 июня 2018
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="read-more__wrapper">
+							<div class="read-more readmore" id="doc-list-readmore">
+								<span class="read-more__text-more">Смотреть все</span>
+								<span class="read-more__text-less">Скрыть</span>
+								<img src="assets/fonts/read-more-btn.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="rates operations__rates">
+						<div class="rates__link-item">
+							<a class="rates__link" href="#">
+								Тарифы на РКО
+							</a>
+							<svg class="rates__svg">
+								<use href="assets/fonts/symbol-defs.svg#icon-next" />
+							</svg>
+						</div>
+						<div class="rates__item-contacts">
+							<div class="rates__contacts">
+								<h5 class="rates__title">Контакты:</h5>
+								<p class="rates__text">
+									s.pigolkina@mfk-bank.ru<br>
+									+7 495 287-02-60
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="operations">
+			<div class="dropdown">
+				<button class="dropbtn">
+					<p class="dropbtn-text">Открытие расчетного счета</p>
+					<img class="dropdown__picture" src="../assets/img/icons/arrow1.png" alt="arrow" class="operations__picture" width="20px"
+						height="20px">
+				</button>
+				<div id="myDropdown" class="dropdown-content">
+					<ul class="operations__list__mobile">
+						<li class="operations__list-item__mobile">
+							<a href="./accountopen.html" class="operations__link__mobile">Открытие расчетного счета</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./ved.html" class="operations__link__mobile">ВЭД</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./specialchecks.html" class="operations__link__mobile">Специальные счета</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./distance-services.html" class="operations__link__mobile">Дистанционные сервисы</a>
+						</li>
+						<li class="operations__list-item__mobile ">
+							<a href="./operations.html" class="operations__link__mobile">Операции с ценными бумагами</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./tarif.html" class="operations__link__mobile">Тарифы</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="" class="operations__link__mobile">Документы</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="operations__item">
+				<ul class="operations__list">
+					<li class="operations__list-item current-operations__list-item">
+						<a href="./accountopen.html" class="operations__link current-operations__link">Открытие расчетного счета</a>
+						<img src="../assets/img/images/arrow.png" alt="arrow" class="operations__picture" width="20px" height="20px">
+					</li>
+					<li class="operations__list-item">
+						<a href="./ved.html" class="operations__link">ВЭД</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="./specialchecks.html" class="operations__link">Специальные счета</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="./distance-services.html" class="operations__link">Дистанционные сервисы</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="./operations.html" class="operations__link">Операции с ценными бумагами</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="./tarif.html" class="operations__link">Тарифы</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="" class="operations__link">Документы</a>
+					</li>
+				</ul>
+			</div>
+			<div class="operations__item">
+				<div class="operations__kind">
+					<div class="operations__kind-item fx-el--100">
+						<h5 class="operations__kind-title">
+							Анкета на открытие счета
+						</h5>
+						<div class="accoutopen__checklist">
+							<input type="text" class="accountopen__text" placeholder="Наименование организации" />
+							<div class="accountopen__item-list">
+								<div class="accountopen__check-item">
+									<input type="text" class="accountopen__text" placeholder="ИНН" />
+									<input type="text" class="accountopen__text" placeholder="Контактное лицо " />
+								</div>
+								<div class="accountopen__check-item">
+									<input type="text" class="accountopen__text" placeholder="Электронная почта" />
+									<input type="text" class="accountopen__text" placeholder="Контактный телефон" />
+								</div>
+							</div>
+							
+						</div>
+						<div class="principal" >
+							<div class="accountopen__conditions">
+								<input type="checkbox" class="accountopen__check" name="check" id="conditions" />
+								<label class="accountopen__check-text" for="conditions">
+									Я согласен с <a href="">условиями</a> использования<br> 
+									банком моих персональных данных для<br> 
+									обработки данного обращения
+								</label>
+							</div>
+							<button class="operations__btn btn m--l-5">
+								Открыть счет
+							</button>
+						</div>
+						
+					</div>
+				</div>
+				<div class="default-card m--b-35">
+					<div class="operations__documentation-nav">
+						<div type="menu__toggle" id="operations__docs" class="operations__docs">
+							<div>
+								<h3 class="operations__documentation-title">
+									Перечень документов для открытия счета
+								</h3>
+								<div class="operations__documentation-Link__list">
+									<a href="#" class="operations__documentation-link" id="resident">Резиденту</a>
+									<a href="#" class="operations__documentation-link" id="noresident">Нерезиденту</a>
+									<a href="#" class="operations__documentation-link" id="up">ИП</a>
+									<a href="#" class="operations__documentation-link current-link" id="custom">Общие</a>
+								</div>
+							</div>
+							<div class="operations__documentation-list">
+								<div class="operations__documentation-kind" id="resident-item">
+									<div class="operations__documentation-file">
+										<img src="../assets/img/images/pdf.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Общие условия комплексного банковского обслуживания
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+									<div class="operations__documentation-file" data-readmore-identifier="doc-list-readmore">
+										<img src="../assets/img/images/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Перечень документов для заключения договора банковского обслуживания 
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="operations__documentation-kind" id="noresident-item">
+									<div class="operations__documentation-file">
+										<img src="../assets/img/images/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Форма Подтверждения о присоединении 
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+									<div class="operations__documentation-file" data-readmore-identifier="doc-list-readmore">
+										<img src="../assets/img/images/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Перечень документов для заключения договора банковского обслуживания 
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="operations__documentation-kind" id="up-item">
+									<div class="operations__documentation-file">
+										<img src="../assets/img/images/pdf.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Общие условия комплексного банковского обслуживания
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+								   <div class="operations__documentation-file" data-readmore-identifier="doc-list-readmore">
+										<img src="../assets/img/images/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Перечень документов для заключения договора банковского обслуживания 
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="operations__documentation-kind active" id="custom-item">
+									<div class="operations__documentation-file">
+										<img src="../assets/img/images/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Форма Подтверждения о присоединении 
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+									<div class="operations__documentation-file" data-readmore-identifier="doc-list-readmore">
+										<img src="../assets/img/images/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Перечень документов для заключения договора банковского обслуживания 
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="read-more__wrapper">
+						<div class="read-more readmore" id="doc-list-readmore">
+							<span class="read-more__text-more">Смотреть все</span>
+							<span class="read-more__text-less">Скрыть</span>
+							<img src="../assets/img/svg/read-more-btn.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="rates operations__rates">
+					<div class="rates__link-item">
+						<a class="rates__link" href="#">
+							Тарифы на РКО
+						</a>
+						<svg class="rates__svg">
+							<use href="../assets/img/svg/sprite/symbol-defs.svg#icon-next" />
+						</svg>
+					</div>
+					<div class="rates__item-contacts">
+						<div class="rates__contacts">
+							<h5 class="rates__title">Контакты:</h5>
+							<p class="rates__text">
+								s.pigolkina@mfk-bank.ru<br>
+								+7 495 287-02-60
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		</section>
+		<footer class=" footer">
     <section class="">
         <div class="footer__container container">
             <div class="logo-footer" id="logo">
@@ -577,7 +861,9 @@
                 </div>
             </div>
             <div class="nav-footer-link" id="online">
-                <a class="nav-footer-link" href="#">Онлайн - банк</a>
+                <a class="nav-footer-link" href="ubs.html">
+                    РЕГИСТРАЦИЯ В ЕДИНОЙ БИОМЕТРИЧЕСКОЙ СИСТЕМЕ
+                </a>
             </div>
             <div class="nav-footer" id="navigate">
                 <ul class="nav-list">
@@ -626,6 +912,6 @@
         </div>
     </section>
 </footer>
-</body>
+			</body>
 
-</html>
+			</html>

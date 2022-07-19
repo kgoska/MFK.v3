@@ -94,14 +94,14 @@
 					</div>
 					<div class="header-menu__contacts text--400 text--M">
 						<div class="header-menu__contacts-icon">
-							<img src="assets/img/phone.svg" alt="">
+							<img src="assets/fonts/phone.svg" alt="">
 						</div>
 						<span>+ 7 495 287-02-60</span>
 					</div>
 					<div class="header-menu__search text--white">
 						<input class="input input--underscore" type="text" placeholder="Поиск">
 						<a class="header-menu__search-icon" href="">
-							<img src="assets/img/search.svg" alt="">
+							<img src="assets/fonts/search.svg" alt="">
 						</a>
 					</div>
 					<!-- </div> -->
@@ -137,7 +137,7 @@
 					</div>
 					<button class="mobile__toggle" id="burger-close">
 						<svg class="mobile__svg">
-							<use href="assets/img/symbol-defs.svg#icon-close-menu"></use>
+							<use href="assets/fonts/symbol-defs.svg#icon-close-menu"></use>
 						</svg>
 					</button>
 				</div>
@@ -215,15 +215,22 @@
 								<div class="submenu__body-wrap">
 									<ul class="submenu__body">
 										<li class="submenu__item">
-											<a class="submenu__item-link" href="accountopen.html">Банковское
-												обслуживание</a>
+											<a class="submenu__item-link" href="rko.html">Расчеты</a>
 										</li>
 										<li class="submenu__item">
-											<a class="submenu__item-link" href="credits.html">Кредитование</a>
+											<a class="submenu__item-link" href="vip-deposits.html">Депозиты</a>
 										</li>
 										<li class="submenu__item">
-											<a class="submenu__item-link" href="garanty.html">Аккредитивы и
-												гарантии</a>
+											<a class="submenu__item-link" href="investments.html">Инвестиции</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__item-link" href="credit-private.html">Кредиты</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__item-link" href="consulting.html">Консультирование</a>
+										</li>
+										<li class="submenu__item">
+											<a class="submenu__item-link" href="lifestyle.html">Lifestyle</a>
 										</li>
 									</ul>
 								</div>
@@ -255,33 +262,41 @@
     <div class="page-content">
         <div class="page-item" id="bank">
             <a class="page-link" href="accountopen.html">
-                <svg class="page__more current__item" viewBox="0 0 32 32">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-bank" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/bank.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Банковское обслуживание</p>
             </a>
         </div>
         <div class="page-item" id="deposits">
             <a class="page-link" href="deposits.html">
-                <svg class="page__more">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-deposite" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/deposite.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Депозиты</p>
             </a>
         </div>
-        <div class="page-item" id="credit">
+        <div class="page-item" id="credits">
             <a class="page-link" href="credits.html">
-                <svg class="page__more">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-credite" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/credite.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Кредитование</p>
             </a>
         </div>
         <div class="page-item" id="garanty">
             <a class="page-link" href="garanty.html">
-                <svg class="page__more">
-                    <use class="page__icon" href="assets/img/symbol-defs.svg#icon-garanties" />
-                </svg>
+                <div class="link-img__wrapper">
+                    <div class="link-img__circle ibg">
+                        <img src="assets/fonts/garanties.svg" alt="">
+                    </div>
+                </div>
                 <p class="page__text current__text">Аккредитивы и гарантии</p>
             </a>
         </div>
@@ -289,254 +304,277 @@
 </section>
 <div id="info" data-current-id="bank" data-main-menu-current-id="corporative-head"></div>
 
-    <!-- Main content-->
+	<!-- Main content-->
 
-    <section class="container">
-        <div class="second__header-operations">
-            <div class="second__text-credits__list">
-                <a class="second__text-credits" href="#">Главная /</a>
-                <a class="second__text-credits" href="./accountopen.html">Корпоративным клиентам /</a>
-                <a class="second__text-credits" href="./accountopen.html">Банковское обслуживание /</a>
-                <a class="second__text-credits current-second__text-credits" href="./distance-services.html">Дистанционные сервисы</a>
-            </div>
-        </div>
-        <div class="operations">
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <p class="dropbtn-text">Дистанционные сервисы</p>
-                    <img class="dropdown__picture" src="assets/img/arrow1.png" alt="arrow" class="operations__picture" width="20px"
-                        height="20px">
-                </button>
-                <div id="myDropdown" class="dropdown-content">
-                    <ul class="operations__list__mobile">
-                        <li class="operations__list-item__mobile">
-                            <a href="./accountopen.html" class="operations__link__mobile">Открытие расчетного счета</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./ved.html" class="operations__link__mobile">ВЭД</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./specialchecks.html" class="operations__link__mobile">Специальные счета</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./distance-services.html" class="operations__link__mobile">Дистанционные сервисы</a>
-                        </li>
-                        <li class="operations__list-item__mobile ">
-                            <a href="./operations.html" class="operations__link__mobile">Операции с ценными бумагами</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="./tarif.html" class="operations__link__mobile">Тарифы</a>
-                        </li>
-                        <li class="operations__list-item__mobile">
-                            <a href="" class="operations__link__mobile">Документы</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="operations__item">
-                <ul class="operations__list">
-                    <li class="operations__list-item">
-                        <a href="./accountopen.html" class="operations__link">Открытие расчетного счета</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./ved.html" class="operations__link">ВЭД</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./specialchecks.html" class="operations__link">Специальные счета</a>
-                    </li>
-                    <li class="operations__list-item current-operations__list-item">
-                        <a href="./distance-services.html" class="operations__link current-operations__link">Дистанционные сервисы</a>
-                        <img src="assets/img/arrow.png" alt="arrow" class="operations__picture" width="20px" height="20px">
-                    </li>
-                    <li class="operations__list-item ">
-                        <a href="./operations.html" class="operations__link ">Операции с ценными бумагами</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="./tarif.html" class="operations__link">Тарифы</a>
-                    </li>
-                    <li class="operations__list-item">
-                        <a href="" class="operations__link">Документы</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="operations__item">
-                <div class="mobile-background" style="background: linear-gradient(127.54deg, #801D23 -6.06%, #B9422B 118.56%);">
-                    <div class="distance-services__mobile">
-                        <div class="mobile__item">
-                            <div class="mobile-choice">
-                                <button type="button" class="mobile__button">AppStore</button>
-                                <button type="button" class="mobile__button">GooglePlay</button>
-                            </div>
-                            <h5 class="mobile__title">
-                                Мобильный банк
-                            </h5>
-                            <p class="mobile__text">
-                                Сервис «Мобильный банк» — это дополнительный сервис, который предоставляется Клиентам, подключенным к
-                                системе
-                                дистанционного банковского обслуживания «Интернет-банк».
-                            </p>
-                        </div>
-                        <div class="mobile__clas">
-                            <div class="mobile__picture">
-                                <img class="mobile-picture" src="assets/img/phone.png" alt="mobile">
-                            </div>
-                            <div class="mobile__services">
-                                <img class="qr-code__picture" src="assets/img/qrcode.png" alt="qr-code" class="qr-code" />
-                                <p class="service-description">
-                                    Приложение доступно для версии iOS 7.0 и выше
-                                </p>
-                                <a href="#" class="service__link-appstore">
-                                    <img src="assets/img/appstore.png" alt="appstore" class="appstore__picture">
-                                </a>
-                                <a href="#" class="service__link-playstore">
-                                    <img src="assets/img/google_play.png" alt="playstore" class="playstore__picture">
-                                </a>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-                
-                <div class="desktop-background" style="background: linear-gradient(53.65deg, #011C4F 13.32%, #002772 47.17%, #01328E 87.51%, #2A74FF 113.92%);
-                     ">
-                    <div class="distance-services__desktop">
-                        <div class="desktop__picture">
-                            <img class="desktop-picture" src="assets/img/desktop.png" alt="desktop">
-                        </div>
-                        <div class="desktop__services">
-                            <h5 class="desktop__title">
-                                Система «Интернет-банк»
-                            </h5>
-                            <p class="desktop__text">
-                                Удобная современная система , которая предоставляет корпоративным клиентам возможность дистанционного
-                                банковского
-                                обслуживания в режиме реального времени с любого компьютера.
-                            </p>
-                            <div class="desktop__picture-mob">
-                                <img class="desktop-picture-mob" src="assets/img/desktop.png" alt="desktop" width="370px">
-                            </div>
-                            <div class="desktop__enlaces">
-                                <button class="desktop__button">Войти</button>
-                                <button class="desktop__button">О сервисе</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="operations__documentation">
-                    <div class="operations__documentation-nav">
-                        <div class="operations__documentation-block">
-                            <div>
-                                <h3 class="operations__documentation-title">
-                                    Перечень документов
-                                </h3>
-                                <div class="operations__documentation-Link__list">
-                                    <a href="#" class="operations__documentation-link" id="tarifs">Мобильный банк</a>
-                                    <a href="#" class="operations__documentation-link current-link" id="docs">Система «Интернет-банк»</a>
-                                </div>
-                            </div>
-                            <div class="operations__documentation-list">
-                                <div class="operations__documentation-kind" id="tarifs-item">
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/pdf.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Правила дистанционного банковского обслуживания
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="operations__documentation-file hide" data-show="no">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Заявление на подключение к системе «Интернет-банк»
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Заявление на изменение прав доступа в систему «Интернет-банк»
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="operations__documentation-kind active" id="docs-item">
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/pdf.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Правила дистанционного банковского обслуживания
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="operations__documentation-file">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Заявление на подключение к системе «Интернет-банк»
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="operations__documentation-file hide" data-show="no">
-                                        <img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
-                                        <div class="operations__documentation-content">
-                                            <H5 class="operations__documentation-description">
-                                                Заявление на изменение прав доступа в систему «Интернет-банк»
-                                            </H5>
-                                            <p class="operations__documentation-caracter">
-                                                PDF, 279 КБ / 04 июня 2018
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="documentation__more more" type="button" id="showmore">
-                        Смотреть все
-                        <svg class="more-picture">
-                            <use href="assets/img/symbol-defs.svg#icon-more" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="rates operations__rates">
-                    <div class="rates__link-item">
-                        <a class="rates__link" href="#">
-                            Тарифы на РКО
-                        </a>
-                        <svg class="rates__svg">
-                            <use href="assets/img/symbol-defs.svg#icon-next" />
-                        </svg>
-                    </div>
-                    <div class="rates__item-contacts">
-                        <div class="rates__contacts">
-                            <h5 class="rates__title">Контакты:</h5>
-                            <p class="rates__text">
-                                DKB@mfk-bank.ru<br>
-                                +7 495 287-02-60
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+	<section class="container">
+		<div class="second__header-operations">
+			<div class="second__text-credits__list">
+				<a class="second__text-credits" href="#">Главная /</a>
+				<a class="second__text-credits" href="./accountopen.html">Корпоративным клиентам /</a>
+				<a class="second__text-credits" href="./accountopen.html">Банковское обслуживание /</a>
+				<a class="second__text-credits current-second__text-credits" href="./distance-services.html">Дистанционные сервисы</a>
+			</div>
+		</div>
+		<div class="operations">
+			<div class="dropdown">
+				<button class="dropbtn">
+					<p class="dropbtn-text">Дистанционные сервисы</p>
+					<img class="dropdown__picture" src="assets/img/arrow1.png" alt="arrow" class="operations__picture" width="20px"
+						height="20px">
+				</button>
+				<div id="myDropdown" class="dropdown-content">
+					<ul class="operations__list__mobile">
+						<li class="operations__list-item__mobile">
+							<a href="./accountopen.html" class="operations__link__mobile">Открытие расчетного счета</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./ved.html" class="operations__link__mobile">ВЭД</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./specialchecks.html" class="operations__link__mobile">Специальные счета</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./distance-services.html" class="operations__link__mobile">Дистанционные сервисы</a>
+						</li>
+						<li class="operations__list-item__mobile ">
+							<a href="./operations.html" class="operations__link__mobile">Операции с ценными бумагами</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="./tarif.html" class="operations__link__mobile">Тарифы</a>
+						</li>
+						<li class="operations__list-item__mobile">
+							<a href="" class="operations__link__mobile">Документы</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="operations__item">
+				<ul class="operations__list">
+					<li class="operations__list-item">
+						<a href="./accountopen.html" class="operations__link">Открытие расчетного счета</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="./ved.html" class="operations__link">ВЭД</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="./specialchecks.html" class="operations__link">Специальные счета</a>
+					</li>
+					<li class="operations__list-item current-operations__list-item">
+						<a href="./distance-services.html" class="operations__link current-operations__link">Дистанционные сервисы</a>
+						<img src="assets/img/arrow.png" alt="arrow" class="operations__picture" width="20px" height="20px">
+					</li>
+					<li class="operations__list-item ">
+						<a href="./operations.html" class="operations__link ">Операции с ценными бумагами</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="./tarif.html" class="operations__link">Тарифы</a>
+					</li>
+					<li class="operations__list-item">
+						<a href="" class="operations__link">Документы</a>
+					</li>
+				</ul>
+			</div>
+			<div class="operations__item">
+				<div class="mobile-background" style="background: linear-gradient(127.54deg, #801D23 -6.06%, #B9422B 118.56%);">
+					<div class="distance-services__mobile">
+						<div class="mobile__item">
+							<div class="mobile-choice">
+								<button type="button" class="mobile__button">AppStore</button>
+								<button type="button" class="mobile__button">GooglePlay</button>
+							</div>
+							<h5 class="mobile__title">
+								Мобильный банк
+							</h5>
+							<p class="mobile__text">
+								Сервис «Мобильный банк» — это дополнительный сервис, который предоставляется Клиентам, подключенным к
+								системе
+								дистанционного банковского обслуживания «Интернет-банк».
+							</p>
+						</div>
+						<div class="mobile__clas">
+							<div class="mobile__picture">
+								<img class="mobile-picture" src="assets/img/phone.png" alt="mobile">
+							</div>
+							<div class="mobile__services">
+								<img class="qr-code__picture" src="assets/img/qrcode.png" alt="qr-code" class="qr-code" />
+								<p class="service-description">
+									Приложение доступно для версии iOS 7.0 и выше
+								</p>
+								<a href="#" class="service__link-appstore">
+									<img src="assets/img/appstore.png" alt="appstore" class="appstore__picture">
+								</a>
+								<a href="#" class="service__link-playstore">
+									<img src="assets/img/google_play.png" alt="playstore" class="playstore__picture">
+								</a>
+							</div>
+						</div>
+					   
+					</div>
+				</div>
+				<div class="desktop-ad-card m--b-45">
+					<div class="desktop-ad-card__bg-image">
+						<img src="assets/img/desktop1.png" alt="">
+					</div>
+					<div class="desktop-ad-card__content-wrapper">
+						<div class="desktop-ad-card__image-wrapper sm-m--t-15">
+							<img src="assets/img/desktop.png" alt="desktop">
+						</div>
+						<div class="desktop-ad-card__text-wrapper">
+							<h5 class="text--white text--700 text--XL m--b-15">
+								Система «Интернет-банк»
+							</h5>
+							<p class="text--dark-white text--400 text--S">
+								Удобная современная система , которая предоставляет корпоративным клиентам возможность дистанционного
+								банковского
+								обслуживания в режиме реального времени с любого компьютера.
+							</p>
+						</div>
+						<div class="desktop-ad-card__button-wrapper m--t-45 sm-m--t-0">
+							<button class="btn btn--white text--light-black">Войти</button>
+							<button class="btn btn--transparent-white text--white">О сервисе</button>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="desktop-background" style="background: linear-gradient(53.65deg, #011C4F 13.32%, #002772 47.17%, #01328E 87.51%, #2A74FF 113.92%);
+					 ">
+					<div class="distance-services__desktop">
+						<div class="desktop__picture">
+							<img class="desktop-picture" src="../assets/img/images/desktop.png" alt="desktop">
+						</div>
+						<div class="desktop__services">
+							<h5 class="desktop__title">
+								Система «Интернет-банк»
+							</h5>
+							<p class="desktop__text">
+								Удобная современная система , которая предоставляет корпоративным клиентам возможность дистанционного
+								банковского
+								обслуживания в режиме реального времени с любого компьютера.
+							</p>
+							<div class="desktop__picture-mob">
+								<img class="desktop-picture-mob" src="../assets/img/images/desktop.png" alt="desktop" width="370px">
+							</div>
+							<div class="desktop__enlaces">
+								<button class="desktop__button">Войти</button>
+								<button class="desktop__button">О сервисе</button>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="operations__documentation">
+					<div class="operations__documentation-nav">
+						<div class="operations__documentation-block">
+							<div>
+								<h3 class="operations__documentation-title">
+									Перечень документов
+								</h3>
+								<div class="operations__documentation-Link__list">
+									<a href="#" class="operations__documentation-link" id="tarifs">Мобильный банк</a>
+									<a href="#" class="operations__documentation-link current-link" id="docs">Система «Интернет-банк»</a>
+								</div>
+							</div>
+							<div class="operations__documentation-list">
+								<div class="operations__documentation-kind" id="tarifs-item">
+									<div class="operations__documentation-file">
+										<img src="assets/img/pdf.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Правила дистанционного банковского обслуживания
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+									<div class="operations__documentation-file hide" data-show="no">
+										<img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Заявление на подключение к системе «Интернет-банк»
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+									<div class="operations__documentation-file">
+										<img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Заявление на изменение прав доступа в систему «Интернет-банк»
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="operations__documentation-kind active" id="docs-item">
+									<div class="operations__documentation-file">
+										<img src="assets/img/pdf.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Правила дистанционного банковского обслуживания
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+									<div class="operations__documentation-file">
+										<img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Заявление на подключение к системе «Интернет-банк»
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+									<div class="operations__documentation-file hide" data-show="no">
+										<img src="assets/img/word.png" alt="pdf" width="24px" height="30px">
+										<div class="operations__documentation-content">
+											<H5 class="operations__documentation-description">
+												Заявление на изменение прав доступа в систему «Интернет-банк»
+											</H5>
+											<p class="operations__documentation-caracter">
+												PDF, 279 КБ / 04 июня 2018
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="documentation__more more" type="button" id="showmore">
+						Смотреть все
+						<svg class="more-picture">
+							<use href="assets/fonts/symbol-defs.svg#icon-more" />
+						</svg>
+					</button>
+				</div>
+				<div class="rates operations__rates">
+					<div class="rates__link-item">
+						<a class="rates__link" href="#">
+							Тарифы на РКО
+						</a>
+						<svg class="rates__svg">
+							<use href="assets/fonts/symbol-defs.svg#icon-next" />
+						</svg>
+					</div>
+					<div class="rates__item-contacts">
+						<div class="rates__contacts">
+							<h5 class="rates__title">Контакты:</h5>
+							<p class="rates__text">
+								DKB@mfk-bank.ru<br>
+								+7 495 287-02-60
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 <footer class=" footer">
     <section class="">
         <div class="footer__container container">
@@ -598,7 +636,9 @@
                 </div>
             </div>
             <div class="nav-footer-link" id="online">
-                <a class="nav-footer-link" href="#">Онлайн - банк</a>
+                <a class="nav-footer-link" href="ubs.html">
+                    РЕГИСТРАЦИЯ В ЕДИНОЙ БИОМЕТРИЧЕСКОЙ СИСТЕМЕ
+                </a>
             </div>
             <div class="nav-footer" id="navigate">
                 <ul class="nav-list">
