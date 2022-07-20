@@ -19,25 +19,35 @@ const filterHandlerLookup = {
 					break;
 				case "breakpoints":
 					let breakpoints = JSON.parse(filter.data('breakpoints')).breakpoints;
-					let totalSteps = 0;
-					let multiplier = 1;
-					let realValue = value;
-					for (var i = 0; i < breakpoints.length; i++) {
-						totalSteps += breakpoints[i].steps;
-						if(value <= breakpoints[i].steps || i == breakpoints.length-1){
-							multiplier = breakpoints[i].multiplier;
-							break;
+					let stepsLeft = value/input[0].step;
+					let realValue = 0;
+					
+					for (let i = 0; i < breakpoints.length; i++){
+
+						if(breakpoints[i].startpoint){
+							realValue = breakpoints[i].startpoint;
 						}
-						value -= breakpoints[i].steps;
+						let last = (i == breakpoints.length-1);
+						if(stepsLeft > breakpoints[i].steps && !last){
+							realValue += breakpoints[i].steps*breakpoints[i].multiplier;
+							stepsLeft -= breakpoints[i].steps;
+						}
+						else{
+							realValue += stepsLeft*breakpoints[i].multiplier;
+							stepsLeft = 0;
+						}
+						
 					}
-					value *= multiplier;
+					value = realValue;
 					break;
 				case "linear":
 				default:
 					break;		
 			}
 			filter.data("filter-value",{value:value});
-			//LABEL CODE
+
+
+			//LABEL CODE ///Remove this shite later!!! (I don't have time to add a cleaner implementation)
 			if(filter.data('label-selector')){
 				let label = filter.find(filter.data('label-selector'));
 				let labelContent = '';
@@ -237,7 +247,7 @@ function FormReadableTime(days) { // 360=>year/30=>month/1=>day
 	for (var i = 0; i < roundedTime.length; i++) {
 		let finalTime = Math.floor(roundedTime[i].days % days);
 		if(days >= roundedTime[i].days){
-			return Math.floor(days/roundedTime[i].days) + " " + FormTimeQuantity(Math.floor(days/roundedTime[i].days), roundedTime[i].unit);
+			return days/roundedTime[i].days + " " + FormTimeQuantity(days/roundedTime[i].days, roundedTime[i].unit);
 		}
 	}
 }

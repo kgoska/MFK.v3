@@ -360,7 +360,7 @@
 						</div>
 						<div class="filter-card">
 							<div class="filters m--b-25 vip-filters__wrapper"
-								data-filtered-items-container-id="deposit-items" data-auto-update="false">
+								data-filtered-items-container-id="filtered-items" data-auto-update="false">
 								<div class="fx sm-fx-d--c vip-filters__checkboxes">
 									<div class="filter fx p--10 sm-fx-el--50 xsm-fx-el--100" data-filter-type="boolean"
 										data-truthfull-selector="input:checked" data-filter-name='condition1'>
@@ -394,23 +394,31 @@
 								{
 									"breakpoints":[
 										{
-											"steps": 5,
+											"steps": 15,
+											"multiplier": 1
+										},
+										{
+											"steps": 3,
 											"multiplier": 5
 										},
 										{
-											"steps": 11,
+											"steps": 2,
+											"multiplier": 15
+										},
+										{
+											"steps": 10,
 											"multiplier": 30
 										},
 										{
 											"steps": 10,
-											"multiplier": 360
+											"multiplier": 180
 										}
 									]
 								}'>
 									<span>Срок:</span>
 									<span class="filter-label text--700 text--M text--dark-gray">1</span>
 									<input id="days-range" type="range" class="filter-trigger m--t-10" name="days"
-										min="1" max="31" value="1" step="1">
+										min="1" max="40" value="1" step="1">
 								</div>
 								<div class="vip-filters__button xsm-m--t-35">
 									<button class="btn btn-filter filter-apply-button p--10 ">
@@ -419,7 +427,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="deposits-card deposits-card--center">
+						<div class="deposits-card deposits-card--center" id='filtered-items'>
 							<div class="card__wrapper">
 								<div class="card__title ">
 									<h3>Расходный вклад — VIP</h3>

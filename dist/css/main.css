@@ -7687,6 +7687,18 @@ label {
   background: transparent;
 }
 
+.contributions-filters {
+  border: 1px solid rgba(133, 133, 133, 0.1);
+  padding: 30px 60px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .contributions-filters {
+    padding: 0;
+    border: none;
+  }
+}
+
 .garanty__card.savingsaccount__card {
   background: #FFFFFF;
   margin-bottom: 50px;
