@@ -247,7 +247,7 @@ function FormReadableTime(days) { // 360=>year/30=>month/1=>day
 	for (var i = 0; i < roundedTime.length; i++) {
 		let finalTime = Math.floor(roundedTime[i].days % days);
 		if(days >= roundedTime[i].days){
-			return days/roundedTime[i].days + " " + FormTimeQuantity(days/roundedTime[i].days, roundedTime[i].unit);
+			return days/roundedTime[i].days + " " + FormTimeQuantity(Math.floor(days/roundedTime[i].days), roundedTime[i].unit);
 		}
 	}
 }
