@@ -4781,19 +4781,19 @@ summary {
 
 .default-card {
   width: 100%;
-  padding: 36px 50px 40px 55px;
+  padding: 40px 50px;
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
   box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
 }
 @media screen and (max-width: 991px) {
   .default-card {
-    padding: 36px 24px 40px 55px;
+    padding: 40px 30px;
   }
 }
 @media screen and (max-width: 575px) {
   .default-card {
-    padding: 36px 10px 40px;
+    padding: 40px 10px;
   }
 }
 
@@ -6316,7 +6316,7 @@ label {
   display: flex;
   border-bottom: 1px solid #B8B8B8;
   margin-bottom: 45px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media screen and (max-width: 767px) {
   .operations__documentation-Link__list {
@@ -6981,10 +6981,6 @@ label {
   color: #373737;
 }
 
-.mobile-background,
-.desktop-background {
-  margin-left: 95px;
-}
 @media screen and (max-width: 1199px) {
   .mobile-background,
 .desktop-background {
@@ -7021,7 +7017,6 @@ label {
   }
 }
 .desktop-ad-card {
-  margin-left: 95px;
   z-index: 0;
   position: relative;
   background: linear-gradient(53.65deg, #011C4F 13.32%, #002772 47.17%, #01328E 87.51%, #2A74FF 113.92%);
@@ -9535,15 +9530,14 @@ label {
 }
 
 .lifestyle-about {
-  padding: 28px 150px 47px 36px;
+  padding: 30px 35px;
   background: #001843;
   box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
   border-radius: 2px;
-  margin: 0 -32px 85px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .lifestyle-about {
-    padding: 50px 15px 65px;
+    padding: 50px 15px;
   }
 }
 .lifestyle-about__text {
@@ -9597,23 +9591,23 @@ label {
 }
 
 .insurance-wrap {
+  margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 60px 34px 82px 38px;
+  padding: 60px 40px;
   background: #001843;
   box-shadow: 0px 4px 4px rgba(86, 31, 0, 0.1);
   border-radius: 2px;
-  margin: 0 -32px 145px;
 }
 @media screen and (max-width: 991px) {
   .insurance-wrap {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .insurance-wrap {
-    padding: 35px 4px 60px;
+    padding: 60px 15px;
   }
 }
 
@@ -10235,45 +10229,93 @@ label {
   padding: 155px 0 220px 0;
 }
 
+.general-title__wrap {
+  display: flex;
+}
+
 .general-title {
+  flex: 0 0 65%;
   margin-bottom: 50px;
   font-family: "Helvetica";
   font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 48px;
   line-height: 1.25em;
   color: #FFFFFF;
 }
+@media screen and (max-width: 992px) {
+  .general-title {
+    flex: 0 0 100%;
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .general-title {
+    font-size: 24px;
+  }
+}
 
 .general-info {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  margin: 84px 0 140px;
+  flex-wrap: wrap;
+  margin: 84px 0 100px;
+  row-gap: 20px;
+}
+@media screen and (max-width: 992px) {
+  .general-info {
+    margin: 40px 0 100px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .general-info {
+    margin: 30px 0 85px;
+    row-gap: auto;
+  }
 }
 
 .info-card__wrapper {
-  display: flex;
+  flex: 0 0 24%;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
   padding: 30px;
 }
-.info-card__wrapper:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 1200px) {
+  .info-card__wrapper {
+    flex: 0 0 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info-card__wrapper {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .info-card__wrapper {
+    flex: 0 0 48%;
+    padding: 15px 10px;
+  }
 }
 .info-card__title {
+  margin-bottom: 12px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 1.25em;
   background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+@media screen and (max-width: 575px) {
+  .info-card__title {
+    font-size: 16px;
+  }
 }
 .info-card__text {
   font-family: "Helvetica";
@@ -10282,6 +10324,11 @@ label {
   font-size: 18px;
   line-height: 21px;
   color: #5B5B5B;
+}
+@media screen and (max-width: 575px) {
+  .info-card__text {
+    font-size: 14px;
+  }
 }
 
 .general-about {
