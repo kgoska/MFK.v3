@@ -6258,7 +6258,9 @@ label {
 
 .operations__documentation-list {
   position: relative;
-  border-right: 1px solid #00205B;
+  border-right: 1px solid;
+  -o-border-image: linear-gradient(to bottom, #00A3E0, #00205B) 1 100%;
+     border-image: linear-gradient(to bottom, #00A3E0, #00205B) 1 100%;
   padding-right: 20px;
 }
 @media screen and (max-width: 767px) {
@@ -9540,18 +9542,6 @@ label {
     padding: 50px 15px;
   }
 }
-.lifestyle-about__text {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  color: #FFFFFF;
-}
-.lifestyle-about__text:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .lifestyle-programm__wrap {
   margin-bottom: 108px;
 }
