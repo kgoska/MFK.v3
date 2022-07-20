@@ -162,7 +162,11 @@ $(document).ready(function(){
 
 //Simple Filters
 $(document).on('click', '.filter-button', function(event) {
-	let filterData = JSON.parse($(this).data("filter"));
+	let filterData = $(this).data("filter");
+	if(typeof filterData == 'string'){
+		filterData = JSON.parse(filterData);
+	}
+	
 	let filteredObjects = $("#"+$(this).data("filter-container-id")).find(".filtered");
 
 	for (var i = 0; i < filteredObjects.length; i++) {
