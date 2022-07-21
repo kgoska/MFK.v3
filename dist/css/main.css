@@ -9263,6 +9263,9 @@ label {
   justify-content: space-between;
   flex: 0 0 40%;
 }
+.internet-bank__access--reverse {
+  flex-direction: row-reverse;
+}
 @media screen and (max-width: 991px) {
   .internet-bank__access {
     margin-bottom: 10px;
@@ -9274,6 +9277,19 @@ label {
   .internet-bank__access {
     margin-bottom: 45px;
   }
+}
+@media screen and (max-width: 991px) {
+  .internet-bank__access--spaced {
+    justify-content: space-between;
+  }
+}
+.internet-bank__access-picture {
+  flex: 0 0 30%;
+  min-width: 0;
+  max-width: 110px;
+}
+.internet-bank__access-picture > img {
+  width: 100%;
 }
 .internet-bank__text.connect-text {
   margin-left: 0px;

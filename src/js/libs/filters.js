@@ -185,6 +185,8 @@ $(document).on('click','.filter-apply-button', function(){
 
 
 function FormTimeQuantity(quantity, unit) { // THIS IS LITERAL HELL, preceed with heavy caution
+	
+	let lastUnit = quantity%10;
 	quantity = quantity.toString();
 	let lastDigit = quantity.slice(quantity.length - 1);
 	let penultimateDigit = 0;
@@ -193,10 +195,10 @@ function FormTimeQuantity(quantity, unit) { // THIS IS LITERAL HELL, preceed wit
 	}
 	switch(unit){
 		case 'year':
-			if(lastDigit == 0 || lastDigit > 4 || penultimateDigit == 1){
+			if(lastUnit == 0 || lastUnit >= 5 || penultimateDigit == 1){
 				return "Лет";
 			}
-			else if (lastDigit == 1){
+			else if (lastUnit == 1){
 				return "Год";
 			}
 			else{
@@ -204,10 +206,10 @@ function FormTimeQuantity(quantity, unit) { // THIS IS LITERAL HELL, preceed wit
 			}
 			break;
 		case 'month':
-			if(lastDigit == 0 || lastDigit > 4 || penultimateDigit == 1){
+			if(lastUnit == 0 || lastUnit > 4 || penultimateDigit == 1){
 				return "Месяцев";
 			}
-			else if (lastDigit == 1){
+			else if (lastUnit == 1){
 				return "Месяц";
 			}
 			else{
@@ -215,10 +217,10 @@ function FormTimeQuantity(quantity, unit) { // THIS IS LITERAL HELL, preceed wit
 			}
 			break;
 		case 'day':
-			if(lastDigit == 0 || lastDigit > 4 || penultimateDigit == 1){
+			if(lastUnit == 0 || lastUnit > 4 || penultimateDigit == 1){
 				return "Дней";
 			}
-			else if (lastDigit == 1){
+			else if (lastUnit == 1){
 				return "День";
 			}
 			else{
