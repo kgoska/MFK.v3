@@ -10269,6 +10269,12 @@ label {
   }
 }
 
+@media screen and (max-width: 440px) {
+  .btn--width {
+    width: -webkit-fill-available;
+  }
+}
+
 .general-info {
   display: flex;
   justify-content: space-between;
@@ -10389,6 +10395,12 @@ label {
   line-height: 34px;
   color: #00205B;
 }
+@media screen and (max-width: 575px) {
+  .about-card__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
 .about-card__title-wrap {
   margin-bottom: 42px;
 }
@@ -10400,6 +10412,12 @@ label {
   line-height: 23px;
   color: #4E4E4E;
 }
+@media screen and (max-width: 575px) {
+  .about-card__posttitle {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 .about-card__text {
   font-family: "Helvetica";
   font-style: normal;
@@ -10408,9 +10426,21 @@ label {
   line-height: 18px;
   color: #4E4E4E;
 }
+@media screen and (max-width: 575px) {
+  .about-card__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .about-card__text-wrapper {
   display: flex;
   margin-right: -60px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 575px) {
+  .about-card__text-wrapper {
+    margin-right: -30px;
+  }
 }
 .about-card__text-wrap {
   flex: 0 0 50%;
@@ -10435,6 +10465,11 @@ label {
   top: 0;
   height: 100%;
   left: 5%;
+}
+@media screen and (max-width: 575px) {
+  .about-card__img {
+    margin-right: -30px;
+  }
 }
 
 input {
