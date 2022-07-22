@@ -116,7 +116,9 @@ function InitializeFilters(){
 	}
 	let filterContainers = $('.filters');
 	for (var i = 0; i < filterContainers.length; i++) {
-		ApplyFilters($(filterContainers[i]));
+		if(filtersContainers[i].data("apply-on-load")){
+			ApplyFilters($(filterContainers[i]));	
+		}
 	}
 }
 function UpdateFilter(filter){

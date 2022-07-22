@@ -81,11 +81,11 @@
 		&__content-wrapper{
 			gap:10px;
 			display: grid;
-			grid-template-columns: [preview-start] 2fr [preview-end button-start title-start primary-start] 1fr [primary-end secondary-start] 4fr [secondary-end title-end button-end];
-			grid-template-rows: [preview-start title-start] 1fr [title-end primary-start secondary-start] 2fr [secondary-end primary-end button-start] auto [button-end preview-end];
+			grid-template-columns: [preview-start] 2fr [preview-end button-start title-start info-start] 5fr [info-end title-end button-end];
+			grid-template-rows: [preview-start title-start] 1fr [title-end info-start] 2fr [info-end button-start] auto [button-end preview-end];
 			@media screen and (max-width: 992px) {
-				grid-template-columns: [secondary-start button-start preview-start] 3fr [preview-end title-start primary-start] 2fr [title-end primary-end button-end secondary-end];
-				grid-template-rows: [preview-start title-start] 1fr [title-end primary-start] 2fr [primary-end preview-end secondary-start] 2fr [secondary-end button-start] auto [button-end];
+				grid-template-columns: [info-start button-start preview-start] 3fr [preview-end title-start] 2fr [title-end button-end info-end];
+				grid-template-rows: [preview-start title-start] 3fr [title-end preview-end info-start] 2fr [info-end button-start] auto [button-end];
 
 			}
 			@media screen and (max-width: 769px) {
@@ -112,6 +112,11 @@
 			grid-column: title-start/title-end;
 			grid-row: title-start/title-end;
 			margin-bottom: 10px;
+			@media screen and (max-width: 992px) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
 			@media screen and (max-width: 769px) {
 				width: unquote("min(100%, 400px)");
 				margin: auto;
@@ -134,21 +139,21 @@
 
 			color: #003772;
 		}
-		&__info-primary {
-			grid-column: primary-start/primary-end;
-			grid-row: primary-start/primary-end;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			margin-right: 15px;
-			@media screen and (max-width: 992px) {
-				margin: 0;
-				justify-content: space-around;
-			}
-		}
+		// &__info-primary {
+		// 	grid-column: primary-start/primary-end;
+		// 	grid-row: primary-start/primary-end;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	justify-content: space-between;
+		// 	margin-right: 15px;
+		// 	@media screen and (max-width: 992px) {
+		// 		margin: 0;
+		// 		justify-content: space-around;
+		// 	}
+		// }
 		&__info-secondary {
-			grid-column: secondary-start/secondary-end;
-			grid-row: secondary-start/secondary-end;
+			grid-column: info-start/info-end;
+			grid-row: info-start/info-end;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;

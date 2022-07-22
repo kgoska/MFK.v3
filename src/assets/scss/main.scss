@@ -74,7 +74,9 @@ ul {
 
 a {
   color: inherit;
-  text-decoration: inherit; /* no underline */
+  &:not(.def-link){
+  	text-decoration: inherit; /* no underline */
+  }
 }
 // a, a:hover, a:focus, a:active { 
 //       text-decoration: none; 

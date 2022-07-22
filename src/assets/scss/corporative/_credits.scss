@@ -128,6 +128,7 @@
 		}
 	}
 	&__time {
+		margin-top: auto;
 		display: flex;
 		align-items: center;
 		font-family: 'Helvetica';
@@ -153,7 +154,6 @@
 
 	}
 	&__button-wrapper {
-		margin-top: auto;
 		padding-top: 15px;
 		display: flex;
 		justify-content: center;
@@ -385,7 +385,7 @@
 .rates__item{
     display: flex;
 	flex: 0 0 30%;
-	@media screen and (max-width: 1199px) {
+	@media screen and (max-width: 1440px) {
 		flex: 0 0 45%;
 		width: 100%;
 	}
