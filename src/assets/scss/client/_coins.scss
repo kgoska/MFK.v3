@@ -67,9 +67,12 @@
 		justify-content: flex-start;
 		align-items: center;
 	}
-}
-.filter {
-	&__sort {
+	.sort {
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		cursor: pointer;
 		position: relative;
 		margin-right: 50px !important;
 		&:after {
@@ -83,16 +86,37 @@
 			margin-left: 2px;
 			transition: all 0.2s;
 		}
-		&--up{
+		//Default
+		&:after{
+			transform: rotate(-45deg);
+			top: 0%;
+			// margin-top: -5px;
+			transition: all 0.2s;
+		}
+
+		//Default
+		&-up{
+			background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
 			&:after{
+				border-color: #7B1931;
 				transform: rotate(-135deg);
 				top: 0%;
 				margin-top: -5px;
 				transition: all 0.2s;
 			}
 		}
-		&--down{
+		&-down{
+			background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
 			&:after{
+				border-color: #7B1931;
 				transform: rotate(45deg);
 				top: 50%;
 				margin-top: -6.5px;
@@ -102,20 +126,22 @@
 	}
 }
 .form-control {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 	display: flex;
 	justify-content: flex-start;
+	cursor: pointer;
 	&:not(:last-child){
 		margin-right: 40px;
 	}
-	input[type="radio"] {
-		appearance: none;
-		&:checked+label{
-			background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			text-fill-color: transparent;
-			}
+	&.active{
+		background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
 	}
 }
 .coins-items {

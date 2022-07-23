@@ -10,6 +10,91 @@ require ('./libs/dropdown.js');
 require ('./libs/deposite.js');
 require ('./libs/filters.js');
 
+//Sort
+
+//Example
+// <section>
+// 	<div class="sort-group" data-sorted-elements-container-id="sorted-list">
+// 		<div class="sort-item" data-current-sort-state="none" data-sorted-field-name="data-price">price</div>
+// 	</div>
+// 	<div id="sorted-list">
+// 		<div class="sorted-item" data-price="10">
+// 			10
+// 		</div>
+// 		<div class="sorted-item" data-price="11">
+// 			11
+// 		</div>
+// 		<div class="sorted-item" data-price="12">
+// 			12
+// 		</div>
+// 		<div class="sorted-item" data-price="3">
+// 			3
+// 		</div>
+// 		<div class="sorted-item" data-price="7">
+// 			7
+// 		</div>
+// 	</div>
+// </section>
+let sortStates = [
+	{className:"",stateName:"none", fieldValueMultiplier:0},
+	{className:"sort-up",stateName:"up", fieldValueMultiplier:1},
+	{className:"sort-down",stateName:"down", fieldValueMultiplier:-1}
+];
+$('.sort-item').on('click', function(){
+	let parent = $(this).parent('.sort-group');
+
+	let sortItems = parent.children('.sort-item');
+	for (let i = 0; i < sortItems.length; i++){
+		if(sortItems[i] != this){
+			SwitchToSortState(0,sortItems[i]);
+		}
+	}
+	let currentStateName = $(this).data("current-sort-state");
+	let currentStateID = 0;
+	for (let i = 0; i < sortStates.length; i++) {
+		if(currentStateName == sortStates[i].stateName){
+			currentStateID = i;
+			break;
+		}
+	}
+	currentStateID ++;
+	if(currentStateID > sortStates.length-1){
+		currentStateID = 0;
+	}
+	SwitchToSortState(currentStateID, this);
+
+	let sortedParent = $("#" + parent.data('sorted-container-id'));
+	let sortedElements = sortedParent.children('.sorted-item');
+	let fieldValueMultiplier = sortStates[currentStateID].fieldValueMultiplier;
+	let sortedFieldName = $(this).data('sorted-field-name');
+	while(sortedElements.length != 0){
+		let biggestItemIndex;
+		let biggestItemValue = Number.NEGATIVE_INFINITY;
+		for (var i = 0; i < sortedElements.length; i++) {
+			let fieldData = $(sortedElements[i]).attr(sortedFieldName);
+			let trueValue = -fieldData*fieldValueMultiplier; //the one with the biggest value will be the last (so the values have to negative)
+			
+			if(trueValue > biggestItemValue){
+				biggestItemValue = trueValue;
+				biggestItemIndex = i;
+
+			}
+		}
+		sortedParent.prepend(sortedElements[biggestItemIndex]);
+		sortedElements.splice(biggestItemIndex,1);
+
+	}
+	//Sort cards accordingly
+});
+function SwitchToSortState(stateID, element){
+	element = $(element);
+	for (let i = 0; i < sortStates.length; i++) {
+		element.removeClass(sortStates[i].className);
+	}
+	element.addClass(sortStates[stateID].className);
+	element.data("current-sort-state", sortStates[stateID].stateName);
+}
+
 
 //Mobile burger
 $(document).on('click', '#burger-open', function(){

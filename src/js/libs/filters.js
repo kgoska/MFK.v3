@@ -101,13 +101,54 @@ const filterHandlerLookup = {
 			return filterfieldData.value == objectfieldData.value;
 		}
 	},
+	"text": {
+		Update: function(filter){
+			let input = filter.children('input[type="text"]');
+			let value = input.val();
+			console.log(value);
+			filter.data("filter-value",{value:value});
+		},
+		Evaluate: function(filterfieldData, objectfieldData){
+
+			return filterfieldData.value.includes(objectfieldData.value) || objectfieldData.value.includes(filterfieldData.value);
+		}
+	},
+	"enum": {
+		Update: function(filter, trigger){
+			let values;
+			
+			if(trigger){
+				values = $(trigger).data('enum-values');
+				if(!filter.data('radio')){
+					let enumButtons = filter.children('[data-enum-values]');
+					enumButtons.removeClass('active');
+					$(trigger).addClass('active');
+				}	
+			}
+			else{
+				if(filter.data('radio')){
+					values = filter.children('[data-enum-values]:checked').data('enum-values');
+				}
+				else{
+					values = filter.children('[data-enum-values].active').data('enum-values');
+				}
+			}
+			
+			filter.data("filter-value",{value:values});
+		},
+		Evaluate: function(filterfieldData, objectfieldData){
+			console.log(filterfieldData.value);
+			console.log(objectfieldData.value);
+			return filterfieldData.value.includes(objectfieldData.value);
+		}
+	},
 };
 $(document).on('click input change', '.filter-trigger', function(){
 	let filter = $(this).closest('.filter');
 	if(filter.length == 0){
 		console.error("could not find filter a filter for the trigger", this);
 	}
-	UpdateFilter(filter);
+	UpdateFilter(filter,this);
 });
 function InitializeFilters(){
 	let filters = $('.filter');
@@ -116,23 +157,24 @@ function InitializeFilters(){
 	}
 	let filterContainers = $('.filters');
 	for (var i = 0; i < filterContainers.length; i++) {
-		if(filtersContainers[i].data("apply-on-load")){
+		if($(filterContainers[i]).data("apply-on-load")){
 			ApplyFilters($(filterContainers[i]));	
 		}
 	}
 }
-function UpdateFilter(filter){
+function UpdateFilter(filter, trigger){
 
 	let filterType = filter.data('filter-type');
-	filterHandlerLookup[filterType].Update(filter);
+	filterHandlerLookup[filterType].Update(filter,trigger);
 
 	let filtersContainer = filter.closest('.filters');
-	if(filtersContainer.data('auto-update')){
+	if(filtersContainer.data('auto-update') || filter.data('auto-update')){
 		ApplyFilters(filtersContainer);
 	}
 }
 function InitializeFilter(filter){
 	let filterType = filter.data('filter-type');
+	console.log(filterType);
 	filterHandlerLookup[filterType].Update(filter);
 }
 function ApplyFilters(filtersContainer){
@@ -155,7 +197,10 @@ function ApplyFilters(filtersContainer){
 	for (let i = 0; i < filteredItems.length; i++) {
 		
 		filteredItems[i] = $(filteredItems[i]);
-		let filteredItemData = JSON.parse(filteredItems[i].data('item-filter-data'));
+		filteredItemData = filteredItems[i].data('item-filter-data');
+		if(typeof filteredItemData == 'string'){
+			filteredItemData = JSON.parse(filteredItemData);
+		}
 		let show = true;
 		for(let filterName in filters){
 			let filter = filters[filterName];

@@ -1,194 +1,218 @@
-        <%- include('inc/header.html') %>
-        <%- include('inc/client-menu.html') %>
-        <div id="info" data-current-id="coins" data-main-menu-current-id="private-client-head"></div>
+		<%- include('inc/header.html') %>
+		<%- include('inc/client-menu.html') %>
+		<div id="info" data-current-id="coins" data-main-menu-current-id="private-client-head"></div>
 <!-- Main content-->
-        <section>
-            <!-- <h1>test</h1> -->
-            <div class="container">
-                <div class="breadcrumbs">
-                    <div class="breadcrumbs__step"><a href="/">Главная</a></div>
-                    <div class="breadcrumbs__step"><a href="contributions.html">Частным клиентам</a></div>
-                    <div class="breadcrumbs__step"><span>Монеты</span></div>        
-                </div>
-            </div> 
-        </section>
-        <section>
-            <div class="container">
-                <div class="page">
-                   <div class="page__sidebar sidebar">
-                        <div class="sidebar__overlay"></div>
-                        <div class="sidebar__items">
-                            <div class="sidebar__item sidebar__item--selected">
-                                <div class="sidebar__item-text">
-                                    <a href="coins.html">Монеты</a>
-                                </div>
-                                <div class="sidebar__item-icon arrow arrow--32 arrow--blue"></div>
-                            </div>
-                            <div class="sidebar__item">
-                                <div class="sidebar__item-text">
-                                    <a href="exchanges.html">Обмен валюты</a>
-                                </div>
-                                <div class="sidebar__item-icon"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="page__content basic-page">
-                        <div class="basic-page__title  basic-page__title--hide-on-md">
-                            <h1>Монеты</h1>
-                        </div>
-                        <div class="basic-page__body coins">
-                            <div class="coins__search search">
-                                <div class="coin-search__wrap">
-                                    <div class="coin-search__title">
-                                        <h2>Поиск монет</h2>
-                                    </div>
-                                    <div class="coin-search__line">
-                                        <input type="text" placeholder="введите название монеты"><button class="btn coin-search__btn">Искать</button>
-                                    </div>
-                                    <div class="coin-search__filters coin-filters">
-                                        <div class="coin-filters__title"><span>Сортировать по:</span></div>
-                                        <div class="coin-filters__price filter__sort filter__sort--up"><span>цене</span></div>
-                                        <div class="coin-filters__year filter__sort filter__sort--down"><span>году выпуска</span></div>
-                                        <div class="coin-filters__filter-all">
-                                            <div class="form-control">
-                                                <input type="radio" id="present" name="coin-filter" checked \>
-                                                <label for="present">в наличии</label>
-                                            </div>
-                                            <div class="form-control">
-                                                <input type="radio" id="all_coins" name="coin-filter" \>
-                                                <label for="all_coins">все монеты</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="coins__items coins-items">
-                                <div class="coins-items__item card">
-                                    <div class="card__wrap">
-                                        <div class="card__coin-wrap">
-                                            <img src="../assets/img/images/coin-1.png" alt="">
-                                        </div>
-                                        <div class="card__title-wrap">
-                                            <div class="card__title-text text--blue text--700 text--uppercase text--LM">
-                                                <span>Георгий победоносец (спмд)</span>
-                                            </div>
-                                            <div class="card__title-art">
-                                                <span>СПМД, 2022 г</span>
-                                                <span><b>Артикул:</b>5216-0060-3</span>
-                                            </div>
-                                        </div>
-                                        <div class="card__h-line-wrap">
-                                            <div class="card__h-line"></div>
-                                        </div>
-                                        <div class="card__prop-wrap text--S">
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Номинал: </span>
-                                                <span class="text--blue text--400">50 рублей</span>
-                                            </div>
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Вес чистого металла:</span>
-                                                <span class="text--blue text--400">7,78</span>
-                                            </div>
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Металл, проба:</span>
-                                                <span class="text--blue text--400">золото, 999/1000</span>
-                                            </div>
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Годы выпуска:</span>
-                                                <span class="text--blue text--400">2018-2021</span>
-                                            </div>
-                                        </div>
-                                        <div class="card__price-wrap">
-                                            <div class="card__price-item">
-                                                <div class="card__price-title text--gray text--400 text--S">
-                                                    <span>Цена продажи</span>
-                                                </div>
-                                                <div class="card__price-text text--blue text--700 text--L">
-                                                    <span>74 000 руб.</span>
-                                                </div>
-                                            </div>
-                                            <div class="card__price-item">
-                                                <div class="card__price-title text--gray text--400 text--S">
-                                                    <span>Цена покупки</span>
-                                                </div>
-                                                <div class="card__price-text text--blue text--700 text--L">
-                                                    <span>53 000 руб.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card__v-line">
-                                        </div>
-                                        <div class="card__btn-wrap">
-                                            <a href="coin.html" class="btn card__btn">Подробнее</a href="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="coins-items__item card">
-                                    <div class="card__wrap">
-                                        <div class="card__coin-wrap">
-                                            <img src="../assets/img/images/coin-1.png" alt="">
-                                        </div>
-                                        <div class="card__title-wrap">
-                                            <div class="card__title-text text--blue text--700 text--uppercase text--LM">
-                                                <span>Георгий победоносец (спмд)</span>
-                                            </div>
-                                            <div class="card__title-art">
-                                                <span>СПМД, 2022 г</span>
-                                                <span><b>Артикул:</b>5216-0060-3</span>
-                                            </div>
-                                        </div>
-                                        <div class="card__h-line-wrap">
-                                            <div class="card__h-line"></div>
-                                        </div>
-                                        <div class="card__prop-wrap text--S">
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Номинал: </span>
-                                                <span class="text--blue text--400">50 рублей</span>
-                                            </div>
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Вес чистого металла:</span>
-                                                <span class="text--blue text--400">7,78</span>
-                                            </div>
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Металл, проба:</span>
-                                                <span class="text--blue text--400">золото, 999/1000</span>
-                                            </div>
-                                            <div class="card__prop-item">
-                                                <span class="text--gray text--700">Годы выпуска:</span>
-                                                <span class="text--blue text--400">2018-2021</span>
-                                            </div>
-                                        </div>
-                                        <div class="card__price-wrap">
-                                            <div class="card__price-item">
-                                                <div class="card__price-title text--gray text--400 text--S">
-                                                    <span>Цена продажи</span>
-                                                </div>
-                                                <div class="card__price-text text--blue text--700 text--L">
-                                                    <span>74 000 руб.</span>
-                                                </div>
-                                            </div>
-                                            <div class="card__price-item">
-                                                <div class="card__price-title text--gray text--400 text--S">
-                                                    <span>Цена покупки</span>
-                                                </div>
-                                                <div class="card__price-text text--blue text--700 text--L">
-                                                    <span>53 000 руб.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card__v-line">
-                                        </div>
-                                        <div class="card__btn-wrap">
-                                            <a href="coin.html" class="btn card__btn">Подробнее</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <%- include('inc/footer.html') %>
-    </body>
+		<section>
+			<!-- <h1>test</h1> -->
+			<div class="container">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__step"><a href="/">Главная</a></div>
+					<div class="breadcrumbs__step"><a href="contributions.html">Частным клиентам</a></div>
+					<div class="breadcrumbs__step"><span>Монеты</span></div>        
+				</div>
+			</div> 
+		</section>
+		<section>
+			<div class="container">
+				<div class="page">
+				   <div class="page__sidebar sidebar">
+						<div class="sidebar__overlay"></div>
+						<div class="sidebar__items">
+							<div class="sidebar__item sidebar__item--selected">
+								<div class="sidebar__item-text">
+									<a href="coins.html">Монеты</a>
+								</div>
+								<div class="sidebar__item-icon"></div>
+							</div>
+							<div class="sidebar__item">
+								<div class="sidebar__item-text">
+									<a href="exchanges.html">Обмен валюты</a>
+								</div>
+								<div class="sidebar__item-icon"></div>
+							</div>
+						</div>
+					</div>
+					<div class="page__content basic-page">
+						<div class="basic-page__title  basic-page__title--hide-on-md">
+							<h1>Монеты</h1>
+						</div>
+						<div class="basic-page__body coins">
+							<div class="coins__search search">
+								<div class="coin-search__wrap">
+									<div class="coin-search__title">
+										<h2>Поиск монет</h2>
+									</div>
+									<div class="filters" data-filtered-items-container-id="coins-list" data-auto-update="false">
+										<div class="coin-search__line filter" data-filter-type="text" data-filter-name='name'>
+											<input class="filter-trigger" type="text" placeholder="введите название монеты">
+											<button class="btn coin-search__btn filter-apply-button">Искать</button>
+										</div>
+										<div class="coin-search__filters coin-filters sort-group" data-sorted-container-id="coins-list">
+											<div class="coin-filters__title"><span>Сортировать по:</span></div>
+											<div class="coin-filters__price filter__sort sort-item sort" data-sorted-field-name="data-price"><span>цене</span></div>
+											<div class="coin-filters__year filter__sort sort-item sort" data-sorted-field-name="data-year"><span>году выпуска</span></div>
+											<div class="coin-filters__filter-all filter" data-filter-type="enum" data-radio="false"data-filter-name='state' data-auto-update="true">
+												<div class="form-control filter-trigger active" data-enum-values='["present", "absent"]'>все монеты</div>
+												<div class="form-control filter-trigger " data-enum-values='["present"]'>в наличии</div>
+												<!-- <div class="form-control">
+													<input type="radio" id="present" name="coin-filter" checked \>
+													<label for="present">в наличии</label>
+												</div>
+												<div class="form-control">
+													<input type="radio" id="all_coins" name="coin-filter" \>
+													<label for="all_coins">все монеты</label>
+												</div> -->
+											</div>
+										</div>  
+									</div>
+									  
+									
+									
+								</div>
+							</div>
+							<div class="coins__items coins-items" id="coins-list">
+								<div class="coins-items__item card filtered-item sorted-item" data-price="53000" data-year="2022" data-item-filter-data='
+								{
+									"name":{
+										"value": "name 1"
+									},
+									"state":{
+										"value": "present"
+									}
+								}'>
+									<div class="card__wrap">
+										<div class="card__coin-wrap">
+											<img src="../assets/img/images/coin-1.png" alt="">
+										</div>
+										<div class="card__title-wrap">
+											<div class="card__title-text text--blue text--700 text--uppercase text--LM">
+												<span>Георгий победоносец (спмд)</span>
+											</div>
+											<div class="card__title-art">
+												<span>СПМД, 2022 г</span>
+												<span><b>Артикул:</b>5216-0060-3</span>
+											</div>
+										</div>
+										<div class="card__h-line-wrap">
+											<div class="card__h-line"></div>
+										</div>
+										<div class="card__prop-wrap text--S">
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Номинал: </span>
+												<span class="text--blue text--400">50 рублей</span>
+											</div>
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Вес чистого металла:</span>
+												<span class="text--blue text--400">7,78</span>
+											</div>
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Металл, проба:</span>
+												<span class="text--blue text--400">золото, 999/1000</span>
+											</div>
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Годы выпуска:</span>
+												<span class="text--blue text--400">2018-2021</span>
+											</div>
+										</div>
+										<div class="card__price-wrap">
+											<div class="card__price-item">
+												<div class="card__price-title text--gray text--400 text--S">
+													<span>Цена продажи</span>
+												</div>
+												<div class="card__price-text text--blue text--700 text--L">
+													<span>74 000 руб.</span>
+												</div>
+											</div>
+											<div class="card__price-item">
+												<div class="card__price-title text--gray text--400 text--S">
+													<span>Цена покупки</span>
+												</div>
+												<div class="card__price-text text--blue text--700 text--L">
+													<span>53 000 руб.</span>
+												</div>
+											</div>
+										</div>
+										<div class="card__v-line">
+										</div>
+										<div class="card__btn-wrap">
+											<a href="coin.html" class="btn card__btn">Подробнее</a href="">
+										</div>
+									</div>
+								</div>
+								<div class="coins-items__item card filtered-item sorted-item" data-price="60000" data-year="2018" data-item-filter-data='
+								{
+									"name":{
+										"value": "name 2"
+									},
+									"state":{
+										"value": "absent"
+									}
+								}'>
+									<div class="card__wrap">
+										<div class="card__coin-wrap">
+											<img src="../assets/img/images/coin-1.png" alt="">
+										</div>
+										<div class="card__title-wrap">
+											<div class="card__title-text text--blue text--700 text--uppercase text--LM">
+												<span>Георгий победоносец (спмд)</span>
+											</div>
+											<div class="card__title-art">
+												<span>СПМД, 2018 г</span>
+												<span><b>Артикул:</b>5216-0060-3</span>
+											</div>
+										</div>
+										<div class="card__h-line-wrap">
+											<div class="card__h-line"></div>
+										</div>
+										<div class="card__prop-wrap text--S">
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Номинал: </span>
+												<span class="text--blue text--400">50 рублей</span>
+											</div>
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Вес чистого металла:</span>
+												<span class="text--blue text--400">7,78</span>
+											</div>
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Металл, проба:</span>
+												<span class="text--blue text--400">золото, 999/1000</span>
+											</div>
+											<div class="card__prop-item">
+												<span class="text--gray text--700">Годы выпуска:</span>
+												<span class="text--blue text--400">2018-2021</span>
+											</div>
+										</div>
+										<div class="card__price-wrap">
+											<div class="card__price-item">
+												<div class="card__price-title text--gray text--400 text--S">
+													<span>Цена продажи</span>
+												</div>
+												<div class="card__price-text text--blue text--700 text--L">
+													<span>74 000 руб.</span>
+												</div>
+											</div>
+											<div class="card__price-item">
+												<div class="card__price-title text--gray text--400 text--S">
+													<span>Цена покупки</span>
+												</div>
+												<div class="card__price-text text--blue text--700 text--L">
+													<span>60 000 руб.</span>
+												</div>
+											</div>
+										</div>
+										<div class="card__v-line">
+										</div>
+										<div class="card__btn-wrap">
+											<a href="coin.html" class="btn card__btn">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<%- include('inc/footer.html') %>
+	</body>
 </html>
