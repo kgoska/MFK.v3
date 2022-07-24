@@ -1,0 +1,30 @@
+.filter-disabler{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	&>input{
+		width: 14px;
+		height: 14px;
+		cursor: pointer;
+	}
+	
+}
+.filter-disabler-wrapper{
+	position: relative;
+	
+}
+.filter{
+	position: relative;
+	&.disabled{
+		filter: opacity(0.4);
+		// input[type=range], span, label, .filter-disabler{
+			
+		// 	filter: opacity(0.4);	
+		// }
+		
+	}
+}

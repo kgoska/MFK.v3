@@ -105,7 +105,6 @@ const filterHandlerLookup = {
 		Update: function(filter){
 			let input = filter.children('input[type="text"]');
 			let value = input.val();
-			console.log(value);
 			filter.data("filter-value",{value:value});
 		},
 		Evaluate: function(filterfieldData, objectfieldData){
@@ -137,8 +136,6 @@ const filterHandlerLookup = {
 			filter.data("filter-value",{value:values});
 		},
 		Evaluate: function(filterfieldData, objectfieldData){
-			console.log(filterfieldData.value);
-			console.log(objectfieldData.value);
 			return filterfieldData.value.includes(objectfieldData.value);
 		}
 	},
@@ -163,7 +160,6 @@ function InitializeFilters(){
 	}
 }
 function UpdateFilter(filter, trigger){
-
 	let filterType = filter.data('filter-type');
 	filterHandlerLookup[filterType].Update(filter,trigger);
 
@@ -174,11 +170,11 @@ function UpdateFilter(filter, trigger){
 }
 function InitializeFilter(filter){
 	let filterType = filter.data('filter-type');
-	console.log(filterType);
 	filterHandlerLookup[filterType].Update(filter);
 }
 function ApplyFilters(filtersContainer){
-	let filterElements = filtersContainer.find('.filter');
+	let filterElements = filtersContainer.find('.filter:not(.disabled)');
+
 	let filters = {};
 	for (let i = 0; i < filterElements.length; i++) {
 		filterElements[i] = $(filterElements[i]);
@@ -189,6 +185,7 @@ function ApplyFilters(filtersContainer){
 		};
 		filters[filterObject.name] = filterObject;
 	}
+	console.log(filters);
 	let filteredItems = $('#' + filtersContainer.data('filtered-items-container-id')).children('.filtered-item');
 	//hide all elements
 	filteredItems.each(function(index){
@@ -243,35 +240,35 @@ function FormTimeQuantity(quantity, unit) { // THIS IS LITERAL HELL, preceed wit
 	switch(unit){
 		case 'year':
 			if(lastUnit == 0 || lastUnit >= 5 || penultimateDigit == 1){
-				return "Лет";
+				return "лет";
 			}
 			else if (lastUnit == 1){
-				return "Год";
+				return "год";
 			}
 			else{
-				return "Года";
+				return "года";
 			}
 			break;
 		case 'month':
 			if(lastUnit == 0 || lastUnit > 4 || penultimateDigit == 1){
-				return "Месяцев";
+				return "месяцев";
 			}
 			else if (lastUnit == 1){
-				return "Месяц";
+				return "месяц";
 			}
 			else{
-				return "Месяца";
+				return "месяца";
 			}
 			break;
 		case 'day':
 			if(lastUnit == 0 || lastUnit > 4 || penultimateDigit == 1){
-				return "Дней";
+				return "дней";
 			}
 			else if (lastUnit == 1){
-				return "День";
+				return "день";
 			}
 			else{
-				return "Дня";
+				return "дня";
 			}
 			break;
 		default:
@@ -308,3 +305,19 @@ function FormReadablePrice(thousands) {
 		return Math.floor(thousands/1000) + " млн. рублей";
 	}
 }
+
+
+//FIlter disabling
+$('.filter-disabler').on('click', function(e){
+	e.stopPropagation();
+	$(this).closest('.filter').toggleClass('disabled', !$(this).find('input')[0].checked);
+});
+$(document).ready(function(){
+	$('.filter-disabler').each(function(){
+		$(this).closest('.filter').toggleClass('disabled', !$(this).find('input')[0].checked);
+	});
+});
+$('.filter').on('click', function(){
+	$(this).removeClass('disabled');
+	$(this).find('.filter-disabler').find('input')[0].checked = true;
+});
