@@ -35,6 +35,32 @@ require ('./libs/filters.js');
 // 		</div>
 // 	</div>
 // </section>
+
+//Modal
+$(document).on('click', '.modal-trigger', function(event) {
+	$("body").css("overflow", "hidden");
+
+	var modalID = $(this).data('modal-id');
+	var modal = $("#" + modalID + ".modal");
+	modal.addClass("modal-active");
+
+	var modalTitle = $(this).data('modal-title');
+	if(typeof modalTitle !== 'undefined'){
+		modal.find(".modal-title").html(modalTitle);
+	}
+});
+$(document).on('click', '.modal-bg, .modal-cross', function(event) {
+	$("body").css("overflow", "visible");
+	var modal = $(this).closest(".modal");
+	modal.removeClass("modal-active");
+
+});
+$(document).on('click', '.modal-window', function(event) {
+	event.stopPropagation();
+});
+
+
+
 let sortStates = [
 	{className:"",stateName:"none", fieldValueMultiplier:0},
 	{className:"sort-up",stateName:"up", fieldValueMultiplier:1},
