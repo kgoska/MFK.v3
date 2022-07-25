@@ -380,21 +380,15 @@ $(document).on('click','.mobile-menu__item-wrap', function(){
 	// let submenuHeight = items.length * items.first().height()+'px';
 	// $('.mobile-menu__item-wrap.selected').parent().find('.submenu__body').height(submenuHeight);
 // });
+$('.tabs-item').click(function(e){
+	e.preventDefault();
+	console.log('Hi');
+	if ($(this).not('current-link')){
+		$('.tabs-item').removeClass('current-link');
+		$(this).addClass('current-link');
+	}
+});
 
-$("#tarifs").click(function (e) {
-	e.preventDefault();
-	$("#tarifs").addClass("current-link");
-	$("#docs").removeClass("current-link");
-	$("#tarifs-item").addClass("active");
-	$("#docs-item").removeClass("active");
-});
-$("#docs").click(function (e) {
-	e.preventDefault();
-	$("#docs").addClass("current-link");
-	$("#tarifs").removeClass("current-link");
-	$("#docs-item").addClass("active");
-	$("#tarifs-item").removeClass("active");
-});
 
 $('body').on('click','#showmore.more',function(e){
 	e.preventDefault();
