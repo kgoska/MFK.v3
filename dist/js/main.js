@@ -111,6 +111,7 @@ const filterHandlerLookup = {
             } else {
               realValue += stepsLeft * breakpoints[i].multiplier;
               stepsLeft = 0;
+              break;
             }
           }
 
@@ -180,7 +181,47 @@ const filterHandlerLookup = {
       });
     },
     Evaluate: function (filterfieldData, objectfieldData) {
-      return filterfieldData.value == objectfieldData.value;
+      return filterfieldData.value == objectfieldData.value || !filterfieldData.value;
+    }
+  },
+  "text": {
+    Update: function (filter) {
+      let input = filter.children('input[type="text"]');
+      let value = input.val();
+      filter.data("filter-value", {
+        value: value
+      });
+    },
+    Evaluate: function (filterfieldData, objectfieldData) {
+      return filterfieldData.value.includes(objectfieldData.value) || objectfieldData.value.includes(filterfieldData.value);
+    }
+  },
+  "enum": {
+    Update: function (filter, trigger) {
+      let values;
+
+      if (trigger) {
+        values = $(trigger).data('enum-values');
+
+        if (!filter.data('radio')) {
+          let enumButtons = filter.children('[data-enum-values]');
+          enumButtons.removeClass('active');
+          $(trigger).addClass('active');
+        }
+      } else {
+        if (filter.data('radio')) {
+          values = filter.children('[data-enum-values]:checked').data('enum-values');
+        } else {
+          values = filter.children('[data-enum-values].active').data('enum-values');
+        }
+      }
+
+      filter.data("filter-value", {
+        value: values
+      });
+    },
+    Evaluate: function (filterfieldData, objectfieldData) {
+      return filterfieldData.value.includes(objectfieldData.value);
     }
   }
 };
@@ -191,7 +232,7 @@ $(document).on('click input change', '.filter-trigger', function () {
     console.error("could not find filter a filter for the trigger", this);
   }
 
-  UpdateFilter(filter);
+  UpdateFilter(filter, this);
 });
 
 function InitializeFilters() {
@@ -204,18 +245,18 @@ function InitializeFilters() {
   let filterContainers = $('.filters');
 
   for (var i = 0; i < filterContainers.length; i++) {
-    if (filtersContainers[i].data("apply-on-load")) {
+    if ($(filterContainers[i]).data("apply-on-load")) {
       ApplyFilters($(filterContainers[i]));
     }
   }
 }
 
-function UpdateFilter(filter) {
+function UpdateFilter(filter, trigger) {
   let filterType = filter.data('filter-type');
-  filterHandlerLookup[filterType].Update(filter);
+  filterHandlerLookup[filterType].Update(filter, trigger);
   let filtersContainer = filter.closest('.filters');
 
-  if (filtersContainer.data('auto-update')) {
+  if (filtersContainer.data('auto-update') || filter.data('auto-update')) {
     ApplyFilters(filtersContainer);
   }
 }
@@ -226,7 +267,7 @@ function InitializeFilter(filter) {
 }
 
 function ApplyFilters(filtersContainer) {
-  let filterElements = filtersContainer.find('.filter');
+  let filterElements = filtersContainer.find('.filter:not(.disabled)');
   let filters = {};
 
   for (let i = 0; i < filterElements.length; i++) {
@@ -239,6 +280,7 @@ function ApplyFilters(filtersContainer) {
     filters[filterObject.name] = filterObject;
   }
 
+  console.log(filters);
   let filteredItems = $('#' + filtersContainer.data('filtered-items-container-id')).children('.filtered-item'); //hide all elements
 
   filteredItems.each(function (index) {
@@ -247,7 +289,12 @@ function ApplyFilters(filtersContainer) {
 
   for (let i = 0; i < filteredItems.length; i++) {
     filteredItems[i] = $(filteredItems[i]);
-    let filteredItemData = JSON.parse(filteredItems[i].data('item-filter-data'));
+    filteredItemData = filteredItems[i].data('item-filter-data');
+
+    if (typeof filteredItemData == 'string') {
+      filteredItemData = JSON.parse(filteredItemData);
+    }
+
     let show = true;
 
     for (let filterName in filters) {
@@ -293,33 +340,33 @@ function FormTimeQuantity(quantity, unit) {
   switch (unit) {
     case 'year':
       if (lastUnit == 0 || lastUnit >= 5 || penultimateDigit == 1) {
-        return "Лет";
+        return "лет";
       } else if (lastUnit == 1) {
-        return "Год";
+        return "год";
       } else {
-        return "Года";
+        return "года";
       }
 
       break;
 
     case 'month':
       if (lastUnit == 0 || lastUnit > 4 || penultimateDigit == 1) {
-        return "Месяцев";
+        return "месяцев";
       } else if (lastUnit == 1) {
-        return "Месяц";
+        return "месяц";
       } else {
-        return "Месяца";
+        return "месяца";
       }
 
       break;
 
     case 'day':
       if (lastUnit == 0 || lastUnit > 4 || penultimateDigit == 1) {
-        return "Дней";
+        return "дней";
       } else if (lastUnit == 1) {
-        return "День";
+        return "день";
       } else {
-        return "Дня";
+        return "дня";
       }
 
       break;
@@ -357,7 +404,22 @@ function FormReadablePrice(thousands) {
   } else {
     return Math.floor(thousands / 1000) + " млн. рублей";
   }
-}
+} //FIlter disabling
+
+
+$('.filter-disabler').on('click', function (e) {
+  e.stopPropagation();
+  $(this).closest('.filter').toggleClass('disabled', !$(this).find('input')[0].checked);
+});
+$(document).ready(function () {
+  $('.filter-disabler').each(function () {
+    $(this).closest('.filter').toggleClass('disabled', !$(this).find('input')[0].checked);
+  });
+});
+$('.filter').on('click', function () {
+  $(this).removeClass('disabled');
+  $(this).find('.filter-disabler').find('input')[0].checked = true;
+});
 
 /***/ }),
 
@@ -1176,7 +1238,107 @@ __webpack_require__(/*! ./libs/dropdown.js */ "./src/js/libs/dropdown.js");
 
 __webpack_require__(/*! ./libs/deposite.js */ "./src/js/libs/deposite.js");
 
-__webpack_require__(/*! ./libs/filters.js */ "./src/js/libs/filters.js"); //Mobile burger
+__webpack_require__(/*! ./libs/filters.js */ "./src/js/libs/filters.js"); //Sort
+//Example
+// <section>
+// 	<div class="sort-group" data-sorted-elements-container-id="sorted-list">
+// 		<div class="sort-item" data-current-sort-state="none" data-sorted-field-name="data-price">price</div>
+// 	</div>
+// 	<div id="sorted-list">
+// 		<div class="sorted-item" data-price="10">
+// 			10
+// 		</div>
+// 		<div class="sorted-item" data-price="11">
+// 			11
+// 		</div>
+// 		<div class="sorted-item" data-price="12">
+// 			12
+// 		</div>
+// 		<div class="sorted-item" data-price="3">
+// 			3
+// 		</div>
+// 		<div class="sorted-item" data-price="7">
+// 			7
+// 		</div>
+// 	</div>
+// </section>
+
+
+let sortStates = [{
+  className: "",
+  stateName: "none",
+  fieldValueMultiplier: 0
+}, {
+  className: "sort-up",
+  stateName: "up",
+  fieldValueMultiplier: 1
+}, {
+  className: "sort-down",
+  stateName: "down",
+  fieldValueMultiplier: -1
+}];
+$('.sort-item').on('click', function () {
+  let parent = $(this).parent('.sort-group');
+  let sortItems = parent.children('.sort-item');
+
+  for (let i = 0; i < sortItems.length; i++) {
+    if (sortItems[i] != this) {
+      SwitchToSortState(0, sortItems[i]);
+    }
+  }
+
+  let currentStateName = $(this).data("current-sort-state");
+  let currentStateID = 0;
+
+  for (let i = 0; i < sortStates.length; i++) {
+    if (currentStateName == sortStates[i].stateName) {
+      currentStateID = i;
+      break;
+    }
+  }
+
+  currentStateID++;
+
+  if (currentStateID > sortStates.length - 1) {
+    currentStateID = 0;
+  }
+
+  SwitchToSortState(currentStateID, this);
+  let sortedParent = $("#" + parent.data('sorted-container-id'));
+  let sortedElements = sortedParent.children('.sorted-item');
+  let fieldValueMultiplier = sortStates[currentStateID].fieldValueMultiplier;
+  let sortedFieldName = $(this).data('sorted-field-name');
+
+  while (sortedElements.length != 0) {
+    let biggestItemIndex;
+    let biggestItemValue = Number.NEGATIVE_INFINITY;
+
+    for (var i = 0; i < sortedElements.length; i++) {
+      let fieldData = $(sortedElements[i]).attr(sortedFieldName);
+      let trueValue = -fieldData * fieldValueMultiplier; //the one with the biggest value will be the last (so the values have to negative)
+
+      if (trueValue > biggestItemValue) {
+        biggestItemValue = trueValue;
+        biggestItemIndex = i;
+      }
+    }
+
+    sortedParent.prepend(sortedElements[biggestItemIndex]);
+    sortedElements.splice(biggestItemIndex, 1);
+  } //Sort cards accordingly
+
+});
+
+function SwitchToSortState(stateID, element) {
+  element = $(element);
+
+  for (let i = 0; i < sortStates.length; i++) {
+    element.removeClass(sortStates[i].className);
+  }
+
+  element.addClass(sortStates[stateID].className);
+  element.data("current-sort-state", sortStates[stateID].stateName);
+} //Mobile burger
 
 
 $(document).on('click', '#burger-open', function () {

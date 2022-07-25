@@ -35,6 +35,7 @@ const filterHandlerLookup = {
 						else{
 							realValue += stepsLeft*breakpoints[i].multiplier;
 							stepsLeft = 0;
+							break;
 						}
 						
 					}
@@ -98,7 +99,7 @@ const filterHandlerLookup = {
 			filter.data("filter-value",{value:value});
 		},
 		Evaluate: function(filterfieldData, objectfieldData){
-			return filterfieldData.value == objectfieldData.value;
+			return filterfieldData.value == objectfieldData.value || !filterfieldData.value;
 		}
 	},
 	"text": {
