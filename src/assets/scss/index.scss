@@ -368,6 +368,10 @@
                   flex-direction: row;
                   justify-content: flex-start;
                   margin-bottom: 55px;
+                  @media screen and (max-width:992px){
+                        flex-wrap: wrap;
+                        row-gap: 20px;
+                  }
 		}
             &__text{
                   font-family: 'Helvetica';
@@ -388,12 +392,19 @@
 		&__wrap {
                   display: flex;
                   column-gap: 30px;
+                  @media screen and (max-width:992px){
+                        flex-direction: column;
+                        row-gap: 40px;
+                  }
 		}
 }
 .content-general {
       display: flex;
       flex-direction: column;
-      
+      @media screen and (max-width:992px){
+            flex-direction: column;
+            row-gap: 40px;
+      }
 
 
 		// .content-general__item
@@ -407,7 +418,9 @@
 		// .content-general__picture
 
 		&__picture {
-                 line-height: 0;
+                  height: 300px;
+                  width: 100%;
+                  line-height: 0;
 		}
 }
 .content-card {
@@ -481,14 +494,24 @@
       display: flex;
       flex-direction: column;
       row-gap: 30px;
+      @media screen and (max-width:575px){
+            row-gap: 40px;
+      }
 }
 .content-double {
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 575px){
+            flex-direction: column;
+            row-gap: 40px;
+      }
 		// .content-double__item
 
 		&__item {
                   flex: 0 0 50%;
+                  @media screen and (max-width:992px){
+                        flex: 0 0 60%;
+                  }
 		}
 
 		// .content-double__picture
@@ -496,13 +519,17 @@
 		&__picture {
                   flex: 0 0 45%;
                   align-self: flex-end;
+                  
 		}
 }
 .news-button {
       display: flex;
       flex: 0 0 45%;
       background: linear-gradient(128.98deg, #801D23 -13.11%, #B9422B 155.05%);
-		// .news-button__svg
+		@media screen and (max-width:992px){
+                        flex: 0 0 35%;
+                  }
+      // .news-button__svg
             &__link{
                   color: #fff;
                   height: 100%;
@@ -510,19 +537,25 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  @media screen and (max-width:575px){
+                        justify-content: flex-start;
+                  }
                   &--text{
-                        margin-right: 45px;
+                        padding: 20px;
                         font-family: 'Helvetica';
                         font-style: normal;
                         font-weight: 400;
                         font-size: 20px;
                         line-height: 23px;
                         color: #FFFFFF; 
+                        @media screen and (max-width:575px){
+                              padding: 40px;
+                        }
                   }
             }
 		&__svg {
-                  width: 10px;
-                  height: 15px;
+                  width: 15px;
+                   height: 25px;
 		}
 }
 .content-simple {
@@ -531,13 +564,154 @@
 		// .content-simple__picture
 
 		&__picture {
+                  width: 100%;
+                  height: 220px;
                   line-height: 0;
+                  @media screen and (max-width:575px){
+                        display: none;
+                  }
 		}
 
 		// .content-simple__item
 
 		&__item {
-                  height: 100%;
+                  
 		}
 }
+
+// internet banking
+
+.internet-banking {
+
+		// .internet-banking__wrap
+
+		&__wrap {
+                  display: flex;
+                  flex-direction: row;
+                  background: #FDFEFF;
+                  border-radius: 5px; 
+                  justify-content: space-between;
+                  margin-bottom: 150px;
+                  @media screen and (max-width:768px){
+                        justify-content: center;
+                        margin-bottom: 30px;
+                  }
+		}
+}
+.banking-info {
+      display: flex;
+      padding: 40px 100px;
+      flex-direction: column;
+      flex: 0 0 60%;
+      justify-content: space-between;
+      @media screen and (max-width:992px){
+            flex: 0 0 54px;
+            padding: 30px 15px;
+      }
+      @media screen and (max-width:768px){
+            padding: 30px 10px ;
+      }
+}
+.info {
+}
+.info-title {
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 34px;
+      color: #00205B;
+            @media screen and (max-width: 992px){
+            font-size: 24px;
+            line-height: 28px;
+      }
+
+		// .info-title__wrap
+
+		&__wrap {
+		}
+}
+.info-text {
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      color: #00205B;
+      @media screen and (max-width: 992px){
+            font-size: 14px;
+            line-height: 16px;
+      }
+            &__subtitle{
+                  margin-bottom: 15px;
+                  font-family: 'Helvetica';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 20px;
+                  line-height: 23px;
+                  color: #00205B;
+                  @media screen and (max-width: 992px){
+                        font-size: 18px;
+                        line-height: 21px;
+                  }
+            }
+		// .info-text__wrap
+
+		&__wrap {
+		}
+}
+.info-button {
+      font-family: 'Helvetica';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      color: #FFFFFF;
+		// .info-button__wrap
+
+		&__wrap {
+                  width: 195px;
+                  background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
+                  border-radius: 2px;
+                  padding: 16px 30px;
+                  @media screen and (max-width: 768px){
+                      width: auto;
+                      text-align: center;
+                  }
+		}
+}
+.info-store {
+
+		// .info-store__wrap
+
+		&__wrap {
+                  display: flex;
+                  flex-direction: row;
+		}
+
+		// .info-store__item
+
+		&__item {
+                  &--margin{
+                        margin-left: -10px;
+                  }
+		}
+}
+.banking-visual {
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width:768px){
+            display: none;
+      }
+}
+.visual {
+      flex: 0 0 40%;
+}
+.visual-phone {
+      margin: 37px -3px;
+}
+.visual-art {
+      height: 100%;
+}
+
 
