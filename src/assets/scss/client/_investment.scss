@@ -1,23 +1,40 @@
 .investment-card {
 
-		// .investment-card__wrapper
-
-		&__wrapper {
-		}
-
 		// .investment-card__banner
 
 		&__banner {
+			display: flex;
+			flex-direction: row;
+			height: 300px;
+			margin-bottom: 55px;
+			@media screen and (max-width:768px){
+				flex-direction: column;
+				height: 600px;
+			}
 		}
 
 		// .investment-card__details
 
 		&__details {
+			margin: 0 70px;
+			@media screen and (max-width:768px){
+				margin: 0 30px;
+			}
 		}
 
 		// .investment-card__description
-
 		&__description {
+			padding: 40px 80px;
+			background: #FFFFFF;
+			border: 1px solid #D1D1D1;
+			box-shadow: 0px 4px 4px rgba(0, 32, 91, 0.15);
+			margin-bottom: 100px;
+			@media screen and (max-width:992px){
+				padding: 40px 30px;
+			}
+			@media screen and (max-width:575px){
+				padding: 35px 15px;
+			}
 		}
 }
 .banner {
@@ -30,64 +47,184 @@
 		// .banner__return
 
 		&__return {
+			display: flex;
+			flex-direction: row;
+			background: #001843;
+			padding: 40px 50px;
 		}
 
-		// .banner__flow
+		// .banner__arrow
 
-		&__flow {
+		&__arrow {
+			margin-right: 25px;
 		}
 
 		// .banner__about
 
 		&__about {
+			display: flex;
+			flex-direction: column;
+			margin-top: 3px;
+			justify-content: space-between;
 		}
 
 		// .banner__subtitle
 
 		&__subtitle {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-left: -40px;
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			color: #FFFFFF;
+			text-transform: uppercase;
+			margin-bottom: 30px;
 		}
 
 		// .banner__title
 
 		&__title {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 21px;
+			line-height: 1.75em;
+			text-transform: uppercase;
+			color: #FFFFFF;
+			margin-bottom: 30px;
 		}
 
 		// .banner__button
 
 		&__button {
+			padding: 15px 25px;
+			background: #00A3E0;
+			border-radius: 2px;
+			border: none;
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			text-align: center;
+			color: #FFFFFF;
+			&__wrap{
+				
+			}
 		}
 
 		// .banner__picture
 
 		&__picture {
+				
+			&__wrap{
+				// height: 100%;
+    			flex: 0 0 52%;
+			}
 		}
 }
 .details-data {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	@media screen and (max-width:768px){
+		flex-direction: column;
+	}
 }
 .data-item {
+	display: flex;
+	flex-direction: column;
 }
 .data-subtitle {
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	color: #4E4E4E;
+	margin-bottom: 30px;
 }
 .data-title {
-
-		// .data-title__wrap
-
-		&__wrap {
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 25px;
+	color: #00205B;
+	&:not(:last-child){
+		margin-bottom: 15px;
+	}
+	&__wrap{
+		display: flex;
+		flex-direction: column;
+		@media screen and (max-width:768px){
+			flex-direction: row;
+			justify-content: space-between;
 		}
+	}
+	
 }
 .details-check {
+	display: flex; 
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 90px;
+	@media screen and (max-width:768px){
+		flex-direction: column;
+	}
 }
 .check-item {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	@media screen and (max-width:768px){
+		width: 170px;
+		justify-content: space-between;
+	}
 }
 .check-title {
+	width: min-content;
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	color: #454444;
+	&__wrap{
+		margin-right: 10px;
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+	}
 }
-.check-img {
-}
+
 .description-wrap {
 }
 .description-list {
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
 }
 .list-title {
+	font-weight: 700;
 }
 .list-item {
+	margin-left: 20px;
+	list-style-type: disc;
+}
+.list-text{
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	color: #454444;
+	&--title{
+		font-weight: 700;
+	}
 }
