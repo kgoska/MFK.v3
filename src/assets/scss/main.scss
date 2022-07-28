@@ -1,9 +1,9 @@
 @use 'sass:math';
-@import './utils/utils-collection';
 @import '../../../node_modules/modern-normalize/modern-normalize.css';
 @import './base/fonts';
 @import './utils/mixins';
 @import './utils/vars';
+@import './utils/utils-collection';
 @import './base/container';
 @import './base/breadcrumbs';
 @import './base/header';
@@ -11,6 +11,7 @@
 @import './base/dropdown';
 @import './base/acordion';
 @import './base/footer';
+@import './base/news';
 @import './base/page-content';
 @import './base/text-styles';
 @import './base/sidebar';

@@ -111,6 +111,9 @@
 	background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
 	border:none;
 	border-radius: 2px;
+	&:active{
+		background: #B94C40;
+	}
 	&--fullwidth{
 		@media screen and (max-width: 767px){
 			width: 100%;

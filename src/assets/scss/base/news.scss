@@ -1,0 +1,24 @@
+.news-card {
+	height: auto;
+	&__image {
+		@media screen and (max-width:576px) {
+			width: 100%;
+			flex-basis: 200px;
+		}
+	}
+	&__text {
+	}
+}
+.news{
+	&__image{
+		&>img{
+			width: 100%;
+		}
+		@media screen and (max-width:992px) {
+			max-width: 300px;
+			width: 100%;
+			margin: auto;
+			flex-basis: 200px;
+		}
+	}
+}
