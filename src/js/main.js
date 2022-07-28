@@ -406,12 +406,13 @@ $(document).on('click','.mobile-menu__item-wrap', function(){
 	// let submenuHeight = items.length * items.first().height()+'px';
 	// $('.mobile-menu__item-wrap.selected').parent().find('.submenu__body').height(submenuHeight);
 // });
-$('.tabs-item').click(function(e){
+$(document).on('click', '.tabs__item', function(e){
 	e.preventDefault();
-	console.log('Hi');
 	if ($(this).not('current-link')){
-		$('.tabs-item').removeClass('current-link');
+		$('.tabs__item').removeClass('current-link');
 		$(this).addClass('current-link');
+		$('.tabs__window').removeClass('active');
+		$('#' + $(this).data('item')).addClass('active');
 	}
 });
 
