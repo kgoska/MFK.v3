@@ -1297,7 +1297,7 @@ let sortStates = [{
   stateName: "down",
   fieldValueMultiplier: -1
 }];
-$('.sort-item').on('click', function () {
+$(document).on('click', '.sort-item', function () {
   let parent = $(this).parent('.sort-group');
   let sortItems = parent.children('.sort-item');
 

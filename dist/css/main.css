@@ -427,11 +427,58 @@ summary {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/main.scss ***!
   \******************************************************************************************************************************************************************************************/
 @charset "UTF-8";
+@font-face {
+  font-family: "Helvetica";
+  src: url(../assets/fonts/Inter-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url(../assets/fonts/Inter-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url(../assets/fonts/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Mixins:
+  ========================================================================== */
+/* Fonts Helpers:
+   Read more: https://github.com/vedees/webpack-template/blob/master/README.md#add-fonts
+   ========================================================================== */
+/*
+  By default template support only modern format fonts
+  Without svg. Only: .woff, .woffs
+  if ypu need svg comments lines bellow and uncomments "Fonts helper all format fonts"
+
+  Usage:
+    1. Put your font to `src/assets/fonts/FOLDERNAME/FONTNAME`
+      FOLLOW: Files Required
+      Example: .woff, .woffs formats
+    2. Go to fonts.scss
+    3. Use mixon
+      Example: @include font-face("OpenSans", "../fonts/OpenSans/opensans");
+
+    Required parameters: @family, @family
+    Minor parameters: @weight, @style, @pipeline
+
+    Example Base:
+      @include font-face("OpenSans", "../fonts/OpenSans/opensans");
+    Example Situation:
+      @include font-face("OpenSans", "../fonts/OpenSans/opensansItalic", 400, italic);
+*/
+/* Vars:
+  ========================================================================== */
+/*
+  All colors taken from:
+  https://github.com/vedees/uimini
+*/
 .fx {
   display: flex;
-}
-.fx--unset {
-  display: unset;
 }
 .fx-g--0 {
   gap: 0px;
@@ -844,6 +891,9 @@ summary {
 .p--b-45 {
   padding-bottom: 45px;
 }
+.p--b-50 {
+  padding-bottom: 50px;
+}
 .p--b-75 {
   padding-bottom: 75px;
 }
@@ -909,12 +959,22 @@ summary {
   padding-bottom: 75px;
 }
 
+.d--b {
+  display: block;
+}
+.d--i {
+  display: inline;
+}
+.d--ib {
+  display: inline-block;
+}
+.d--n {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .lg-fx {
     display: flex;
-  }
-  .lg-fx--unset {
-    display: unset;
   }
   .lg-fx-g--0 {
     gap: 0px;
@@ -1392,13 +1452,22 @@ summary {
     padding-top: 75px;
     padding-bottom: 75px;
   }
+  .lg-d--b {
+    display: block;
+  }
+  .lg-d--i {
+    display: inline;
+  }
+  .lg-d--ib {
+    display: inline-block;
+  }
+  .lg-d--n {
+    display: none;
+  }
 }
 @media screen and (max-width: 991px) {
   .md-fx {
     display: flex;
-  }
-  .md-fx--unset {
-    display: unset;
   }
   .md-fx-g--0 {
     gap: 0px;
@@ -1876,13 +1945,22 @@ summary {
     padding-top: 75px;
     padding-bottom: 75px;
   }
+  .md-d--b {
+    display: block;
+  }
+  .md-d--i {
+    display: inline;
+  }
+  .md-d--ib {
+    display: inline-block;
+  }
+  .md-d--n {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .sm-fx {
     display: flex;
-  }
-  .sm-fx--unset {
-    display: unset;
   }
   .sm-fx-g--0 {
     gap: 0px;
@@ -2360,13 +2438,22 @@ summary {
     padding-top: 75px;
     padding-bottom: 75px;
   }
+  .sm-d--b {
+    display: block;
+  }
+  .sm-d--i {
+    display: inline;
+  }
+  .sm-d--ib {
+    display: inline-block;
+  }
+  .sm-d--n {
+    display: none;
+  }
 }
 @media screen and (max-width: 576px) {
   .xsm-fx {
     display: flex;
-  }
-  .xsm-fx--unset {
-    display: unset;
   }
   .xsm-fx-g--0 {
     gap: 0px;
@@ -2844,6 +2931,18 @@ summary {
     padding-top: 75px;
     padding-bottom: 75px;
   }
+  .xsm-d--b {
+    display: block;
+  }
+  .xsm-d--i {
+    display: inline;
+  }
+  .xsm-d--ib {
+    display: inline-block;
+  }
+  .xsm-d--n {
+    display: none;
+  }
 }
 .full-img--w > img {
   width: 100%;
@@ -2863,56 +2962,19 @@ summary {
   position: absolute;
 }
 
-@font-face {
-  font-family: "Helvetica";
-  src: url(../assets/fonts/Inter-Regular.ttf) format("truetype");
-  font-weight: 400;
-  font-style: normal;
+.bdrs--3 {
+  border-radius: 3px;
 }
-@font-face {
-  font-family: "Helvetica";
-  src: url(../assets/fonts/Inter-Medium.ttf) format("truetype");
-  font-weight: 500;
-  font-style: normal;
+.bdrs--5 {
+  border-radius: 5px;
 }
-@font-face {
-  font-family: "Helvetica";
-  src: url(../assets/fonts/Inter-Bold.ttf) format("truetype");
-  font-weight: 700;
-  font-style: normal;
+.bdrs--10 {
+  border-radius: 10px;
 }
-/* Mixins:
-  ========================================================================== */
-/* Fonts Helpers:
-   Read more: https://github.com/vedees/webpack-template/blob/master/README.md#add-fonts
-   ========================================================================== */
-/*
-  By default template support only modern format fonts
-  Without svg. Only: .woff, .woffs
-  if ypu need svg comments lines bellow and uncomments "Fonts helper all format fonts"
+.bdrs--15 {
+  border-radius: 15px;
+}
 
-  Usage:
-    1. Put your font to `src/assets/fonts/FOLDERNAME/FONTNAME`
-      FOLLOW: Files Required
-      Example: .woff, .woffs formats
-    2. Go to fonts.scss
-    3. Use mixon
-      Example: @include font-face("OpenSans", "../fonts/OpenSans/opensans");
-
-    Required parameters: @family, @family
-    Minor parameters: @weight, @style, @pipeline
-
-    Example Base:
-      @include font-face("OpenSans", "../fonts/OpenSans/opensans");
-    Example Situation:
-      @include font-face("OpenSans", "../fonts/OpenSans/opensansItalic", 400, italic);
-*/
-/* Vars:
-  ========================================================================== */
-/*
-  All colors taken from:
-  https://github.com/vedees/uimini
-*/
 .container {
   box-sizing: border-box;
   width: 1270px;
@@ -3980,6 +4042,27 @@ summary {
   border-image-source: linear-gradient(90deg, #FFFFFF -61.32%, rgba(0, 0, 0, 0) 199.06%);
 }
 
+.news-card {
+  height: auto;
+}
+@media screen and (max-width: 576px) {
+  .news-card__image {
+    width: 100%;
+    flex-basis: 200px;
+  }
+}
+.news__image > img {
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .news__image {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    flex-basis: 200px;
+  }
+}
+
 .page-content {
   display: flex;
   justify-content: center;
@@ -4089,6 +4172,9 @@ summary {
   background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
   border: none;
   border-radius: 2px;
+}
+.btn:active {
+  background: #B94C40;
 }
 @media screen and (max-width: 767px) {
   .btn--fullwidth {
@@ -7854,6 +7940,11 @@ label {
 .investment-card__details {
   margin: 0 70px;
 }
+@media screen and (max-width: 1200px) {
+  .investment-card__details {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .investment-card__details {
     margin: 0 30px;
@@ -7878,10 +7969,16 @@ label {
 }
 
 .banner__return {
+  flex-basis: 50%;
   display: flex;
   flex-direction: row;
   background: #001843;
   padding: 40px 50px;
+}
+@media screen and (max-width: 575px) {
+  .banner__return {
+    padding: 20px;
+  }
 }
 .banner__arrow {
   margin-right: 25px;
@@ -7904,17 +8001,16 @@ label {
   line-height: 18px;
   color: #FFFFFF;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .banner__title {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
-  font-size: 21px;
+  font-size: 30px;
   line-height: 1.75em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 30px;
 }
 .banner__button {
   padding: 15px 25px;
@@ -7930,7 +8026,7 @@ label {
   color: #FFFFFF;
 }
 .banner__picture__wrap {
-  flex: 0 0 52%;
+  flex-grow: 1;
 }
 
 .details-data {
@@ -7951,22 +8047,12 @@ label {
 }
 
 .data-subtitle {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: #4E4E4E;
+  height: 2em;
   margin-bottom: 30px;
 }
 
 .data-title {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 25px;
-  color: #00205B;
+  height: 2em;
 }
 .data-title:not(:last-child) {
   margin-bottom: 15px;
@@ -7978,7 +8064,8 @@ label {
 @media screen and (max-width: 768px) {
   .data-title__wrap {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    text-align: center;
   }
 }
 
@@ -7991,6 +8078,7 @@ label {
 @media screen and (max-width: 768px) {
   .details-check {
     flex-direction: column;
+    align-items: center;
   }
 }
 
