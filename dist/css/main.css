@@ -10501,11 +10501,6 @@ label {
     border: none;
   }
 }
-.column__title--min-size {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
 @media screen and (max-width: 768px) {
   .column__title--min-size {
     width: 100%;
@@ -10619,6 +10614,10 @@ label {
   flex-direction: row;
   text-align: center;
 }
+.columns__item {
+  flex-grow: 1;
+}
+
 .filter-card {
   margin: 0 100px;
 }
