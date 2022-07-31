@@ -80,6 +80,23 @@
 		}
 	}
 }
+//xxsm
+@media screen and (max-width: 376px){
+	.xxsm{
+		&-fx{
+			@import './flex-util-preset';
+		}
+		&-m{
+			@import './margin-util-preset';
+		}
+		&-p{
+			@import './padding-util-preset';
+		}
+		&-d{
+			@import './display-util-preset';
+		}
+	}
+}
 
 .full-img{
 	&--w{

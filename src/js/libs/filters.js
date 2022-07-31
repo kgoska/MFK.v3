@@ -309,7 +309,7 @@ function FormReadablePrice(thousands) {
 
 
 //FIlter disabling
-$('.filter-disabler').on('click', function(e){
+$(document).on('click touchstart','.filter-disabler', function(e){
 	e.stopPropagation();
 	$(this).closest('.filter').toggleClass('disabled', !$(this).find('input')[0].checked);
 });
@@ -318,7 +318,11 @@ $(document).ready(function(){
 		$(this).closest('.filter').toggleClass('disabled', !$(this).find('input')[0].checked);
 	});
 });
-$('.filter').on('click', function(){
-	$(this).removeClass('disabled');
-	$(this).find('.filter-disabler').find('input')[0].checked = true;
+$(document).on('click touchstart','.filter', function(){
+	let filterDisabler = $(this).find('.filter-disabler');
+	if(filterDisabler.length > 0){
+		$(this).removeClass('disabled');
+		filterDisabler.find('input')[0].checked = true;	
+	}
+	
 });

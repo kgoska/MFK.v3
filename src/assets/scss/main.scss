@@ -57,13 +57,8 @@ body {
 	color: #003772;
 	background-color: #F7FAFF;
 }
-
-button:hover,
-button:focus {
+button:not(:disabled){
 	cursor: pointer;
-}
-button:active{
-	background: #B94C40;
 }
 * {
 	box-sizing: border-box;
@@ -261,12 +256,12 @@ div.hidden{
 		justify-content: center;
 		align-items: center;
 		transition: all 0.8s; // after .8s to allow the model to disappear
-		width: 100%;
+		// width: 100%;
 		height: 100%;
 		top: 100%;
 		left: 0;
 		overflow-y: scroll;
-		padding: 20px 25px;
+		// padding: 20px 25px;
 		box-sizing: border-box;
 		z-index: 5;
 		-ms-overflow-style: none;  /* IE and Edge */
@@ -279,7 +274,9 @@ div.hidden{
 		margin: auto;
 		padding: 50px 20px;
 		//max-height: 100%;
-		
+		&--100{
+			width: 100%;
+		}
 		&--75{
 			width: 75%;
 			@media screen and (max-width: 772px) {
@@ -300,7 +297,7 @@ div.hidden{
 		position: relative;
 		z-index: 10;
 		background: #FFF;
-		border-radius: 10px;
+		border-radius: 4px;
 		padding: 15px 25px;
 	}
 	&__top {
@@ -316,23 +313,23 @@ div.hidden{
 	&__cross {
 		justify-self: end;
 		cursor: pointer;
-		height: 40px;
-		width: 40px;
+		height: 20px;
+		width: 20px;
 		display: flex;
 		justify-content: center;
 	}
 	&__cross-line {
 		height: 100%;
 		box-sizing: border-box;
-		border: 2px solid #0C4DA2;
+		border: 1px solid #0C4DA2;
 		background: #0C4DA2;
 		border-radius: 2px;
 		transform-origin: 50% 50%;
 		&--1 {
-			transform: translateX(2px) rotate(-135deg);
+			transform: translateX(1px) rotate(-135deg);
 		}
 		&--2 {
-			transform: translateX(-2px) rotate(135deg);
+			transform: translateX(-1px) rotate(135deg);
 		}
 	}
 	&__content-wrapper{
@@ -380,197 +377,12 @@ div.hidden{
 	}
 }
 .form {
-	&__wrapper {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
+	input, select{
+		width: 100%;
 	}
-	&__block {
-		box-sizing: border-box;
-		display: flex;
-		flex-wrap: wrap;
-		&--custom{
-			flex: 0 0 var(--L-block-w, var(--block-w, 100%));
-			@media screen and (max-width: 992px) {	
-				flex: 0 0 var(--M-block-w);	
-			}
-			@media screen and (max-width: 768px) {
-				flex: 0 0 var(--S-block-w);
-			}
-			@media screen and (max-width: 768px) {
-				flex: 0 0 var(--S-block-w);
-			}
-			@media screen and (max-width: 768px) {
-				flex: 0 0 var(--XS-block-w);
-			}
-		}
-		&--p-custom{
-			padding-top: var(--b-pt);
-			padding-bottom: var(--b-pb);
-			padding-right: var(--b-pr);
-			padding-left: var(--b-pl);
-		}
-		&--px5{
-			padding-left: 5px;
-			padding-right: 5px;
-		}
-		&--px15{
-			padding-left: 5px;
-			padding-right: 15px;
-		}
-		&--px25{
-			padding-left: 5px;
-			padding-right: 25px;
-		}
-		&--py5{
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		&--py15{
-			padding-top: 5px;
-			padding-bottom: 15px;
-		}
-		&--py25{
-			padding-top: 5px;
-			padding-bottom: 25px;
-		}
-	}
-	&__field {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		&--custom{
-			flex: 0 0 var(--L-field-w, 100%);
-			@media screen and (max-width: 992px) {	
-				flex: 0 0 var(--M-field-w);	
-			}
-			@media screen and (max-width: 768px) {
-				flex: 0 0 var(--S-field-w);
-			}
-			@media screen and (max-width: 576px) {
-				flex: 0 0 var(--XS-field-w);
-			}
-		}
-		&--nowrap{
-			flex-wrap: nowrap;
-		}
-		&--p-custom{
-			padding-top: var(--f-pt);
-			padding-bottom: var(--f-pb);
-			padding-right: var(--f-pr);
-			padding-left: var(--f-pl);
-		}
-		&--no-stretch{
-			height: fit-content;
-		}
-	}
-	.p{
-		&--x5{
-			padding-left: 5px;
-			padding-right: 5px;
-		}
-		&--y5{
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		&--x10{
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-		&--y10{
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
-		&--x15{
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-		&--y15{
-			padding-top: 15px;
-			padding-bottom: 15px;
-		}
-		&--x25{
-			padding-left: 25px;
-			padding-right: 25px;
-		}
-		&--y25{
-			padding-top: 25px;
-			padding-bottom: 25px;
-		}
-		&--x45{
-			padding-left: 45px;
-			padding-right: 45px;
-		}
-		&--y45{
-			padding-top: 45px;
-			padding-bottom: 45px;
-		}
-	}
-	.m{
-		&--x5{
-			margin-left: 5px;
-			margin-right: 5px;
-		}
-		&--y5{
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
-		&--x10{
-			margin-left: 10px;
-			margin-right: 10px;
-		}
-		&--y10{
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-		&--x15{
-			margin-left: 15px;
-			margin-right: 15px;
-		}
-		&--y15{
-			margin-top: 15px;
-			margin-bottom: 15px;
-		}
-		&--x25{
-			margin-left: 25px;
-			margin-right: 25px;
-		}
-		&--y25{
-			margin-top: 25px;
-			margin-bottom: 25px;
-		}
-		&--x45{
-			margin-left: 45px;
-			margin-right: 45px;
-		}
-		&--y45{
-			margin-top: 45px;
-			margin-bottom: 45px;
-		}
-	}
-	&__field-element{
-		box-sizing: border-box;
-		&--w{
-			&-adj{
-				flex-grow: 1;
-				flex-shrink: 1;
-			}
-			&-custom{
-				flex-basis: var(--elem-w);
-			}
-		}
-		&--tl{
-			text-align: left;
-		}
-		&--tr{
-			text-align: right;
-		}
-		&--tc{
-			text-align: center;
-		}
-		>input,select{
-			width: 100%;
-		}
-	}
+	// input:not([value=""]):not(:focus){
+	// 	position: relative;
+	// 	border: 1px solid red !important;
+	// 	color: red !important;
+	// }
 }

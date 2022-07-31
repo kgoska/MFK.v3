@@ -36,6 +36,57 @@ require ('./libs/filters.js');
 // 	</div>
 // </section>
 
+//window-selector
+$(document).ready(function() {
+	$('.window-selector select').each(function(){
+		let windowSelector = $(this).closest('.window-selector');
+		let optionWindows = windowSelector.find('.select-option-window');
+		optionWindows.addClass('hidden');
+		for (var i = 0; i < optionWindows.length; i++) {
+			if($(optionWindows[i]).data('option-value') == this.value){
+				$(optionWindows[i]).removeClass('hidden');
+			}
+		}	
+	});
+	
+});
+$(document).on('change', '.window-selector select', function() {
+	let windowSelector = $(this).closest('.window-selector');
+	let optionWindows = windowSelector.find('.select-option-window');
+	optionWindows.addClass('hidden');
+	for (var i = 0; i < optionWindows.length; i++) {
+		if($(optionWindows[i]).data('option-value') == this.value){
+			$(optionWindows[i]).removeClass('hidden');
+		}
+	}
+});
+
+//validated form
+$(document).ready(function() {
+	$('.validated-form').each(function(){
+		ValidateForm($(this));
+	});
+	
+});
+$(document).on('click change input', '.validated-form-input', function(){
+	let form = $(this).closest('.validated-form');
+	ValidateForm(form);
+});
+function ValidateForm(form){
+	let inputs = form.find('.validated-form-input');
+	let validated = true;
+	for (var i = 0; i < inputs.length; i++) {
+		validated = validated && $(inputs[i]).is($(inputs[i]).data('valid-selector'));
+		// console.log(inputs[i], $(inputs[i]).data('valid-selector'), $(inputs[i]).is($(inputs[i]).data('valid-selector')));
+		// let rInput = $(inputs[i]).find('input[value=""]');
+		// if(rInput.length == 0){
+		// 	console.log("empty input in ",inputs[i]);
+		// }
+		
+	}
+	form.find(form.data('submit-button-selector')).attr("disabled", !validated);
+}
+
 //Modal
 $(document).on('click', '.modal-trigger', function(event) {
 	$("body").css("overflow", "hidden");
@@ -48,19 +99,25 @@ $(document).on('click', '.modal-trigger', function(event) {
 	if(typeof modalTitle !== 'undefined'){
 		modal.find(".modal-title").html(modalTitle);
 	}
+	let modalFieldPresets= $(this).data('field-presets');
+	if(modalFieldPresets){
+		for (let i = 0; i < modalFieldPresets.length; i++) {
+			modal.find(modalFieldPresets[i].childSelector).val(modalFieldPresets[i].value);
+		}
+	}
 });
-$(document).on('click', '.modal-bg, .modal-cross', function(event) {
+$(document).on('mousedown touchstart', '.modal-bg, .modal-cross', function(event) {
 	$("body").css("overflow", "visible");
 	var modal = $(this).closest(".modal");
 	modal.removeClass("modal-active");
 
 });
-$(document).on('click', '.modal-window', function(event) {
+$(document).on('mousedown touchstart', '.modal-window', function(event) {
 	event.stopPropagation();
 });
 
 
-
+//sort
 let sortStates = [
 	{className:"",stateName:"none", fieldValueMultiplier:0},
 	{className:"sort-up",stateName:"up", fieldValueMultiplier:1},

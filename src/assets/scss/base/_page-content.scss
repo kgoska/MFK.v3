@@ -111,9 +111,15 @@
 	background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
 	border:none;
 	border-radius: 2px;
-	&:active{
-		background: #B94C40;
+	&:disabled{
+		filter: opacity(0.7);
 	}
+	&:not(:disabled){
+		&:active{
+			background: #B94C40;
+		}	
+	}
+	
 	&--fullwidth{
 		@media screen and (max-width: 767px){
 			width: 100%;
@@ -125,8 +131,10 @@
 		border: 1px solid #4E4E4E;
 		border-radius: 2px;
 		transition: all 0.2s;
-		&:active{
-			background: #ddd;
+		&:not(:disabled){
+			&:active{
+				background: #ddd;
+			}
 		}
 	}
 	&--transparent-white{
@@ -135,17 +143,21 @@
 		border: 1px solid #FFF;
 		border-radius: 2px;
 		transition: all 0.2s;
-		&:active{
-			background: rgba(0.5,0.5,0.5,0.5);
+		&:not(:disabled){
+			&:active{
+				background: rgba(0.5,0.5,0.5,0.5);
+			}
 		}
 	}
 	&--cyan{
 		background: #00A3E0;
 		border-radius: 2px;
 		transition: all 0.2s;
-		&:active{
-			background: #00A3E0;
-			filter: brightness(85%);
+		&:not(:disabled){
+			&:active{
+				background: #00A3E0;
+				filter: brightness(85%);
+			}
 		}
 	}
 	&--white{
@@ -153,9 +165,11 @@
 		border-radius: 2px;
 		transition: all 0.2s;
 		color: #000;
-		&:active{
-			background: #FFF;
-			filter: brightness(85%);
+		&:not(:disabled){
+			&:active{
+				background: #FFF;
+				filter: brightness(85%);
+			}
 		}
 	}
 }
