@@ -410,6 +410,7 @@
 	}
 	&__contact-wrapper{
 		// margin-top: 35px;
+		align-self: start;
 		flex: 0 0 calc(var(--body-width)/3);
 		@media screen and (max-width: 768px) {
 			order: 1;
@@ -451,9 +452,15 @@
 		}
 		@media screen and (max-width: 768px) {
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: space-around;
 			max-width: 350px;
 			margin: auto;
+			flex-wrap: wrap;
+			white-space: nowrap;
+			&>a{
+				margin: 15px;
+			}
+
 		}
 	}
 	&__bottom-bar {

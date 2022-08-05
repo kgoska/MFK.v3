@@ -4418,6 +4418,7 @@ summary {
   }
 }
 .footer__contact-wrapper {
+  align-self: start;
   flex: 0 0 calc(var(--body-width) / 3);
 }
 @media screen and (max-width: 768px) {
@@ -4469,9 +4470,14 @@ summary {
 @media screen and (max-width: 768px) {
   .footer__menu {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 350px;
     margin: auto;
+    flex-wrap: wrap;
+    white-space: nowrap;
+  }
+  .footer__menu > a {
+    margin: 15px;
   }
 }
 .footer__bottom-bar {
@@ -11797,6 +11803,7 @@ label {
 @media screen and (max-width: 768px) {
   .banking-info {
     padding: 30px 10px;
+    flex-grow: 1;
   }
 }
 
@@ -11870,6 +11877,15 @@ label {
 }
 .info-store__item--margin {
   margin-left: -10px;
+}
+@media screen and (max-width: 768px) {
+  .info-store__item {
+    flex: 0 0 50%;
+    margin: 0;
+  }
+  .info-store__item > img {
+    width: 100%;
+  }
 }
 
 .banking-visual {

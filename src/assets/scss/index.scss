@@ -610,6 +610,7 @@
       }
       @media screen and (max-width:768px){
             padding: 30px 10px ;
+            flex-grow: 1;
       }
 }
 .info {
@@ -692,8 +693,16 @@
 		// .info-store__item
 
 		&__item {
+
                   &--margin{
                         margin-left: -10px;
+                  }
+                  @media screen and (max-width: 768px) {
+                        flex: 0 0 50%;
+                        &>img{
+                              width: 100%;
+                        }
+                        margin: 0;
                   }
 		}
 }
