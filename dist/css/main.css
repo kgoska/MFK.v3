@@ -4610,8 +4610,7 @@ summary {
 }
 
 .btn {
-  width: 210px;
-  height: 50px;
+  padding: 20px 50px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -4625,6 +4624,12 @@ summary {
   background: linear-gradient(224.4deg, #7B1931 -23.64%, #E05226 113.52%);
   border: none;
   border-radius: 2px;
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    padding: 15px 10px;
+    width: 100%;
+  }
 }
 .btn:disabled {
   filter: opacity(0.7);
@@ -5113,6 +5118,15 @@ summary {
   line-height: inherit !important;
   font-weight: inherit !important;
   opacity: 0.6;
+}
+.input--placeholder-dark::-moz-placeholder {
+  opacity: 0.9 !important;
+}
+.input--placeholder-dark:-ms-input-placeholder {
+  opacity: 0.9 !important;
+}
+.input--placeholder-dark::placeholder {
+  opacity: 0.9 !important;
 }
 .input--underscore {
   background: transparent;
@@ -12258,6 +12272,60 @@ div.hidden {
 
 .form input, .form select {
   width: 100%;
+}
+.form__input {
+  position: relative;
+}
+.form__input:not(.invalid) .form__input-invalid-message {
+  display: none;
+}
+.form__input.invalid {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  perspective: 1000px;
+}
+.form__input-invalid-message {
+  color: red;
+  font-size: 10px;
+}
+.form__input-invalid-message--top-right {
+  font-size: 1em;
+  position: absolute;
+  top: -5px;
+  right: 1px;
+}
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 /*# sourceMappingURL=main.css.map*/

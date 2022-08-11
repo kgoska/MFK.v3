@@ -62,21 +62,77 @@ $(document).on('change', '.window-selector select', function() {
 });
 
 //validated form
-$(document).ready(function() {
-	$('.validated-form').each(function(){
-		ValidateForm($(this));
-	});
+// $(document).ready(function() {
+// 	$('.validated-form').each(function(){
+// 		ValidateForm($(this));
+// 	});
 	
-});
-$(document).on('click change input', '.validated-form-input', function(){
+// });
+
+const inputValidationLookup = {
+	"regex": {
+		validate: function(input){
+			if(input.hasClass('hidden')){
+				return true;
+			}
+			let regex = new RegExp(input.data('validation-regex'));
+			return regex.test(input.find('input, select>option:selected').val());
+		}
+	},
+	"css-selector": {
+		validate: function(input){
+			return input.is(input.data('validation-selector'));
+		}
+	},
+}
+$(document).on('submit', '.recaptcha-validated-form', function(e){
+	e.preventDefault();
 	let form = $(this).closest('.validated-form');
-	ValidateForm(form);
+	let valid = ValidateForm(form);
+	if(valid){
+		grecaptcha.ready(function() {
+        	grecaptcha.execute(this.data('site-key'), {action: 'submit'}).then(function(token) {
+          		this[0].submit();
+        	}.bind(this));
+        }.bind(form));
+	}
+})
+$(document).on('submit', '.validated-form', function(e){
+	let form = $(this).closest('.validated-form');
+	let valid = ValidateForm(form);
+	if(!valid){
+		e.preventDefault();
+	}
+});
+// $(document).ready(function(){
+// 	$('.validated-form').submit(function(e){
+		
+// 	});
+// });
+
+// $(document).on('submit', '.validated-form', function(e){
+// 	let form = $(this).closest('.validated-form');
+// 	let valid = ValidateForm(form);
+// 	console.log(valid);
+// 	// if(!valid){
+// 		e.preventDefault();
+// 	// }
+// });
+$(document).on('click input change', '.validated-form-input', function(){
+	$(this).removeClass('invalid');
 });
 function ValidateForm(form){
 	let inputs = form.find('.validated-form-input');
+	// let type = 
 	let validated = true;
 	for (var i = 0; i < inputs.length; i++) {
-		validated = validated && $(inputs[i]).is($(inputs[i]).data('valid-selector'));
+		let input = $(inputs[i]);
+		let type = input.data('validation-type');
+		let inputValid = inputValidationLookup[type].validate(input);
+		if(!inputValid){
+			input.addClass('invalid')
+		}
+		validated = validated && inputValid;
 		// console.log(inputs[i], $(inputs[i]).data('valid-selector'), $(inputs[i]).is($(inputs[i]).data('valid-selector')));
 		// let rInput = $(inputs[i]).find('input[value=""]');
 		// if(rInput.length == 0){
@@ -84,7 +140,8 @@ function ValidateForm(form){
 		// }
 		
 	}
-	form.find(form.data('submit-button-selector')).attr("disabled", !validated);
+	return validated;
+	// form.find(form.data('submit-button-selector')).attr("disabled", !validated);
 }
 
 //Modal
