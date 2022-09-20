@@ -1318,7 +1318,7 @@ const inputValidationLookup = {
 };
 $(document).on('submit', '.recaptcha-validated-form', function (e) {
   e.preventDefault();
-  let form = $(this).closest('.validated-form');
+  let form = $(this);
   let valid = ValidateForm(form);
 
   if (valid) {
@@ -1326,13 +1326,14 @@ $(document).on('submit', '.recaptcha-validated-form', function (e) {
       grecaptcha.execute(this.data('site-key'), {
         action: 'submit'
       }).then(function (token) {
+        this[0].recaptchatoken.value = token;
         this[0].submit();
       }.bind(this));
     }.bind(form));
   }
 });
 $(document).on('submit', '.validated-form', function (e) {
-  let form = $(this).closest('.validated-form');
+  let form = $(this);
   let valid = ValidateForm(form);
 
   if (!valid) {

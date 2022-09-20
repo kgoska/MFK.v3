@@ -28,6 +28,7 @@
 
 	}
 	&__item {
+		position: relative;
 		margin: 25px 0;
 		line-height: 1.6em;
 		padding: 5px;
@@ -68,7 +69,8 @@
 				}
 			}
 			.sidebar__item-icon {
-				position: relative;
+				position: absolute;
+				right: 0;
 				height: 100%;
 				width: 28px;
 				text-align: start;

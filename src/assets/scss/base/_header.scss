@@ -219,11 +219,27 @@
 	&__search {
 		order: 2;
 		display: flex;
+		position: relative;
 		&>input{
 			@media screen and (max-width: 1200px) {
+				position: absolute;
+				right: 25px;
+				top: 0px;
+				bottom: 0px;
+				background: #1e3866;
+				padding: 10px 15px;
+				border-radius: 5px;
 				display: none;
 			}
 		}
+		@media screen and (max-width: 1200px) {
+			&:focus{
+				&>input{
+					display: block;
+				}
+			}
+		}
+
 	}
 	&__search-icon {
 		cursor: pointer;

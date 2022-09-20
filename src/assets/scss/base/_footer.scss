@@ -320,7 +320,8 @@
 		padding-top: 60px;
 		padding-bottom: 55px;
 		@media screen and (max-width: 768px) {
-			flex-direction: column;
+			display: block;
+			// flex-direction: column;
 		}
 	}
 	&__logo {
@@ -331,6 +332,7 @@
 		}
 		@media screen and (max-width: 768px) {
 			display: flex;
+			align-items: center;
 			flex: 0 0 auto;
 			margin-bottom: 25px;
 			&>img{
@@ -341,9 +343,9 @@
 		}
 	}
 	&__content-wrapper {
-		display: flex;
+		// display: flex;
 		flex: 0 0 calc(90% - 120px);
-		flex-direction: column;
+		// flex-direction: column;
 		--body-width: 80%;
 		@media screen and (max-width: 1200px) {
 			--body-width: 100%;

@@ -7,6 +7,11 @@
 		}
 	}
 	&__text {
+		flex-grow: 1;
+	}
+	&__button{
+		max-width: 300px;
+		margin: auto;
 	}
 }
 .news{
@@ -21,4 +26,9 @@
 			flex-basis: 200px;
 		}
 	}
+}
+.news-single-btn{
+	max-width: 300px;
+	margin: auto;
+	margin-bottom: 25px;
 }

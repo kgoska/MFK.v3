@@ -183,8 +183,8 @@
 	display: none;
 }
 .operations__documentation-kind.active {
-	display: flex;
-	flex-direction: column;
+	display: block;
+	// flex-direction: column;
 	position: relative;
 }
 .operations__documentation-file{
