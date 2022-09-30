@@ -179,9 +179,14 @@
 			grid-column: button-start/button-end;
 			grid-row: button-start/button-end;
 			display: flex;
+			justify-content: flex-end;
 			gap: 30px;
+			@media screen and (max-width: 992px) {
+				justify-content: space-between;
+			}
 			@media screen and (max-width: 769px) {
 				flex-direction: column;
+
 			}
 		}
 		&__button {
