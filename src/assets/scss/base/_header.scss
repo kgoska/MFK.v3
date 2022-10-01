@@ -194,6 +194,9 @@
 		}
 	}
 	&__top-menu-item {
+		&.active {
+			font-weight: bold;
+		}
 		@media screen and (max-width: 992px) {
 			padding: 5px;
 			text-align: center;

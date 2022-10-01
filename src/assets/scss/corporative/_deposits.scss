@@ -291,26 +291,26 @@
 	grid-column: 1/2;
 	grid-row:4/5;
 	@media screen and (max-width: 767px) {
-		grid-column: 2/3;
+		grid-column: 1/3;
 		grid-row: 6/7;
 	}
 }
 #bet{
-	grid-column: 2/3;
+	grid-column: 3/3;
 	grid-row:4/5;
 	@media screen and (max-width: 767px) {
 		grid-column: 1/2;
 		grid-row: 5/6;
 	}
 }
-#amount{
-	grid-column: 3/4;
-	grid-row:4/5;
-	@media screen and (max-width: 767px) {
-		grid-column: 1/2;
-		grid-row: 6/7;
-	}
-}
+// #amount{
+// 	grid-column: 3/4;
+// 	grid-row:4/5;
+// 	@media screen and (max-width: 767px) {
+// 		grid-column: 1/2;
+// 		grid-row: 6/7;
+// 	}
+// }
 .deposite-kinds__content{
 	display: grid;      
 	padding: 25px 20px 37px 90px;
@@ -334,7 +334,7 @@
 	@media  screen and (max-width: 767px) {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-		padding: 10px 10px 40px 10px;
+		padding: 10px 20px 40px 20px;
 		column-gap: 10px;
 		row-gap: 0;
 		margin: 0 auto 40px;

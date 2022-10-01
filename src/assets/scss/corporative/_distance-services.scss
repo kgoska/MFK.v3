@@ -35,6 +35,8 @@
 	margin-bottom: 35px;
 }  
 .mobile__button{
+	border: 1px solid;
+    padding: 7px 14px;
 	width:118px;
 	height: 37px;
 	font-family: 'Helvetica';
@@ -49,6 +51,7 @@
 		background: #fff;
 		color: #801D23;
 		border: none;
+		padding: 9px 24px;
 	}
 } 
 .mobile__button:active{
